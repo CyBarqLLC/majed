@@ -61,15 +61,15 @@
   --g-900: #16181a;
   --black: #0c0d0e;
 
-  /* semantic */
-  --paper: var(--g-50);
-  --surface: var(--g-100);
-  --placeholder: var(--g-200);
+  /* semantic — a single, unbroken page colour */
+  --paper: #d4d4d4;
+  --surface: var(--paper);
+  --placeholder: #c6c6c6;
   --ink: var(--g-900);
-  --ink-70: var(--g-700);
-  --ink-45: var(--g-500);
-  --line: var(--g-300);
-  --line-soft: var(--g-200);
+  --ink-70: #3f4346;
+  --ink-45: #5e6164;
+  --line: rgba(22, 24, 26, 0.19);
+  --line-soft: rgba(22, 24, 26, 0.12);
   --on-black: #f2f2ef;
   --on-black-55: rgba(242, 242, 239, 0.58);
   --on-black-line: rgba(242, 242, 239, 0.16);
@@ -101,7 +101,6 @@
   --sv: 0;   /* scroll velocity, roughly -30…30 */
   --px: 0;   /* pointer x, -1…1 */
   --py: 0;   /* pointer y, -1…1 */
-  --prog: 0; /* page scroll progress, 0…1 */
 }
 
 @media (min-width: 900px) {
@@ -242,8 +241,7 @@ html[dir="rtl"] .link:hover .arrow { transform: scaleX(-1) translate(2px, -2px);
 
 .section { padding-block: var(--section); }
 .section--tight { padding-block: calc(var(--section) * 0.62); }
-.section--surface { background: var(--surface); }
-.section--paper { background: var(--paper); }
+
 
 .section-head {
   display: flex;
@@ -288,8 +286,8 @@ html[lang="ar"] .section-title { font-weight: 400; }
   justify-content: space-between;
   gap: 1rem;
   border-radius: var(--radius);
-  border: 1px solid var(--g-200);
-  background: rgba(251, 251, 250, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.62);
   -webkit-backdrop-filter: saturate(1.5) blur(20px);
   backdrop-filter: saturate(1.5) blur(20px);
   box-shadow: 0 1px 1px rgba(22, 24, 26, 0.02);
@@ -298,22 +296,9 @@ html[lang="ar"] .section-title { font-weight: 400; }
     border-color 0.5s var(--ease);
 }
 .nav.is-scrolled .nav__bar {
-  background: rgba(251, 251, 250, 0.88);
+  background: rgba(255, 255, 255, 0.78);
   box-shadow: 0 1px 1px rgba(22, 24, 26, 0.03), 0 12px 36px rgba(22, 24, 26, 0.06);
-  border-color: var(--g-300);
-}
-
-/* reading-progress hairline along the bottom of the bar */
-.nav__progress {
-  position: absolute;
-  inset-inline-start: 0;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  background: var(--g-400);
-  transform: scaleX(var(--prog));
-  transform-origin: inline-start;
-  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .nav__logo {
@@ -366,7 +351,7 @@ html[lang="ar"] .section-title { font-weight: 400; }
   color: var(--ink-45);
   direction: ltr;
 }
-.lang__sep { color: var(--g-400); }
+.lang__sep { color: var(--g-500); }
 .lang a { transition: color 0.35s var(--ease); }
 .lang a:hover { color: var(--ink); }
 .lang [aria-current="true"] { color: var(--ink); }
@@ -397,8 +382,8 @@ html[lang="ar"] .section-title { font-weight: 400; }
   max-width: 1320px;
   margin: 8px auto 0;
   border-radius: var(--radius);
-  border: 1px solid var(--g-200);
-  background: rgba(251, 251, 250, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.88);
   -webkit-backdrop-filter: saturate(1.5) blur(20px);
   backdrop-filter: saturate(1.5) blur(20px);
   box-shadow: 0 14px 44px rgba(22, 24, 26, 0.08);
@@ -476,17 +461,6 @@ html[lang="ar"] .hero__name { font-weight: 400; line-height: 1.16; }
 .hero__name .w:nth-child(3) { animation-delay: 0.18s; }
 @keyframes wordIn { to { opacity: 1; transform: none; } }
 
-.hero__rule {
-  width: clamp(56px, 9vw, 120px);
-  height: 1px;
-  background: var(--g-300);
-  margin-block: clamp(1.8rem, 4.5vh, 2.8rem);
-  transform: scaleX(0);
-  transform-origin: inline-start;
-  animation: ruleIn 1.1s var(--ease) 0.34s forwards;
-}
-@keyframes ruleIn { to { transform: scaleX(1); } }
-
 .hero .lead {
   color: var(--g-700);
   max-width: 46ch;
@@ -503,8 +477,7 @@ html[lang="ar"] .hero .lead { max-width: 42ch; line-height: 1.85; }
   flex: 0 0 auto;
   height: clamp(200px, 32svh, 400px);
   overflow: hidden;
-  background: var(--g-100);
-  border-top: 1px solid var(--line-soft);
+  background: transparent;
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
   mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
 }
@@ -555,7 +528,7 @@ html[lang="ar"] .hero .lead { max-width: 42ch; line-height: 1.85; }
 
 /* ---------- 7. Intro — portrait + biography ---------- */
 
-.intro { background: var(--paper); }
+
 
 .intro__grid { display: grid; gap: clamp(2.5rem, 6vw, 4rem); }
 @media (min-width: 880px) {
@@ -571,7 +544,6 @@ html[lang="ar"] .hero .lead { max-width: 42ch; line-height: 1.85; }
   aspect-ratio: 4 / 5;
   overflow: hidden;
   max-width: 340px;
-  background: var(--g-100);
 }
 @media (min-width: 880px) {
   .intro__portrait { order: 0; max-width: none; position: sticky; top: calc(var(--nav-h) + 48px); }
@@ -597,7 +569,7 @@ html[lang="ar"] .hero .lead { max-width: 42ch; line-height: 1.85; }
 
 /* ---------- 8. Works — reactive mosaic ---------- */
 
-.works { background: var(--surface); }
+
 
 .mosaic {
   display: grid;
@@ -628,7 +600,6 @@ html[lang="ar"] .hero .lead { max-width: 42ch; line-height: 1.85; }
   aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--placeholder);
-  box-shadow: 0 1px 2px rgba(22, 24, 26, 0.03);
 }
 .tile__frame img {
   width: 100%; height: 100%; object-fit: cover;
@@ -695,8 +666,8 @@ html[lang="ar"] .hero .lead { max-width: 42ch; line-height: 1.85; }
    One quiet pattern: mark -> story -> (optional) visit.
    ------------------------------------------------------------- */
 
-.athar { background: var(--paper); border-block: 1px solid var(--line-soft); }
-.cottages { background: var(--surface); border-bottom: 1px solid var(--line-soft); }
+
+
 
 .athar__grid { display: grid; gap: clamp(2.75rem, 7vw, 4rem); }
 @media (min-width: 880px) {
@@ -754,7 +725,7 @@ html[dir="rtl"] .btn .arrow { transform: scaleX(-1); }
 
 /* ---------- 10. Media feature ---------- */
 
-.media { background: var(--paper); }
+
 
 .media__link { display: block; }
 .media__frame {
@@ -905,18 +876,18 @@ html[lang="en"] .field > label {
   resize: vertical;
 }
 .field input::placeholder,
-.field textarea::placeholder { color: var(--g-400); }
+.field textarea::placeholder { color: #6f7275; opacity: 0.75; }
 
 .field input:hover,
 .field select:hover,
-.field textarea:hover { border-color: var(--g-400); }
+.field textarea:hover { border-color: var(--ink-45); }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
   outline: none;
   border-color: var(--ink);
-  background: rgba(242, 242, 242, 0.5);
+  background: rgba(255, 255, 255, 0.3);
 }
 .field input:focus-visible,
 .field select:focus-visible,
@@ -945,13 +916,13 @@ html[lang="en"] .field > label {
   font-size: var(--step--1);
   font-weight: 400;
   color: var(--g-50);
-  background: var(--g-800);
+  background: var(--g-900);
   padding: 1.05em 2.4em;
   border-radius: 2px;
   transition: background 0.45s var(--ease), opacity 0.3s var(--ease);
 }
 html[lang="en"] .form__submit { letter-spacing: 0.08em; }
-.form__submit:hover { background: var(--g-900); }
+.form__submit:hover { background: var(--black); }
 .form__submit[disabled] { opacity: 0.5; cursor: default; }
 
 /* status line — only ever shown for a real outcome */
@@ -1036,8 +1007,8 @@ html[lang="en"] .footer__col h2 { letter-spacing: 0.13em; text-transform: upperc
   top: -30%;
   inset-inline-start: -22%;
   background: radial-gradient(circle at 50% 50%,
-    rgba(233, 233, 233, 0.85) 0%,
-    rgba(242, 242, 242, 0.5) 42%,
+    rgba(242, 242, 242, 0.4) 0%,
+    rgba(242, 242, 242, 0.18) 42%,
     rgba(242, 242, 242, 0) 70%);
   animation: driftA 74s ease-in-out infinite alternate;
 }
@@ -1048,8 +1019,8 @@ html[lang="en"] .footer__col h2 { letter-spacing: 0.13em; text-transform: upperc
   bottom: -28%;
   inset-inline-end: -18%;
   background: radial-gradient(circle at 50% 50%,
-    rgba(242, 242, 242, 0.9) 0%,
-    rgba(233, 233, 233, 0.42) 46%,
+    rgba(233, 233, 233, 0.34) 0%,
+    rgba(233, 233, 233, 0.14) 46%,
     rgba(233, 233, 233, 0) 72%);
   animation: driftB 96s ease-in-out infinite alternate;
 }
@@ -1109,7 +1080,6 @@ html[lang="en"] .footer__col h2 { letter-spacing: 0.13em; text-transform: upperc
   .ambient::before, .ambient::after { animation: none; }
   .hero__field { transform: rotate(-3deg); }
   .hero__name .w, .hero .lead { opacity: 1; transform: none; animation: none; }
-  .hero__rule { transform: scaleX(1); animation: none; }
 }
 
 .no-js .reveal, .no-js .img-reveal img, .no-js .tile { opacity: 1; transform: none; clip-path: none; }

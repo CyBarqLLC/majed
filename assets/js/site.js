@@ -178,12 +178,11 @@
   if (reduce) return;
 
   /* ---------- one animation loop -----------------------------
-     writes --sv (scroll velocity), --prog (page progress)
-     and --px / --py (pointer position) on <html>.
+     writes --sv (scroll velocity) and --px / --py (pointer
+     position) on <html>.
      ---------------------------------------------------------- */
   var lastY = window.pageYOffset;
   var vel = 0;
-  var progress = 0;
   var pxTarget = 0, pyTarget = 0, px = 0, py = 0;
   var hasPointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   var hero = document.querySelector("[data-hero]");
@@ -222,14 +221,6 @@
     vel *= 0.9;
     if (Math.abs(vel) < 0.02) vel = 0;
     root.style.setProperty("--sv", clamp(vel, -34, 34).toFixed(2));
-
-    /* page progress for the navbar hairline */
-    var max = document.documentElement.scrollHeight - window.innerHeight;
-    var p = max > 0 ? clamp(y / max, 0, 1) : 0;
-    if (Math.abs(p - progress) > 0.001) {
-      progress = p;
-      root.style.setProperty("--prog", progress.toFixed(4));
-    }
 
     /* pointer parallax for the hero field */
     if (hasPointer && hero) {

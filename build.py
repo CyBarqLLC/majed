@@ -117,8 +117,7 @@ AR = {
         "وبموازاة ذلك، ارتبط عملي بالإعلام الوقفي وتوثيق أثر المؤسسات ومبادراتها. وفي عام 2021 أسستُ مؤسسة أثر للإعلام الوقفي، لتكون مساحةً متخصصة في إبراز أثر الوقف، وتوثيق قصصه، وتقديمها بصورة تليق بما تصنعه هذه المؤسسات في مجتمعاتها.",
     ],
     "about_facts": [("المكان", "عمّان — الأردن"),
-                    ("المجال", "عمارة وتصميم · إعلام وقفي"),
-                    ("الأعمال", "<span dir=\"ltr\">2007 — 2018</span>")],
+                    ("المجال", "عمارة وتصميم · إعلام وقفي")],
     "about_portrait_alt": "صورة شخصية لماجد ناموس",
 
     "athar_title": "مؤسسة أثر",
@@ -191,7 +190,6 @@ EN = {
     "hero_cue": "Works below",
 
     "works_title": "Works",
-    "works_meta": "2007 — 2018",
 
     "about_meta": "About",
     "about_body": [
@@ -200,8 +198,7 @@ EN = {
         "Alongside this, my work has been tied to waqf media and to documenting the impact of institutions and their initiatives. In 2021 I founded Athar Foundation for Waqf Media, as a space dedicated to bringing the impact of waqf into view, documenting its stories, and presenting them in a way worthy of what these institutions do for their communities.",
     ],
     "about_facts": [("Based", "Amman — Jordan"),
-                    ("Field", "Architecture &amp; design · Waqf media"),
-                    ("Works", "2007 — 2018")],
+                    ("Field", "Architecture &amp; design · Waqf media")],
     "about_portrait_alt": "Portrait of Majed Namous",
 
     "athar_title": "Athar Foundation",
@@ -347,7 +344,7 @@ def head(t, *, page, title, desc, canonical):
   <link rel="alternate" hreflang="ar" href="{base}/{ar_path}">
   <link rel="alternate" hreflang="en" href="{base}/{en_path}">
   <link rel="alternate" hreflang="x-default" href="{base}/{ar_path}">
-  <meta name="theme-color" content="#f1f1ee">
+  <meta name="theme-color" content="#d4d4d4">
   <link rel="icon" href="{root}favicon.ico" sizes="32x32">
   <link rel="icon" href="{a}/favicon-512.png" type="image/png" sizes="512x512">
   <link rel="apple-touch-icon" href="{a}/apple-touch-icon.png">
@@ -410,7 +407,6 @@ def navbar(t, page, alt_href):
         <span></span><span></span>
       </button>
     </div>
-    <span class="nav__progress" aria-hidden="true"></span>
   </div>
   <div class="nav__menu" id="nav-menu" data-nav-menu aria-hidden="true">
     <div class="nav__menu-inner">
@@ -454,7 +450,6 @@ def footer(t):
     </div>
     <div class="footer__bottom">
       <span>© <span data-year>{year}</span> {name}. {rights}</span>
-      <span dir="ltr">Majed Namous</span>
     </div>
   </div>
 </footer>
@@ -524,7 +519,6 @@ def home(t, alt_href):
       <div class="wrap">
         <p class="meta hero__eyebrow">{greet}</p>
         <h1 class="hero__name">{name}</h1>
-        <div class="hero__rule" aria-hidden="true"></div>
         <p class="lead">{lead}</p>
       </div>
     </div>
@@ -553,7 +547,6 @@ def home(t, alt_href):
     <div class="wrap">
       <div class="section-head reveal">
         <h2 class="section-title" id="works-title">{works_title}</h2>
-        <p class="meta">{works_meta}</p>
       </div>
       <div class="mosaic" data-mosaic>
         {tiles}
@@ -627,7 +620,7 @@ def home(t, alt_href):
         about_meta=t["about_meta"], bio=bio,
         portrait=picture("majed-portrait", t["about_portrait_alt"], [900, 600],
                          "(min-width: 880px) 40vw, 86vw"),
-        works_title=t["works_title"], works_meta=t["works_meta"],
+        works_title=t["works_title"],
         tiles="\n        ".join(tiles),
         athar_mark=ATHAR_MARK, athar_logo_alt=t["athar_logo_alt"],
         athar_title=t["athar_title"],
