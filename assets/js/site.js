@@ -233,5 +233,82 @@
     requestAnimationFrame(frame);
   }
 
+
+  /* ---------- lightbox for the story photographs ---------- */
+  (function lightbox() {
+    var box = document.querySelector("[data-lightbox]");
+    var shots = Array.prototype.slice.call(document.querySelectorAll("[data-shot]"));
+    if (!box || !shots.length) return;
+
+    var img = box.querySelector("[data-lightbox-img]");
+    var prevBtn = box.querySelector("[data-lightbox-prev]");
+    var nextBtn = box.querySelector("[data-lightbox-next]");
+    var index = -1;
+    var opener = null;
+
+    var single = shots.length < 2;
+    if (single && prevBtn && nextBtn) {
+      prevBtn.hidden = true;
+      nextBtn.hidden = true;
+    }
+
+    var show = function (i) {
+      index = (i + shots.length) % shots.length;
+      var s = shots[index];
+      img.src = s.getAttribute("data-shot-src");
+      img.alt = s.getAttribute("data-shot-alt") || "";
+    };
+
+    var open = function (i, from) {
+      opener = from || null;
+      box.hidden = false;
+      show(i);
+      document.body.classList.add("is-locked");
+      /* let the browser paint the hidden state before fading in */
+      requestAnimationFrame(function () { box.classList.add("is-open"); });
+      var close = box.querySelector(".lightbox__close");
+      if (close) close.focus();
+    };
+
+    var close = function () {
+      box.classList.remove("is-open");
+      document.body.classList.remove("is-locked");
+      var done = function () {
+        box.hidden = true;
+        img.removeAttribute("src");
+      };
+      if (reduce) done();
+      else window.setTimeout(done, 380);
+      if (opener) opener.focus();
+      opener = null;
+    };
+
+    shots.forEach(function (s, i) {
+      s.addEventListener("click", function () { open(i, s); });
+    });
+
+    Array.prototype.forEach.call(
+      box.querySelectorAll("[data-lightbox-close]"),
+      function (el) { el.addEventListener("click", close); }
+    );
+    if (prevBtn) prevBtn.addEventListener("click", function () { show(index - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { show(index + 1); });
+
+    document.addEventListener("keydown", function (e) {
+      if (box.hidden) return;
+      if (e.key === "Escape") { e.preventDefault(); close(); }
+      else if (e.key === "ArrowLeft" && !single) { show(index + (document.documentElement.dir === "rtl" ? 1 : -1)); }
+      else if (e.key === "ArrowRight" && !single) { show(index + (document.documentElement.dir === "rtl" ? -1 : 1)); }
+      else if (e.key === "Tab") {
+        var focusable = box.querySelectorAll("button:not([hidden])");
+        if (!focusable.length) return;
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  })();
+
   requestAnimationFrame(frame);
 })();
