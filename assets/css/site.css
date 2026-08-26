@@ -1102,15 +1102,22 @@ html[lang="en"] .footer__col h2 { letter-spacing: 0.13em; text-transform: upperc
 
 .story-hero__eyebrow { margin-bottom: clamp(0.9rem, 3vw, 1.35rem); }
 
+/* Single exception in the site: this title carries the word "الأقصى",
+   whose final alef maksura the display face draws detached. Thmanyah here. */
 .story-hero__title {
-  font-family: var(--font-display);
+  font-family: var(--font-body);
   font-size: var(--step-3);
   font-weight: 300;
   line-height: 1.14;
+  letter-spacing: -0.02em;
   max-width: 18ch;
 }
-html[lang="en"] .story-hero__title { letter-spacing: -0.02em; }
-html[lang="ar"] .story-hero__title { font-weight: 400; line-height: 1.32; max-width: 14ch; }
+html[lang="ar"] .story-hero__title {
+  font-weight: 300;
+  line-height: 1.42;
+  letter-spacing: 0;
+  max-width: 16ch;
+}
 
 .story-hero__sub { margin-top: clamp(1.1rem, 3.5vw, 1.75rem); }
 

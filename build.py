@@ -10,6 +10,7 @@ Out:  index.html, contact.html, en/index.html, en/contact.html,
 Everything editable lives in sections 1 and 2 below.
 """
 
+import hashlib
 import os
 import re
 from datetime import date
@@ -182,7 +183,7 @@ AR = {
         "كان هدفي بسيطًا: أن يراه الناس، ويتذكرونه، وتبقى صورته حاضرة في الذاكرة.",
     ],
 
-    "aqsa_h2": "من الفكرة إلى البداية",
+    "aqsa_h2": "أول خطوة",
     "aqsa_p2": [
         "قبل أن أبدأ العمل على السيارة، صنعت مجسّمًا صغيرًا حتى أرى الفكرة أمامي بشكل حقيقي، وأعرف كيف يمكن توزيع القبة والأسوار والساحات على مساحة السيارة.",
         "كانت هذه أول خطوة لتحويل الفكرة من تصور في ذهني إلى شيء يمكن تنفيذه.",
@@ -229,7 +230,7 @@ AR = {
     "aqsa_alt_people_a": "أطفال يتجمّعون أمام المجسّم المعروض خلف زجاج",
     "aqsa_alt_people_b": "المجسّم معروضًا في الشارع خلف واجهة زجاجية",
 
-    "aqsa_end": "فما نريد أن يبقى في الذاكرة، يجب أن يبقى حاضرًا أمام العين.",
+    "aqsa_end": "ما نريد له أن يدوم داخل الذاكرة، لا بد أن يدوم أمام العين.",
     "aqsa_link_media": "لقائي على قناة الجزيرة حول الفكرة",
     "aqsa_link_contact": "تواصل معي",
     "aqsa_zoom": "عرض الصورة بحجم أكبر",
@@ -421,6 +422,16 @@ VIEWBOX = {
 }
 
 
+def asset_ver(rel):
+    """Short content hash, appended to css/js URLs so a rebuild never
+    serves a stale file out of the browser cache."""
+    try:
+        with open(os.path.join(ROOT, rel), "rb") as f:
+            return hashlib.md5(f.read()).hexdigest()[:8]
+    except OSError:
+        return "0"
+
+
 def svg(name, optional=False):
     """Inline an SVG: strip the prolog, tighten the viewBox, allow recolouring.
 
@@ -520,7 +531,7 @@ def head(t, *, page, title, desc, canonical):
   <meta property="og:image" content="{base}/assets/img/work-2016-1000.jpg">
   <meta name="twitter:card" content="summary_large_image">
   {preload_fonts}{preload}
-  <link rel="stylesheet" href="{assets}/css/site.css">
+  <link rel="stylesheet" href="{assets}/css/site.css?v={cssv}">
 </head>
 <body>
 <a class="skip" href="#main">{skip}</a>
@@ -531,6 +542,7 @@ def head(t, *, page, title, desc, canonical):
            preload=preload,
            ogsite=SITE["site_name"],
            oglocale=("ar_JO" if t["lang"] == "ar" else "en_US"),
+           cssv=asset_ver("assets/css/site.css"),
            skip=t["skip"])
 
 
@@ -614,14 +626,15 @@ def footer(t):
     </div>
   </div>
 </footer>
-<script src="{assets}/js/site.js" defer></script>
+<script src="{assets}/js/site.js?v={jsv}" defer></script>
 </body>
 </html>
 """.format(home=t["home_href"], name=t["footer_name"], logo=LOGO_FOOTER,
            tag=t["footer_tag"], navtitle=t["footer_nav_title"], nav=nav_items,
            contacttitle=t["footer_contact_title"], email=SITE["email"],
            phone=SITE["phone"], phone_display=SITE["phone_display"],
-           year=YEAR, rights=t["footer_rights"], assets=ASSETS)
+           year=YEAR, rights=t["footer_rights"], assets=ASSETS,
+           jsv=asset_ver("assets/js/site.js"))
 
 
 # ============================================================
