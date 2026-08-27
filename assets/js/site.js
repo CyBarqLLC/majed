@@ -310,5 +310,38 @@
     });
   })();
 
+  /* ---------- the Athar film ----------
+     Never autoplays. `controls` sits in the markup so the element still
+     works with JS off; with JS on it is taken away until the visitor
+     presses play, and the poster carries the frame until then. -------- */
+  (function film() {
+    var stage = document.querySelector("[data-film]");
+    if (!stage) return;
+
+    var video = stage.querySelector("[data-film-video]");
+    var play = stage.querySelector("[data-film-play]");
+    if (!video || !play) return;
+
+    video.removeAttribute("controls");
+
+    var started = function () { stage.classList.add("is-playing"); };
+
+    play.addEventListener("click", function () {
+      video.setAttribute("controls", "");
+      video.preload = "metadata";
+      started();
+      var p = video.play();
+      if (p && p.catch) {
+        p.catch(function () {
+          /* the browser declined — leave the native controls in reach */
+          started();
+        });
+      }
+    });
+
+    video.addEventListener("play", started);
+  })();
+
+
   requestAnimationFrame(frame);
 })();

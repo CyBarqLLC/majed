@@ -148,6 +148,15 @@ AR = {
     "athar_cta": "زيارة موقع مؤسسة أثر",
     "athar_logo_alt": "شعار مؤسسة أثر",
 
+    "film_meta": "مؤتمر المدينة المنورة للأوقاف - <span dir=\"ltr\">2022</span>",
+    "film_title": "«أوقاف المدينة.. كيان وإحسان»",
+    "film_body": [
+        "أُقيم المؤتمر تحت رعاية صاحب السمو الملكي أمير منطقة المدينة المنورة، وعُرض فيه هذا الفيلم الوثائقي من إنتاج مؤسسة أثر للإعلام الوقفي.",
+        "وفي المناسبة ذاتها، حظيتُ أنا وفريقي في المؤسسة بالشكر، تقديرًا لجهودها ومساهمتها في إنتاج العمل.",
+    ],
+    "film_play": "شاهد الفيلم",
+    "film_alt": "لقطة من الفيلم الوثائقي «أوقاف المدينة.. كيان وإحسان»",
+
     "cottages_meta": "شارع الأردن - تأسست <span dir=\"ltr\">2023</span>",
     "cottages_title": "أكواخ الماجد",
     "cottages_body": [
@@ -299,6 +308,15 @@ EN = {
     ],
     "athar_cta": "Visit Athar Foundation",
     "athar_logo_alt": "Athar Foundation logo",
+
+    "film_meta": "Madinah Waqf Conference - 2022",
+    "film_title": "Awqaf of Madinah: Entity and Benevolence",
+    "film_body": [
+        "The conference was held under the patronage of His Royal Highness the Prince of the Madinah Region, and this documentary film, produced by Athar Foundation for Waqf Media, was screened there.",
+        "On the same occasion, my team at the foundation and I were thanked, in recognition of the foundation's efforts and its part in producing the work.",
+    ],
+    "film_play": "Watch the film",
+    "film_alt": "A still from the documentary film Awqaf of Madinah",
 
     "cottages_title": "Al Majed Cottages",
     "cottages_body": [
@@ -455,6 +473,9 @@ def svg(name, optional=False):
 LOGO = svg("logo.svg")
 LOGO_FOOTER = svg("logo-footer.svg")
 ATHAR_MARK = svg("athar.svg")
+
+PLAY_ICON = ('<svg class="play-glyph" viewBox="0 0 24 24" aria-hidden="true" '
+             'focusable="false"><path d="M8.6 5.2 18.2 12 8.6 18.8Z"/></svg>')
 COTTAGES_MARK = svg("almajed-cottages.svg", optional=True)
 
 ARROW = ('<svg class="arrow" viewBox="0 0 12 12" fill="none" aria-hidden="true" '
@@ -679,6 +700,7 @@ def home(t, alt_href):
 
     bio = "\n        ".join("<p>%s</p>" % p for p in t["about_body"])
     athar_paras = "\n        ".join("<p>%s</p>" % p for p in t["athar_body"])
+    film_paras = "\n        ".join("<p>%s</p>" % p for p in t["film_body"])
     cottages_paras = "\n        ".join("<p>%s</p>" % p for p in t["cottages_body"])
     media_story = "\n        ".join("<p>%s</p>" % p for p in t["media_story"])
 
@@ -738,6 +760,29 @@ def home(t, alt_href):
           <div class="prose athar__story reveal" data-delay="1">
         {athar_paras}
           </div>
+
+          <!-- a documented moment: the film, screened in Madinah -->
+          <figure class="film">
+            <div class="film__stage reveal" data-film>
+              <video class="film__video" data-film-video
+                     poster="{film_poster}" preload="none" playsinline controls
+                     width="480" height="608" aria-label="{film_alt}">
+                <source src="{film_src}" type="video/mp4">
+              </video>
+              <button class="film__play" type="button" data-film-play>
+                <span class="film__play-mark" aria-hidden="true">{play_icon}</span>
+                <span class="film__play-label">{film_play}</span>
+              </button>
+            </div>
+            <figcaption class="film__body reveal" data-delay="1">
+              <p class="meta">{film_meta}</p>
+              <h3 class="film__title">{film_title}</h3>
+              <div class="prose film__note">
+            {film_paras}
+              </div>
+            </figcaption>
+          </figure>
+
           <p class="athar__visit reveal" data-delay="2">
             <a class="btn" href="{athar_url}" target="_blank" rel="noopener">
               <span>{athar_cta}</span>{arrow}
@@ -805,6 +850,11 @@ def home(t, alt_href):
         athar_title=t["athar_title"],
         athar_paras=athar_paras,
         athar_url=SITE["athar_url"], athar_cta=t["athar_cta"], arrow=ARROW,
+        film_poster="%s/athar-film-480.jpg" % A,
+        film_src="%s/video/athar-madinah-film.mp4" % ASSETS,
+        film_alt=t["film_alt"], play_icon=PLAY_ICON,
+        film_play=t["film_play"], film_meta=t["film_meta"],
+        film_title=t["film_title"], film_paras=film_paras,
         cottages_mark=COTTAGES_MARK, cottages_logo_alt=t["cottages_logo_alt"],
         cottages_title=t["cottages_title"],
         cottages_paras=cottages_paras,
