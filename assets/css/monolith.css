@@ -1,0 +1,487 @@
+/* ============================================================
+   The Monolith Majlis — project page
+   Loaded by monolith.html / en/monolith.html only, after site.css.
+   Nothing here reaches the other pages: every rule hangs off
+   html.theme-cream or a .mono-* class.
+
+   Art direction: warm cream paper (#f0ede6), black type and black
+   hairlines. Thmanyah for everything, Arabic headings included.
+   No gradients, no cards, no shadows beyond the site's own navbar.
+   Mobile first.
+   ============================================================ */
+
+/* ---------- 1. Page tokens ---------- */
+
+html.theme-cream {
+  --paper: #f0ede6;
+  --surface: #f0ede6;
+  --placeholder: #e4e0d6;
+  --ink: #0c0c0c;
+  --ink-70: #2a2926;
+  --ink-45: #605d56;
+  --line: rgba(12, 12, 12, 0.9);
+  --line-soft: rgba(12, 12, 12, 0.2);
+  --stone: #7a6a4a;          /* the limestone, darkened for small type */
+  --mono-gap: clamp(4.5rem, 11vw, 9.5rem);
+}
+
+/* Thmanyah for every heading on this page, in both languages */
+html.theme-cream[lang] { --font-display: var(--font-body); }
+
+html.theme-cream body { background-color: var(--paper); }
+html.theme-cream ::selection { background: var(--ink); color: var(--paper); }
+
+/* Latin set inside the Arabic page: small, tracked, upper case */
+.mono-latin {
+  font-size: var(--step--2);
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+/* ---------- 2. Hero ---------- */
+
+.mono-hero { position: relative; }
+
+.mono-hero__media {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 753 / 941;
+  overflow: hidden;
+  background: var(--placeholder);
+}
+@media (min-width: 700px) {
+  .mono-hero__media {
+    aspect-ratio: 16 / 9;
+    max-height: 92vh;
+    max-height: 92svh;
+  }
+}
+.mono-hero__media picture { display: block; width: 100%; height: 100%; }
+.mono-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+}
+.mono-hero__media picture { animation: monoIn 1.5s var(--ease) both; }
+@keyframes monoIn {
+  from { opacity: 0; transform: scale(1.035); }
+  to { opacity: 1; transform: none; }
+}
+
+/* a very slow drift as the image leaves the viewport — CSS only,
+   and only where scroll-driven animation exists */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .mono-hero__media img {
+      animation: monoDrift linear both;
+      animation-timeline: view();
+      animation-range: exit 0% exit 100%;
+    }
+  }
+}
+@keyframes monoDrift {
+  from { transform: none; }
+  to { transform: translate3d(0, 5%, 0) scale(1.03); }
+}
+
+.mono-hero__head {
+  padding-top: clamp(2.25rem, 7vw, 4.5rem);
+}
+
+.mono-hero__eyebrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--step--1);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--ink);
+}
+html[lang="en"] .mono-hero__eyebrow {
+  font-size: var(--step--2);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.mono-hero__title {
+  margin-top: clamp(1.75rem, 6vw, 3.5rem);
+  font-family: var(--font-body);
+  font-size: clamp(2.7rem, 1.35rem + 6.6vw, 7.25rem);
+  font-weight: 300;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  max-width: 12ch;
+}
+html[lang="ar"] .mono-hero__title {
+  line-height: 1.32;
+  letter-spacing: 0;
+  max-width: 11ch;
+}
+
+.mono-hero__alt {
+  margin-top: clamp(0.9rem, 2.6vw, 1.5rem);
+  color: var(--stone);
+}
+html[lang="ar"] .mono-hero__alt { text-align: right; }
+html[lang="en"] .mono-hero__alt {
+  text-align: left;
+  font-size: var(--step-1);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.mono-facts {
+  margin-top: clamp(2.5rem, 8vw, 5rem);
+  display: grid;
+  border-top: 1px solid var(--line-soft);
+}
+.mono-facts__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding-block: 0.85rem;
+  border-bottom: 1px solid var(--line-soft);
+}
+.mono-facts dt {
+  flex: 0 0 auto;
+  font-size: var(--step--1);
+  font-weight: 400;
+  color: var(--ink-45);
+}
+.mono-facts dd {
+  font-size: var(--step--1);
+  font-weight: 400;
+  color: var(--ink);
+  text-align: end;
+}
+html[lang="en"] .mono-facts dt,
+html[lang="en"] .mono-facts dd {
+  font-size: var(--step--2);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+@media (min-width: 1000px) {
+  .mono-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(2rem, 4vw, 3.5rem);
+    border-top: 0;
+  }
+  .mono-facts__item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.35rem;
+    padding-block: 1rem 0;
+    border-bottom: 0;
+    border-top: 1px solid var(--line-soft);
+  }
+  .mono-facts dd { text-align: start; }
+}
+
+/* ---------- 3. Opening statement ---------- */
+
+.mono-open { padding-block: var(--mono-gap); }
+
+.mono-statement {
+  font-size: clamp(1.75rem, 1.15rem + 2.9vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  max-width: 20ch;
+  text-wrap: balance;
+}
+html[lang="ar"] .mono-statement {
+  line-height: 1.62;
+  letter-spacing: 0;
+  max-width: 19ch;
+}
+@media (min-width: 900px) {
+  .mono-statement { margin-inline-start: calc(100% / 12 * 4); }
+}
+
+/* ---------- 4. Chapters ---------- */
+
+.mono-ch { padding-bottom: var(--mono-gap); }
+
+.mono-ch__grid {
+  display: grid;
+  gap: clamp(1.75rem, 6vw, 2.75rem);
+}
+.mono-ch__grid::before {
+  content: "";
+  grid-column: 1 / -1;
+  height: 1px;
+  background: var(--line);
+}
+
+.mono-ch__head {
+  display: flex;
+  align-items: baseline;
+  gap: 1.1rem;
+}
+
+.mono-num {
+  flex: 0 0 auto;
+  font-size: var(--step--2);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: var(--stone);
+  line-height: 1.5;
+}
+
+.mono-ch__title {
+  font-family: var(--font-body);
+  font-size: var(--step-2);
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+html[lang="ar"] .mono-ch__title {
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.mono-prose p { max-width: 56ch; color: var(--ink-70); }
+.mono-prose p:first-child { color: var(--ink); }
+
+@media (min-width: 900px) {
+  .mono-ch__grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 2.4vw, 2.5rem);
+    row-gap: clamp(1.75rem, 3vw, 2.5rem);
+  }
+  .mono-ch__head {
+    grid-column: 1 / span 4;
+    flex-direction: column;
+    gap: 0.9rem;
+    align-self: start;
+    position: sticky;
+    top: calc(var(--nav-h) + 44px);
+  }
+  .mono-ch__body { grid-column: 5 / span 8; }
+}
+
+/* ---- 02: the triad ---- */
+
+.mono-triad {
+  display: grid;
+  border-bottom: 1px solid var(--line-soft);
+}
+.mono-triad__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: clamp(0.9rem, 3vw, 1.35rem);
+  border-top: 1px solid var(--line-soft);
+}
+.mono-triad__item:first-child { border-top: 0; padding-top: 0; }
+.mono-triad__main {
+  font-size: clamp(2rem, 1.3rem + 3.4vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+html[lang="ar"] .mono-triad__main { line-height: 1.5; letter-spacing: 0; }
+.mono-triad .mono-latin { color: var(--stone); flex: 0 0 auto; }
+@media (max-width: 899px) {
+  .mono-triad__item:first-child { padding-top: 0.35rem; }
+}
+
+.mono-split {
+  display: grid;
+  gap: clamp(2.25rem, 7vw, 3.5rem);
+  margin-top: clamp(3rem, 8vw, 5.5rem);
+}
+.mono-plate--block { width: 82%; max-width: 500px; }
+@media (min-width: 900px) {
+  .mono-split {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 2.4vw, 2.5rem);
+    align-items: start;
+  }
+  .mono-plate--block { grid-column: 1 / span 4; width: 100%; }
+  .mono-split .mono-prose { grid-column: 6 / span 7; }
+}
+
+/* ---------- 5. Plates (photographs) ---------- */
+
+.mono-plate { margin: 0; }
+
+.mono-plate__frame {
+  overflow: hidden;
+  background: var(--placeholder);
+}
+.mono-plate__frame picture { display: block; width: 100%; height: 100%; }
+.mono-plate__frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.mono-plate--above .mono-plate__frame { aspect-ratio: 16 / 9; }
+.mono-plate--block .mono-plate__frame { aspect-ratio: 4 / 5; }
+.mono-plate--seat .mono-plate__frame { aspect-ratio: 1 / 1; }
+.mono-plate--wall .mono-plate__frame { aspect-ratio: 510 / 382; }
+.mono-plate--table .mono-plate__frame { aspect-ratio: 3 / 2; }
+.mono-plate--sofa .mono-plate__frame { aspect-ratio: 700 / 310; }
+.mono-plate--sky .mono-plate__frame { aspect-ratio: 2 / 3; }
+
+.mono-plate__cap {
+  display: grid;
+  gap: 0.15rem;
+  margin-top: 0.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--line-soft);
+  font-size: var(--step--1);
+  line-height: 1.6;
+}
+.mono-plate__label { font-weight: 400; color: var(--ink); }
+.mono-plate__text { font-weight: 300; color: var(--ink-45); max-width: 44ch; }
+html[lang="en"] .mono-plate__label {
+  font-size: var(--step--2);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.mono-ch--plates .mono-plate--above { margin-top: clamp(2.75rem, 7vw, 4.5rem); }
+
+/* mobile: one column, but not one width — the plates step from
+   side to side so the sequence reads as a layout, not a list */
+.mono-trio,
+.mono-duo {
+  display: grid;
+  gap: clamp(2.5rem, 9vw, 3.5rem);
+  margin-top: clamp(2.5rem, 9vw, 4.5rem);
+}
+.mono-plate--seat { width: 72%; max-width: 420px; }
+.mono-plate--wall { width: 86%; max-width: 510px; justify-self: end; }
+.mono-plate--table { width: 78%; max-width: 450px; }
+.mono-plate--sky { width: 82%; max-width: 520px; justify-self: end; }
+
+@media (min-width: 820px) {
+  .mono-trio {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 2.4vw, 2.5rem);
+    align-items: start;
+  }
+  .mono-plate--seat { grid-column: 1 / span 3; width: 100%; margin-top: clamp(3rem, 8vw, 7rem); }
+  .mono-plate--wall { grid-column: 5 / span 4; width: 100%; justify-self: stretch; }
+  .mono-plate--table { grid-column: 10 / span 3; width: 100%; margin-top: clamp(5rem, 13vw, 12rem); }
+
+  .mono-duo {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 2.4vw, 2.5rem);
+    align-items: end;
+    margin-top: clamp(4rem, 9vw, 8rem);
+  }
+  .mono-plate--sky { grid-column: 2 / span 4; width: 100%; justify-self: stretch; }
+  .mono-plate--sofa { grid-column: 7 / span 6; }
+}
+
+@media (hover: hover) and (min-width: 1000px) {
+  .mono-plate__frame img { transition: transform 1.2s var(--ease); }
+  .mono-plate:hover .mono-plate__frame img { transform: scale(1.02); }
+}
+
+/* ---------- 6. Project information ---------- */
+
+.mono-info { border-bottom: 1px solid var(--line-soft); }
+.mono-info__row {
+  display: grid;
+  gap: 0.2rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--line-soft);
+}
+.mono-info__row:first-child { border-top: 0; padding-top: 0; }
+.mono-info dt {
+  font-size: var(--step--1);
+  font-weight: 400;
+  color: var(--ink-45);
+  line-height: 1.5;
+}
+html[lang="en"] .mono-info dt {
+  font-size: var(--step--2);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.mono-info dd {
+  font-size: var(--step-0);
+  font-weight: 300;
+  color: var(--ink);
+  max-width: 46ch;
+}
+.mono-info dd [dir="ltr"] { display: inline-block; }
+@media (min-width: 640px) {
+  .mono-info__row {
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+}
+
+/* ---------- 7. The personal statement ---------- */
+
+.mono-prose--voice p {
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--ink);
+  max-width: 34ch;
+}
+html[lang="ar"] .mono-prose--voice p { line-height: 1.8; max-width: 33ch; }
+.mono-prose--voice p + p { margin-top: 1.2em; }
+.mono-prose--voice p:last-child { color: var(--ink-45); }
+
+/* ---------- 8. Closing ---------- */
+
+.mono-end {
+  padding-block: var(--mono-gap) calc(var(--mono-gap) * 1.05);
+  border-top: 1px solid var(--line);
+}
+
+.mono-end__line {
+  font-size: clamp(2.1rem, 1.2rem + 4.4vw, 5.25rem);
+  font-weight: 300;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+html[lang="ar"] .mono-end__line { line-height: 1.5; letter-spacing: 0; }
+.mono-end__line span { display: block; }
+.mono-end__line span + span { color: var(--ink); }
+
+.mono-sign {
+  margin-top: clamp(3.5rem, 10vw, 7rem);
+  display: grid;
+  justify-items: start;
+  gap: 0.3rem;
+}
+.mono-sign__mark { display: block; color: var(--ink); margin-bottom: 0.6rem; }
+.mono-sign__mark svg { height: clamp(46px, 7vw, 62px); width: auto; }
+.mono-sign__mark svg path { fill: currentColor; }
+.mono-sign__alt { color: var(--ink); }
+
+.mono-end__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem 2.75rem;
+  margin-top: clamp(3rem, 8vw, 5rem);
+}
+html.theme-cream .link { border-bottom-color: var(--line-soft); }
+html.theme-cream .link:hover { border-bottom-color: var(--ink); }
+
+/* ---------- 9. Reduced motion / no JS ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .mono-hero__media picture,
+  .mono-hero__media img { animation: none; opacity: 1; transform: none; }
+}
