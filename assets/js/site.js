@@ -106,6 +106,32 @@
     setOpen(false);
   }
 
+  /* ---------- sub-menu under "Works" ----------
+     Hover and keyboard focus are handled in CSS. The caret button is
+     the touch path: it toggles the panel, and Escape or a tap
+     anywhere else closes it. ---------------------------------------- */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-sub]"), function (item) {
+    var btn = item.querySelector("[data-sub-toggle]");
+    if (!btn) return;
+    var setSub = function (open) {
+      item.classList.toggle("is-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setSub(!item.classList.contains("is-open"));
+    });
+    document.addEventListener("click", function (e) {
+      if (!item.contains(e.target)) setSub(false);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && item.classList.contains("is-open")) {
+        setSub(false);
+        btn.focus();
+      }
+    });
+  });
+
   /* ---------- reveal on scroll ---------- */
   var items = document.querySelectorAll(".reveal, .img-reveal, .tile");
 

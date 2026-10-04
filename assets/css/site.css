@@ -336,8 +336,82 @@ html[lang="ar"] .section-title { font-weight: 400; }
 }
 .nav__link:hover { color: var(--ink); }
 .nav__link:hover::after,
+.nav__link.is-current::after,
 .nav__link[aria-current="page"]::after { transform: scaleX(1); }
+.nav__link.is-current,
 .nav__link[aria-current="page"] { color: var(--ink); }
+
+/* --- project pages listed under "Works" ---
+   Desktop: a small quiet panel below the bar, opened by hover, by
+   keyboard focus, or by the caret button (touch). The bar must not
+   clip it, so the bar's overflow is released from 900px up. */
+@media (min-width: 900px) { .nav__bar { overflow: visible; } }
+
+.nav__item--sub { position: relative; display: flex; align-items: center; gap: 0.15em; }
+
+.nav__caret {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  margin-inline-end: -6px;
+  color: var(--ink-45);
+  transition: color 0.35s var(--ease);
+}
+.nav__caret svg { width: 9px; height: 9px; transition: transform 0.4s var(--ease); }
+.nav__caret:hover { color: var(--ink); }
+
+.nav__links .nav__sub {
+  display: block;
+  position: absolute;
+  top: calc(50% + var(--nav-h) / 2 + 8px);
+  inset-inline-start: -1.1rem;
+  min-width: max-content;
+  padding: 0.35rem 1.1rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 44px rgba(22, 24, 26, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5px);
+  transition: opacity 0.3s var(--ease), transform 0.4s var(--ease), visibility 0s 0.3s;
+}
+/* keeps the hover alive across the gap between the bar and the panel */
+.nav__sub::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 100%;
+  height: calc(var(--nav-h) / 2 - 6px);
+}
+.nav__item--sub.is-open .nav__sub,
+.nav__item--sub:focus-within .nav__sub {
+  opacity: 1; visibility: visible; transform: none;
+  transition: opacity 0.3s var(--ease), transform 0.4s var(--ease), visibility 0s;
+}
+.nav__item--sub.is-open .nav__caret svg { transform: rotate(180deg); }
+@media (hover: hover) {
+  .nav__item--sub:hover .nav__sub {
+    opacity: 1; visibility: visible; transform: none;
+    transition: opacity 0.3s var(--ease), transform 0.4s var(--ease), visibility 0s;
+  }
+  .nav__item--sub:hover .nav__caret svg { transform: rotate(180deg); }
+}
+.nav__sub li + li { border-top: 1px solid var(--line-soft); }
+.nav__sub a {
+  display: block;
+  padding-block: 0.7rem;
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink-70);
+  white-space: nowrap;
+  transition: color 0.35s var(--ease);
+}
+.nav__sub a:hover,
+.nav__sub a[aria-current="page"] { color: var(--ink); }
 
 .nav__end { display: flex; align-items: center; gap: 0.9rem; flex: 0 0 auto; }
 
@@ -411,6 +485,15 @@ html[lang="ar"] .section-title { font-weight: 400; }
   line-height: 1.3;
   color: var(--ink);
 }
+/* project pages nested under "Works" in the mobile menu */
+.nav__menu-sub { padding-inline-start: 1.15rem; padding-bottom: 0.65rem; }
+.nav__menu .nav__menu-sub li + li { border-top: 0; }
+.nav__menu .nav__menu-sub a {
+  padding-block: 0.42rem;
+  font-size: var(--step-0);
+  color: var(--ink-70);
+}
+.nav__menu .nav__menu-sub a[aria-current="page"] { color: var(--ink); }
 
 /* ---------- 6. Hero — quiet type, mosaic horizon ----------
    The drifting mosaic is a band at the foot of the hero, not a

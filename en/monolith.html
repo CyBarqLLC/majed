@@ -9,7 +9,7 @@
   <link rel="alternate" hreflang="ar" href="https://majednamous.com/monolith.html">
   <link rel="alternate" hreflang="en" href="https://majednamous.com/en/monolith.html">
   <link rel="alternate" hreflang="x-default" href="https://majednamous.com/monolith.html">
-  <meta name="theme-color" content="#f0ede6">
+  <meta name="theme-color" content="#f9f4ea">
   <link rel="icon" href="../favicon.ico" sizes="32x32">
   <link rel="icon" href="../assets/img/favicon-512.png" type="image/png" sizes="512x512">
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
@@ -24,8 +24,8 @@
   <link rel="preload" as="font" type="font/woff" href="../assets/fonts/thmanyah-light.woff" crossorigin>
   <link rel="preload" as="image" type="image/webp" href="../assets/img/mono-hero-m-753.webp" media="(max-width: 699px)" fetchpriority="high">
   <link rel="preload" as="image" type="image/webp" imagesrcset="../assets/img/mono-hero-1472.webp 1472w, ../assets/img/mono-hero-1100.webp 1100w, ../assets/img/mono-hero-800.webp 800w" imagesizes="100vw" media="(min-width: 700px)" fetchpriority="high">
-  <link rel="stylesheet" href="../assets/css/site.css?v=395edbee">
-  <link rel="stylesheet" href="../assets/css/monolith.css?v=5c8f9310">
+  <link rel="stylesheet" href="../assets/css/site.css?v=45bcbfe7">
+  <link rel="stylesheet" href="../assets/css/monolith.css?v=bfd956ba">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -44,10 +44,9 @@
     <nav class="nav__links" aria-label="Primary">
       <ul>
         <li><a class="nav__link" href="index.html#top">Home</a></li>
-        <li><a class="nav__link" href="index.html#works">Works</a></li>
+        <li class="nav__item--sub" data-sub><a class="nav__link is-current" href="index.html#works">Works</a><button class="nav__caret" type="button" data-sub-toggle aria-expanded="false" aria-controls="nav-sub" aria-label="Selected projects"><svg viewBox="0 0 10 10" fill="none" aria-hidden="true" focusable="false"><path d="M2 3.6 5 6.6 8 3.6" stroke="currentColor" stroke-width="1.1"/></svg></button><ul class="nav__sub" id="nav-sub"><li><a href="monolith.html" aria-current="page">The Monolith Majlis</a></li><li><a href="aqsa.html">The Al-Aqsa Car</a></li></ul></li>
         <li><a class="nav__link" href="index.html#about">About</a></li>
         <li><a class="nav__link" href="index.html#athar">Athar</a></li>
-        <li><a class="nav__link" href="aqsa.html">Al-Aqsa Car</a></li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -63,10 +62,9 @@
     <div class="nav__menu-inner">
       <ul>
         <li><a class="" href="index.html#top">Home</a></li>
-        <li><a class="" href="index.html#works">Works</a></li>
+        <li><a href="index.html#works">Works</a><ul class="nav__menu-sub"><li><a href="monolith.html" aria-current="page">The Monolith Majlis</a></li><li><a href="aqsa.html">The Al-Aqsa Car</a></li></ul></li>
         <li><a class="" href="index.html#about">About</a></li>
         <li><a class="" href="index.html#athar">Athar</a></li>
-        <li><a class="" href="aqsa.html">Al-Aqsa Car</a></li>
         <li><a class="" href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -78,87 +76,62 @@
   <section class="mono-hero" id="top" aria-labelledby="mono-title">
     <figure class="mono-hero__media"><picture><source media="(max-width: 699px)" type="image/webp" srcset="../assets/img/mono-hero-m-753.webp" width="753" height="941"><source type="image/webp" sizes="100vw" srcset="../assets/img/mono-hero-1472.webp 1472w, ../assets/img/mono-hero-1100.webp 1100w, ../assets/img/mono-hero-800.webp 800w"><img src="../assets/img/mono-hero-1472.jpg" alt="An outdoor majlis of large stone blocks gathered around a round stone table, with a stone wall behind it holding firewood in a circular opening" width="1472" height="828" loading="eager" decoding="async" fetchpriority="high"></picture></figure>
     <div class="wrap mono-hero__head">
-      <p class="mono-hero__eyebrow reveal"><span>Project</span><span dir="ltr">2026</span></p>
+      <p class="mono-hero__eyebrow reveal"><span>Amman, Jordan</span><span>September 2026</span></p>
       <h1 class="mono-hero__title reveal" id="mono-title">The Monolith Majlis</h1>
       <p class="mono-hero__alt  reveal" data-delay="1" lang="ar" dir="rtl">مجلس الكتلة الواحدة</p>
-      <dl class="mono-facts reveal" data-delay="2"><div class="mono-facts__item"><dt>Location</dt><dd>Amman, Jordan</dd></div><div class="mono-facts__item"><dt>Completed</dt><dd>September 2026</dd></div><div class="mono-facts__item"><dt>Field</dt><dd>Landscape / Architecture / Stone</dd></div></dl>
     </div>
   </section>
 
   <section class="mono-open">
     <div class="wrap">
-      <p class="mono-statement reveal">When the block itself is the seat, sitting becomes a direct encounter with stone.</p>
+      <p class="mono-statement reveal">An outdoor majlis in natural stone, with a single block for every seat.</p>
     </div>
   </section>
 
   <section class="mono-ch" aria-labelledby="m1">
     <div class="wrap mono-ch__grid">
       <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">01</p><h2 class="mono-ch__title" id="m1">The idea</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose  reveal" data-delay="1"><p>It began with a simple question: how can stone be present in a place with its full weight, and not only its face?</p><p>We are used to seeing stone as cladding on a wall, a frame around a window, a finish on a facade. I was looking for something different: stone that covers nothing and decorates nothing, that stands in the open as a mass with its own weight and shadow.</p><p>From there came the decision that the seat itself would be a single block of stone. Here the stone is not laid over something else. It is the thing itself.</p></div></div>
+      <div class="mono-ch__body"><div class="prose mono-prose reveal" data-delay="1"><p>In most of what we build, stone comes last: we build first, then clad in stone. In this majlis I wanted to start from it. Instead of building a seat and covering it with stone, I chose to make the seat itself a single block of stone.</p></div></div>
     </div>
   </section>
 
-  <section class="mono-ch mono-ch--key" aria-labelledby="m2">
+  <section class="mono-ch" aria-labelledby="m2">
     <div class="wrap mono-ch__grid">
       <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">02</p><h2 class="mono-ch__title" id="m2">The single block</h2></header>
-      <div class="mono-ch__body">
-        <ul class="mono-triad reveal"><li class="mono-triad__item"><span class="mono-triad__main">One block</span></li><li class="mono-triad__item"><span class="mono-triad__main">One mass</span></li><li class="mono-triad__item"><span class="mono-triad__main">One piece</span></li></ul>
-      </div>
-    </div>
-    <div class="wrap mono-split">
-      <figure class="mono-plate mono-plate--block img-reveal">
-        <div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-block-500.webp 500w" sizes="(min-width: 1320px) 520px, (min-width: 880px) 40vw, 92vw"><img src="../assets/img/mono-block-500.jpg" alt="A single block of stone forming a seat and its back, with fabric cushions on it" loading="lazy" decoding="async" width="500" height="625"></picture></div>
-        <figcaption class="mono-plate__cap"><span class="mono-plate__text">Seat and back, from the same block.</span></figcaption>
-      </figure>
-      <div class="prose mono-prose  reveal" data-delay="1"><p>Every main seat in this majlis is one complete block of stone. I did not assemble pieces to make a seat. I worked each block the way one carves: take away what is too much, keep what is enough to sit on.</p><p>I did not want the stone to look as if it had been built into a seat. I wanted the seat to look as if it had been in the stone from the beginning.</p><p>So I left the surface its natural roughness, to keep each block close to where it came from.</p></div>
+      <div class="mono-ch__body"><div class="prose mono-prose reveal" data-delay="1"><p>Every seat here is one piece: the seat and its back are the same stone, with nothing assembled. I left its surface rough, because I wanted the stone to remain stone even as a seat.</p></div><figure class="mono-plate mono-plate--block mono-ch__fig img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-block-500.webp 500w" sizes="(min-width: 900px) 400px, 78vw"><img src="../assets/img/mono-block-500.jpg" alt="A single block of stone forming a seat and its back, with fabric cushions on it" loading="lazy" decoding="async" width="500" height="625"></picture></div></figure></div>
     </div>
   </section>
 
   <section class="mono-ch" aria-labelledby="m3">
     <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">03</p><h2 class="mono-ch__title" id="m3">Stone as architecture</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose  reveal" data-delay="1"><p>In Jordan, stone is more than a building material; it is part of the memory of the place. I grew up in a city known by the colour of its stone, its houses, stairways and walls made of the same material that comes out of its ground.</p><p>Because it is so familiar, we rarely look at it. I wanted to put it at the front of the scene: the material we all know, in a form other than the usual one.</p><p>I am not trying to imitate the past here. No arches, no ornament; only the stone, in the language of today.</p></div></div>
+      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">03</p><h2 class="mono-ch__title" id="m3">Stone and the majlis</h2></header>
+      <div class="mono-ch__body"><div class="prose mono-prose reveal" data-delay="1"><p>Stone and the majlis are both familiar in our homes in Jordan: we build with one and gather in the other. What I did here was bring them together into one thing. The majlis stays as we know it, seats facing each other around a table for hospitality and conversation, only this time in stone and in the open air.</p></div><figure class="mono-plate mono-plate--sky mono-ch__fig mono-ch__fig--end img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-sky-720.webp 720w" sizes="(min-width: 900px) 400px, 78vw"><img src="../assets/img/mono-sky-720.jpg" alt="The majlis under a wide overcast sky, hills stretching beyond the stone wall" loading="lazy" decoding="async" width="720" height="1080"></picture></div></figure></div>
     </div>
   </section>
 
-  <section class="mono-ch" aria-labelledby="m4">
+  <section class="mono-ch mono-ch--plates" aria-labelledby="m4">
     <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">04</p><h2 class="mono-ch__title" id="m4">A Jordanian majlis, in a contemporary language</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose  reveal" data-delay="1"><p>A majlis, for us, is not a set of seats. It is where a guest is received, where conversation goes round, where people gather. Its worth lies in who sits there before it lies in what they sit on.</p><p>I kept that meaning and changed its language. The seating still faces inward around one centre, as in any majlis, but the seats are stone blocks closer to sculpture, the floor is gravel, and the ceiling is open sky.</p><p>So four things meet in one space: the Jordanian majlis, Jordanian stone, sculpture and contemporary landscape, and I tried to keep any one of them from overriding the others.</p></div></div>
-    </div>
-  </section>
-
-  <section class="mono-ch mono-ch--plates" aria-labelledby="m5">
-    <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">05</p><h2 class="mono-ch__title" id="m5">Composition</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose  reveal" data-delay="1"><p>The composition rests on very few elements: blocks to sit on, a table at the centre, a wall that closes the scene, and planting that softens its edges. The rest is space.</p></div></div>
+      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">04</p><h2 class="mono-ch__title" id="m4">Composition</h2></header>
+      <div class="mono-ch__body"><div class="prose mono-prose reveal" data-delay="1"><p>The composition is simple: seats gathered around a round stone table, with a wall behind them that holds the firewood. Around them, red gravel and planting leave the stone as the clearest thing in the scene.</p></div></div>
     </div>
     <div class="wrap">
-      <figure class="mono-plate mono-plate--above  img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-above-1280.webp 1280w, ../assets/img/mono-above-800.webp 800w" sizes="(min-width: 1320px) 1240px, 92vw"><img src="../assets/img/mono-above-1280.jpg" alt="The majlis from above: stone seating blocks around a round table on red gravel" loading="lazy" decoding="async" width="1280" height="720"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">From above</span><span class="mono-plate__text">The seating blocks gather around the central table; the wall closes the scene on one side.</span></figcaption></figure>
-      <div class="mono-trio"><figure class="mono-plate mono-plate--seat  img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-seat-420.webp 420w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="../assets/img/mono-seat-420.jpg" alt="A stone seating block beside a flowering shrub" loading="lazy" decoding="async" width="420" height="420"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">Block and planting</span><span class="mono-plate__text">The colour of the planting against the colour of the stone.</span></figcaption></figure><figure class="mono-plate mono-plate--wall  img-reveal" data-delay="1"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-wall-510.webp 510w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="../assets/img/mono-wall-510.jpg" alt="A stone wall with a circular and a rectangular opening, both filled with firewood" loading="lazy" decoding="async" width="510" height="382"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">The wall</span><span class="mono-plate__text">Two openings in the stone, a circle and a rectangle, holding firewood.</span></figcaption></figure><figure class="mono-plate mono-plate--table  img-reveal" data-delay="2"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-table-450.webp 450w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="../assets/img/mono-table-450.jpg" alt="A low round stone table at the centre of the majlis" loading="lazy" decoding="async" width="450" height="300"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">The central table</span><span class="mono-plate__text">A low round block, the centre of the majlis.</span></figcaption></figure></div>
-      <div class="mono-duo"><figure class="mono-plate mono-plate--sky  img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-sky-720.webp 720w" sizes="(min-width: 1320px) 520px, (min-width: 880px) 40vw, 92vw"><img src="../assets/img/mono-sky-720.jpg" alt="The majlis under a wide overcast sky, hills stretching beyond the stone wall" loading="lazy" decoding="async" width="720" height="1080"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">The space around</span><span class="mono-plate__text">The majlis is open to the hills and the sky.</span></figcaption></figure><figure class="mono-plate mono-plate--sofa  img-reveal" data-delay="1"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-sofa-700.webp 700w" sizes="(min-width: 1320px) 640px, (min-width: 880px) 50vw, 92vw"><img src="../assets/img/mono-sofa-700.jpg" alt="Light fabric cushions on a long stone seat" loading="lazy" decoding="async" width="700" height="310"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">Stone and fabric</span><span class="mono-plate__text">The cushions rest on the stone without hiding it.</span></figcaption></figure></div>
+      <figure class="mono-plate mono-plate--above img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-above-1280.webp 1280w, ../assets/img/mono-above-800.webp 800w" sizes="(min-width: 1320px) 1240px, 92vw"><img src="../assets/img/mono-above-1280.jpg" alt="The majlis from above: stone seating blocks around a round table on red gravel" loading="lazy" decoding="async" width="1280" height="720"></picture></div><figcaption class="mono-plate__cap">From above</figcaption></figure>
+      <div class="mono-trio"><figure class="mono-plate mono-plate--seat img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-seat-420.webp 420w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="../assets/img/mono-seat-420.jpg" alt="A stone seating block beside a flowering shrub" loading="lazy" decoding="async" width="420" height="420"></picture></div><figcaption class="mono-plate__cap">Block and planting</figcaption></figure><figure class="mono-plate mono-plate--wall img-reveal" data-delay="1"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-wall-510.webp 510w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="../assets/img/mono-wall-510.jpg" alt="A stone wall with a circular and a rectangular opening, both filled with firewood" loading="lazy" decoding="async" width="510" height="382"></picture></div><figcaption class="mono-plate__cap">The wall</figcaption></figure><figure class="mono-plate mono-plate--table img-reveal" data-delay="2"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="../assets/img/mono-table-450.webp 450w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="../assets/img/mono-table-450.jpg" alt="A low round stone table at the centre of the majlis" loading="lazy" decoding="async" width="450" height="300"></picture></div><figcaption class="mono-plate__cap">The central table</figcaption></figure></div>
     </div>
   </section>
 
-  <section class="mono-ch" aria-labelledby="m6">
+  <section class="mono-ch" aria-labelledby="m5">
     <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">06</p><h2 class="mono-ch__title" id="m6">Project information</h2></header>
+      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">05</p><h2 class="mono-ch__title" id="m5">Project information</h2></header>
       <div class="mono-ch__body">
-        <dl class="mono-info reveal" data-delay="1"><div class="mono-info__row"><dt>Project</dt><dd>The Monolith Majlis</dd></div><div class="mono-info__row"><dt>Arabic name</dt><dd><span lang="ar" dir="rtl">مجلس الكتلة الواحدة</span></dd></div><div class="mono-info__row"><dt>Location</dt><dd>Amman, Jordan</dd></div><div class="mono-info__row"><dt>Completed</dt><dd>September 2026</dd></div><div class="mono-info__row"><dt>Field</dt><dd>Landscape / Outdoor Architecture / Stone</dd></div><div class="mono-info__row"><dt>Concept</dt><dd>An outdoor majlis built on single blocks of stone that work as seating and as architectural masses at once.</dd></div><div class="mono-info__row"><dt>Design and execution</dt><dd>Majed Namous</dd></div></dl>
+        <dl class="mono-info reveal" data-delay="1"><div class="mono-info__row"><dt>Location</dt><dd>Amman, Jordan</dd></div><div class="mono-info__row"><dt>Completed</dt><dd>September 2026</dd></div><div class="mono-info__row"><dt>Field</dt><dd>Landscape / Outdoor Architecture / Stone</dd></div><div class="mono-info__row"><dt>Concept</dt><dd>An outdoor majlis of single stone blocks, each block a seat.</dd></div><div class="mono-info__row"><dt>Design and execution</dt><dd>Majed Namous</dd></div></dl>
       </div>
-    </div>
-  </section>
-
-  <section class="mono-ch mono-ch--voice" aria-labelledby="m7">
-    <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">07</p><h2 class="mono-ch__title" id="m7">Why a single block?</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose mono-prose--voice reveal" data-delay="1"><p>I was looking for something that cannot be made by setting one piece on top of another. What is assembled is easy to repeat. A block is different: each one has its own shape, weight and texture.</p><p>I wanted the place to have real weight. So the stone became the seat, the wall, the mass and the composition at once.</p><p>I had no close precedent to measure against, so the project carried a degree of experiment. That is what drew me to it.</p></div></div>
     </div>
   </section>
 
   <section class="mono-end">
     <div class="wrap">
-      <p class="mono-end__line reveal"><span>I did not place the stone in the space.</span> <span>I let it make the space.</span></p>
+      <p class="mono-end__line reveal"><span>Nothing here is more than stone and a place to sit.</span> <span>That is what I wanted.</span></p>
       <div class="mono-sign reveal" data-delay="1">
         <span class="mono-sign__mark"><svg aria-hidden="true" focusable="false" id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="81 194 1084 611">
   
@@ -215,9 +188,10 @@
         <h2>Links</h2>
         <ul>
           <li><a href="index.html#works">Works</a></li>
+          <li><a href="monolith.html">The Monolith Majlis</a></li>
+          <li><a href="aqsa.html">The Al-Aqsa Car</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#athar">Athar</a></li>
-          <li><a href="aqsa.html">Al-Aqsa Car</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -234,6 +208,6 @@
     </div>
   </div>
 </footer>
-<script src="../assets/js/site.js?v=e0962a8a" defer></script>
+<script src="../assets/js/site.js?v=3d705f26" defer></script>
 </body>
 </html>

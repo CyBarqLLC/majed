@@ -9,7 +9,7 @@
   <link rel="alternate" hreflang="ar" href="https://majednamous.com/monolith.html">
   <link rel="alternate" hreflang="en" href="https://majednamous.com/en/monolith.html">
   <link rel="alternate" hreflang="x-default" href="https://majednamous.com/monolith.html">
-  <meta name="theme-color" content="#f0ede6">
+  <meta name="theme-color" content="#f9f4ea">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="assets/img/favicon-512.png" type="image/png" sizes="512x512">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -24,8 +24,8 @@
   <link rel="preload" as="font" type="font/woff" href="assets/fonts/thmanyah-light.woff" crossorigin>
   <link rel="preload" as="image" type="image/webp" href="assets/img/mono-hero-m-753.webp" media="(max-width: 699px)" fetchpriority="high">
   <link rel="preload" as="image" type="image/webp" imagesrcset="assets/img/mono-hero-1472.webp 1472w, assets/img/mono-hero-1100.webp 1100w, assets/img/mono-hero-800.webp 800w" imagesizes="100vw" media="(min-width: 700px)" fetchpriority="high">
-  <link rel="stylesheet" href="assets/css/site.css?v=395edbee">
-  <link rel="stylesheet" href="assets/css/monolith.css?v=5c8f9310">
+  <link rel="stylesheet" href="assets/css/site.css?v=45bcbfe7">
+  <link rel="stylesheet" href="assets/css/monolith.css?v=bfd956ba">
 </head>
 <body>
 <a class="skip" href="#main">تخطّي إلى المحتوى</a>
@@ -44,10 +44,9 @@
     <nav class="nav__links" aria-label="التنقّل">
       <ul>
         <li><a class="nav__link" href="index.html#top">الرئيسية</a></li>
-        <li><a class="nav__link" href="index.html#works">الأعمال</a></li>
+        <li class="nav__item--sub" data-sub><a class="nav__link is-current" href="index.html#works">الأعمال</a><button class="nav__caret" type="button" data-sub-toggle aria-expanded="false" aria-controls="nav-sub" aria-label="مشاريع من الأعمال"><svg viewBox="0 0 10 10" fill="none" aria-hidden="true" focusable="false"><path d="M2 3.6 5 6.6 8 3.6" stroke="currentColor" stroke-width="1.1"/></svg></button><ul class="nav__sub" id="nav-sub"><li><a href="monolith.html" aria-current="page">مجلس الكتلة الواحدة</a></li><li><a href="aqsa.html">سيارة الأقصى</a></li></ul></li>
         <li><a class="nav__link" href="index.html#about">عن ماجد</a></li>
         <li><a class="nav__link" href="index.html#athar">أثر</a></li>
-        <li><a class="nav__link" href="aqsa.html">سيارة الأقصى</a></li>
         <li><a class="nav__link" href="contact.html">تواصل</a></li>
       </ul>
     </nav>
@@ -63,10 +62,9 @@
     <div class="nav__menu-inner">
       <ul>
         <li><a class="" href="index.html#top">الرئيسية</a></li>
-        <li><a class="" href="index.html#works">الأعمال</a></li>
+        <li><a href="index.html#works">الأعمال</a><ul class="nav__menu-sub"><li><a href="monolith.html" aria-current="page">مجلس الكتلة الواحدة</a></li><li><a href="aqsa.html">سيارة الأقصى</a></li></ul></li>
         <li><a class="" href="index.html#about">عن ماجد</a></li>
         <li><a class="" href="index.html#athar">أثر</a></li>
-        <li><a class="" href="aqsa.html">سيارة الأقصى</a></li>
         <li><a class="" href="contact.html">تواصل</a></li>
       </ul>
     </div>
@@ -78,87 +76,62 @@
   <section class="mono-hero" id="top" aria-labelledby="mono-title">
     <figure class="mono-hero__media"><picture><source media="(max-width: 699px)" type="image/webp" srcset="assets/img/mono-hero-m-753.webp" width="753" height="941"><source type="image/webp" sizes="100vw" srcset="assets/img/mono-hero-1472.webp 1472w, assets/img/mono-hero-1100.webp 1100w, assets/img/mono-hero-800.webp 800w"><img src="assets/img/mono-hero-1472.jpg" alt="مجلس خارجي من كتل حجرية كبيرة تتحلّق حول طاولة حجرية مستديرة، وخلفه جدار حجري بفتحة دائرية مملوءة بالحطب" width="1472" height="828" loading="eager" decoding="async" fetchpriority="high"></picture></figure>
     <div class="wrap mono-hero__head">
-      <p class="mono-hero__eyebrow reveal"><span>مشروع</span><span dir="ltr">2026</span></p>
+      <p class="mono-hero__eyebrow reveal"><span>عمّان، الأردن</span><span>سبتمبر 2026</span></p>
       <h1 class="mono-hero__title reveal" id="mono-title">مجلس الكتلة الواحدة</h1>
       <p class="mono-hero__alt mono-latin reveal" data-delay="1" lang="en" dir="ltr">The Monolith Majlis</p>
-      <dl class="mono-facts reveal" data-delay="2"><div class="mono-facts__item"><dt>الموقع</dt><dd>عمّان، الأردن</dd></div><div class="mono-facts__item"><dt>الإنجاز</dt><dd>سبتمبر 2026</dd></div><div class="mono-facts__item"><dt>المجال</dt><dd><span class="mono-latin" lang="en" dir="ltr">Landscape / Architecture / Stone</span></dd></div></dl>
     </div>
   </section>
 
   <section class="mono-open">
     <div class="wrap">
-      <p class="mono-statement reveal">حين تكون الكتلة هي المقعد، يصير الجلوس لقاءً مباشرًا مع الحجر.</p>
+      <p class="mono-statement reveal">مجلس خارجي من الحجر الطبيعي، لكل مقعد فيه كتلة واحدة.</p>
     </div>
   </section>
 
   <section class="mono-ch" aria-labelledby="m1">
     <div class="wrap mono-ch__grid">
       <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">01</p><h2 class="mono-ch__title" id="m1">الفكرة</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose  reveal" data-delay="1"><p>بدأت الفكرة من سؤال بسيط: كيف يحضر الحجر في المكان بوزنه كلّه، لا بوجهه فقط؟</p><p>اعتدنا أن نرى الحجر كسوةً لجدار، أو إطارًا لنافذة، أو لمسةً تزيّن واجهة. وكنت أبحث عن شيء مختلف: حجرٍ لا يغطّي شيئًا ولا يزيّن شيئًا، بل يقف في الفراغ كتلةً لها ثقلها وظلّها.</p><p>من هنا جاء القرار: أن يكون المقعد نفسه كتلةً حجرية واحدة. الحجر هنا لا يكسو شيئًا آخر؛ هو الشيء نفسه.</p></div></div>
+      <div class="mono-ch__body"><div class="prose mono-prose reveal" data-delay="1"><p>في أغلب ما نبنيه يأتي الحجر في النهاية: نبني أولًا، ثم نكسو بالحجر. في هذا المجلس أردت أن أبدأ منه. فبدل أن أبني مقعدًا وأغطّيه بالحجر، اخترت أن يكون المقعد نفسه كتلةً حجرية واحدة.</p></div></div>
     </div>
   </section>
 
-  <section class="mono-ch mono-ch--key" aria-labelledby="m2">
+  <section class="mono-ch" aria-labelledby="m2">
     <div class="wrap mono-ch__grid">
       <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">02</p><h2 class="mono-ch__title" id="m2">الكتلة الواحدة</h2></header>
-      <div class="mono-ch__body">
-        <ul class="mono-triad reveal"><li class="mono-triad__item"><span class="mono-triad__main">حجرٌ واحد</span><span class="mono-latin" lang="en" dir="ltr">One Block</span></li><li class="mono-triad__item"><span class="mono-triad__main">كتلةٌ واحدة</span><span class="mono-latin" lang="en" dir="ltr">One Mass</span></li><li class="mono-triad__item"><span class="mono-triad__main">قطعةٌ واحدة</span><span class="mono-latin" lang="en" dir="ltr">One Piece</span></li></ul>
-      </div>
-    </div>
-    <div class="wrap mono-split">
-      <figure class="mono-plate mono-plate--block img-reveal">
-        <div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-block-500.webp 500w" sizes="(min-width: 1320px) 520px, (min-width: 880px) 40vw, 92vw"><img src="assets/img/mono-block-500.jpg" alt="كتلة حجرية واحدة تشكّل مقعدًا ومسندًا، وعليها وسائد قماشية" loading="lazy" decoding="async" width="500" height="625"></picture></div>
-        <figcaption class="mono-plate__cap"><span class="mono-plate__text">المقعد والمسند من الكتلة نفسها.</span></figcaption>
-      </figure>
-      <div class="prose mono-prose  reveal" data-delay="1"><p>كل عنصر جلوس رئيسي في هذا المجلس كتلة حجرية واحدة كاملة. لم أجمع قطعًا لأصنع منها مقعدًا؛ تعاملت مع كل كتلة بمنطق النحت: أُزيل ما يزيد، وأُبقي ما يكفي للجلوس.</p><p>لم أرد أن يبدو الحجر وكأنه بُني ليصير مقعدًا. أردت أن يبدو المقعد وكأنه كان في الحجر منذ البداية.</p><p>ولذلك تركت للسطح خشونته الطبيعية، حتى تبقى الكتلة قريبة من أصلها.</p></div>
+      <div class="mono-ch__body"><div class="prose mono-prose reveal" data-delay="1"><p>كل مقعد هنا قطعة واحدة: مكان الجلوس والمسند من الحجر نفسه، دون تجميع. وتركت سطحه خشنًا، لأني أردت أن يبقى الحجر حجرًا حتى وهو مقعد.</p></div><figure class="mono-plate mono-plate--block mono-ch__fig img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-block-500.webp 500w" sizes="(min-width: 900px) 400px, 78vw"><img src="assets/img/mono-block-500.jpg" alt="كتلة حجرية واحدة تشكّل مقعدًا ومسندًا، وعليها وسائد قماشية" loading="lazy" decoding="async" width="500" height="625"></picture></div></figure></div>
     </div>
   </section>
 
   <section class="mono-ch" aria-labelledby="m3">
     <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">03</p><h2 class="mono-ch__title" id="m3">الحجر كعمارة</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose  reveal" data-delay="1"><p>الحجر في الأردن ليس مادّة بناء فحسب؛ إنه جزء من ذاكرة المكان. نشأتُ في مدينةٍ تُعرف بلون حجرها، بيوتها وأدراجها وأسوارها من المادّة نفسها التي تخرج من أرضها.</p><p>ولأنه مألوف إلى هذا الحد، قلّما نلتفت إليه. أردت أن أقدّمه في مقدّمة المشهد: المادّة التي نعرفها جميعًا، في هيئةٍ غير التي اعتدناها.</p><p>لا أحاول هنا أن أقلّد الماضي. لا أقواس ولا زخارف؛ فقط الحجر نفسه، بلغة اليوم.</p></div></div>
+      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">03</p><h2 class="mono-ch__title" id="m3">الحجر والمجلس</h2></header>
+      <div class="mono-ch__body"><div class="prose mono-prose reveal" data-delay="1"><p>الحجر والمجلس كلاهما مألوف في بيوتنا في الأردن: الأول نبني به، والثاني نجتمع فيه. ما فعلته هنا أنني جمعتهما في شيء واحد. بقي المجلس كما نعرفه، مقاعد متقابلة حول طاولة للضيافة والحديث، لكنه هذه المرة من الحجر وفي الهواء الطلق.</p></div><figure class="mono-plate mono-plate--sky mono-ch__fig mono-ch__fig--end img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-sky-720.webp 720w" sizes="(min-width: 900px) 400px, 78vw"><img src="assets/img/mono-sky-720.jpg" alt="المجلس تحت سماء غائمة واسعة، والتلال تمتدّ خلف الجدار الحجري" loading="lazy" decoding="async" width="720" height="1080"></picture></div></figure></div>
     </div>
   </section>
 
-  <section class="mono-ch" aria-labelledby="m4">
+  <section class="mono-ch mono-ch--plates" aria-labelledby="m4">
     <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">04</p><h2 class="mono-ch__title" id="m4">مجلس أردني بلغة معاصرة</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose  reveal" data-delay="1"><p>المجلس عندنا ليس مجموعة مقاعد. هو المكان الذي يُستقبل فيه الضيف، ويدور فيه الحديث، ويجتمع حوله الناس. قيمته في من يجلسون فيه قبل أن تكون في ما يجلسون عليه.</p><p>حافظت على هذا المعنى وغيّرت لغته. الجلوس متقابل حول مركزٍ واحد كما في كل مجلس، لكنّ المقاعد كتلٌ حجرية أقرب إلى المنحوتات، والأرض حصى، والسقف سماء مفتوحة.</p><p>هكذا يلتقي في مساحة واحدة المجلس الأردني، والحجر الأردني، والنحت، وتنسيق المواقع المعاصر، وحاولت ألّا يطغى أحدها على الآخر.</p></div></div>
-    </div>
-  </section>
-
-  <section class="mono-ch mono-ch--plates" aria-labelledby="m5">
-    <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">05</p><h2 class="mono-ch__title" id="m5">التكوين</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose  reveal" data-delay="1"><p>يقوم التكوين على عناصر قليلة: كتل للجلوس، وطاولة في الوسط، وجدار يحدّ المشهد، ونبات يليّن حوافّه. والباقي فراغ.</p></div></div>
+      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">04</p><h2 class="mono-ch__title" id="m4">التكوين</h2></header>
+      <div class="mono-ch__body"><div class="prose mono-prose reveal" data-delay="1"><p>التكوين بسيط: مقاعد تتحلّق حول طاولة حجرية مستديرة، وخلفها جدار يحمل الحطب. وحولها حصى أحمر ونبات، يتركان للحجر أن يكون أوضح ما في المشهد.</p></div></div>
     </div>
     <div class="wrap">
-      <figure class="mono-plate mono-plate--above  img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-above-1280.webp 1280w, assets/img/mono-above-800.webp 800w" sizes="(min-width: 1320px) 1240px, 92vw"><img src="assets/img/mono-above-1280.jpg" alt="المجلس من الأعلى: كتل حجرية للجلوس حول طاولة مستديرة فوق أرضية من الحصى الأحمر" loading="lazy" decoding="async" width="1280" height="720"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">المشهد من الأعلى</span><span class="mono-plate__text">كتل الجلوس تتحلّق حول طاولة الوسط، والجدار يغلق المشهد من جهة واحدة.</span></figcaption></figure>
-      <div class="mono-trio"><figure class="mono-plate mono-plate--seat  img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-seat-420.webp 420w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="assets/img/mono-seat-420.jpg" alt="كتلة حجرية للجلوس بجوار شجيرة مزهرة" loading="lazy" decoding="async" width="420" height="420"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">الكتلة والنبات</span><span class="mono-plate__text">لون النبات أمام لون الحجر.</span></figcaption></figure><figure class="mono-plate mono-plate--wall  img-reveal" data-delay="1"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-wall-510.webp 510w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="assets/img/mono-wall-510.jpg" alt="جدار حجري فيه فتحة دائرية وأخرى مستطيلة مملوءتان بالحطب" loading="lazy" decoding="async" width="510" height="382"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">الجدار</span><span class="mono-plate__text">فتحتان في الحجر، دائرة ومستطيل، تحملان الحطب.</span></figcaption></figure><figure class="mono-plate mono-plate--table  img-reveal" data-delay="2"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-table-450.webp 450w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="assets/img/mono-table-450.jpg" alt="طاولة حجرية مستديرة منخفضة في وسط المجلس" loading="lazy" decoding="async" width="450" height="300"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">طاولة الوسط</span><span class="mono-plate__text">كتلة مستديرة منخفضة، هي مركز المجلس.</span></figcaption></figure></div>
-      <div class="mono-duo"><figure class="mono-plate mono-plate--sky  img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-sky-720.webp 720w" sizes="(min-width: 1320px) 520px, (min-width: 880px) 40vw, 92vw"><img src="assets/img/mono-sky-720.jpg" alt="المجلس تحت سماء غائمة واسعة، والتلال تمتدّ خلف الجدار الحجري" loading="lazy" decoding="async" width="720" height="1080"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">الفراغ المحيط</span><span class="mono-plate__text">المجلس مفتوح على التلال والسماء.</span></figcaption></figure><figure class="mono-plate mono-plate--sofa  img-reveal" data-delay="1"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-sofa-700.webp 700w" sizes="(min-width: 1320px) 640px, (min-width: 880px) 50vw, 92vw"><img src="assets/img/mono-sofa-700.jpg" alt="وسائد قماشية فاتحة فوق مقعد حجري طويل" loading="lazy" decoding="async" width="700" height="310"></picture></div><figcaption class="mono-plate__cap"><span class="mono-plate__label">الحجر والقماش</span><span class="mono-plate__text">الوسائد تستقرّ على الحجر ولا تخفيه.</span></figcaption></figure></div>
+      <figure class="mono-plate mono-plate--above img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-above-1280.webp 1280w, assets/img/mono-above-800.webp 800w" sizes="(min-width: 1320px) 1240px, 92vw"><img src="assets/img/mono-above-1280.jpg" alt="المجلس من الأعلى: كتل حجرية للجلوس حول طاولة مستديرة فوق أرضية من الحصى الأحمر" loading="lazy" decoding="async" width="1280" height="720"></picture></div><figcaption class="mono-plate__cap">المشهد من الأعلى</figcaption></figure>
+      <div class="mono-trio"><figure class="mono-plate mono-plate--seat img-reveal"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-seat-420.webp 420w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="assets/img/mono-seat-420.jpg" alt="كتلة حجرية للجلوس بجوار شجيرة مزهرة" loading="lazy" decoding="async" width="420" height="420"></picture></div><figcaption class="mono-plate__cap">الكتلة والنبات</figcaption></figure><figure class="mono-plate mono-plate--wall img-reveal" data-delay="1"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-wall-510.webp 510w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="assets/img/mono-wall-510.jpg" alt="جدار حجري فيه فتحة دائرية وأخرى مستطيلة مملوءتان بالحطب" loading="lazy" decoding="async" width="510" height="382"></picture></div><figcaption class="mono-plate__cap">الجدار</figcaption></figure><figure class="mono-plate mono-plate--table img-reveal" data-delay="2"><div class="mono-plate__frame"><picture><source type="image/webp" srcset="assets/img/mono-table-450.webp 450w" sizes="(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"><img src="assets/img/mono-table-450.jpg" alt="طاولة حجرية مستديرة منخفضة في وسط المجلس" loading="lazy" decoding="async" width="450" height="300"></picture></div><figcaption class="mono-plate__cap">طاولة الوسط</figcaption></figure></div>
     </div>
   </section>
 
-  <section class="mono-ch" aria-labelledby="m6">
+  <section class="mono-ch" aria-labelledby="m5">
     <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">06</p><h2 class="mono-ch__title" id="m6">بيانات المشروع</h2></header>
+      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">05</p><h2 class="mono-ch__title" id="m5">بيانات المشروع</h2></header>
       <div class="mono-ch__body">
-        <dl class="mono-info reveal" data-delay="1"><div class="mono-info__row"><dt>اسم المشروع</dt><dd>مجلس الكتلة الواحدة</dd></div><div class="mono-info__row"><dt>الاسم الإنجليزي</dt><dd><span lang="en" dir="ltr">The Monolith Majlis</span></dd></div><div class="mono-info__row"><dt>الموقع</dt><dd>عمّان، الأردن</dd></div><div class="mono-info__row"><dt>تاريخ الإنجاز</dt><dd>سبتمبر 2026</dd></div><div class="mono-info__row"><dt>المجال</dt><dd><span lang="en" dir="ltr">Landscape / Outdoor Architecture / Stone</span></dd></div><div class="mono-info__row"><dt>الفكرة</dt><dd>مجلس خارجي قائم على كتل حجرية منفردة، تعمل عناصرَ جلوسٍ وكتلًا معمارية في آنٍ واحد.</dd></div><div class="mono-info__row"><dt>التصميم والتنفيذ</dt><dd>ماجد ناموس</dd></div></dl>
+        <dl class="mono-info reveal" data-delay="1"><div class="mono-info__row"><dt>الموقع</dt><dd>عمّان، الأردن</dd></div><div class="mono-info__row"><dt>تاريخ الإنجاز</dt><dd>سبتمبر 2026</dd></div><div class="mono-info__row"><dt>المجال</dt><dd><span lang="en" dir="ltr">Landscape / Outdoor Architecture / Stone</span></dd></div><div class="mono-info__row"><dt>الفكرة</dt><dd>مجلس خارجي من كتل حجرية منفردة، كل كتلة فيه مقعد.</dd></div><div class="mono-info__row"><dt>التصميم والتنفيذ</dt><dd>ماجد ناموس</dd></div></dl>
       </div>
-    </div>
-  </section>
-
-  <section class="mono-ch mono-ch--voice" aria-labelledby="m7">
-    <div class="wrap mono-ch__grid">
-      <header class="mono-ch__head reveal"><p class="mono-num" dir="ltr">07</p><h2 class="mono-ch__title" id="m7">لماذا الكتلة الواحدة؟</h2></header>
-      <div class="mono-ch__body"><div class="prose mono-prose mono-prose--voice reveal" data-delay="1"><p>كنت أبحث عن شيء لا يُصنع بتركيب قطعةٍ فوق قطعة. ما يُركَّب يسهل أن يُعاد ويُكرَّر؛ أمّا الكتلة فلكل واحدةٍ منها شكلها ووزنها وملمسها.</p><p>أردت للمكان ثقلًا حقيقيًا. لذلك صار الحجر هو المقعد والجدار والكتلة والتكوين في الوقت نفسه.</p><p>لم يكن أمامي نموذج قريب أقيس عليه، فكان في المشروع قدرٌ من التجربة. وهذا ما شدّني إليه.</p></div></div>
     </div>
   </section>
 
   <section class="mono-end">
     <div class="wrap">
-      <p class="mono-end__line reveal"><span>لم أضع الحجر في المكان.</span> <span>تركته يصنع المكان.</span></p>
+      <p class="mono-end__line reveal"><span>لا شيء هنا أكثر من حجرٍ وجلسة.</span> <span>وهذا ما أردته.</span></p>
       <div class="mono-sign reveal" data-delay="1">
         <span class="mono-sign__mark"><svg aria-hidden="true" focusable="false" id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="81 194 1084 611">
   
@@ -215,9 +188,10 @@
         <h2>روابط</h2>
         <ul>
           <li><a href="index.html#works">الأعمال</a></li>
+          <li><a href="monolith.html">مجلس الكتلة الواحدة</a></li>
+          <li><a href="aqsa.html">سيارة الأقصى</a></li>
           <li><a href="index.html#about">عن ماجد</a></li>
           <li><a href="index.html#athar">أثر</a></li>
-          <li><a href="aqsa.html">سيارة الأقصى</a></li>
           <li><a href="contact.html">تواصل</a></li>
         </ul>
       </div>
@@ -234,6 +208,6 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/site.js?v=e0962a8a" defer></script>
+<script src="assets/js/site.js?v=3d705f26" defer></script>
 </body>
 </html>

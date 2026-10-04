@@ -107,7 +107,6 @@ MONO_IMG = {
     "mono-seat":   ([420], 420, 420),
     "mono-wall":   ([510], 510, 382),
     "mono-table":  ([450], 450, 300),
-    "mono-sofa":   ([700], 700, 310),
     "mono-sky":    ([720], 720, 1080),
 }
 
@@ -129,9 +128,14 @@ AR = {
     "lang": "ar", "dir": "rtl", "other": "en", "other_label": "EN", "self_label": "AR",
     
     
-    "nav": [("#top", "الرئيسية"), ("#works", "الأعمال"), ("#about", "عن ماجد"),
-            ("#athar", "أثر"), ("aqsa.html", "سيارة الأقصى"),
+    # An entry may carry a third element: the project pages listed
+    # under it (a quiet sub-menu on desktop, nested rows on mobile).
+    "nav": [("#top", "الرئيسية"),
+            ("#works", "الأعمال", [("monolith.html", "مجلس الكتلة الواحدة"),
+                                   ("aqsa.html", "سيارة الأقصى")]),
+            ("#about", "عن ماجد"), ("#athar", "أثر"),
             ("contact.html", "تواصل")],
+    "nav_sub_label": "مشاريع من الأعمال",
     "skip": "تخطّي إلى المحتوى",
     "menu_open": "فتح القائمة",
     "home_href": "index.html", "contact_href": "contact.html",
@@ -263,98 +267,58 @@ AR = {
     "aqsa_next": "الصورة التالية",
 
     # --- The Monolith Majlis (monolith.html) ---
-    # First person throughout. No figures, stone types, areas or costs:
-    # only what was actually provided about the project.
+    # First person, short, no superlatives. No figures, stone types,
+    # areas or costs: only what was actually provided about the project.
     "mono_page_title": "مجلس الكتلة الواحدة - ماجد ناموس",
     "mono_desc": "مجلس الكتلة الواحدة: مجلس خارجي في عمّان صمّمته ونفّذته من كتل حجرية منفردة، حيث كل مقعد كتلة واحدة.",
-    "mono_eyebrow": "مشروع",
+    "mono_place": "عمّان، الأردن",
+    "mono_date": "سبتمبر 2026",
     "mono_title": "مجلس الكتلة الواحدة",
     "mono_title_alt": "The Monolith Majlis",
     "mono_title_alt_lang": "en",
     "mono_hero_alt": "مجلس خارجي من كتل حجرية كبيرة تتحلّق حول طاولة حجرية مستديرة، وخلفه جدار حجري بفتحة دائرية مملوءة بالحطب",
-    "mono_hero_facts": [("الموقع", "عمّان، الأردن"),
-                        ("الإنجاز", "سبتمبر 2026"),
-                        ("المجال", '<span class="mono-latin" lang="en" dir="ltr">Landscape / Architecture / Stone</span>')],
-    "mono_open": "حين تكون الكتلة هي المقعد، يصير الجلوس لقاءً مباشرًا مع الحجر.",
+    "mono_open": "مجلس خارجي من الحجر الطبيعي، لكل مقعد فيه كتلة واحدة.",
 
     "mono_h1": "الفكرة",
     "mono_p1": [
-        "بدأت الفكرة من سؤال بسيط: كيف يحضر الحجر في المكان بوزنه كلّه، لا بوجهه فقط؟",
-        "اعتدنا أن نرى الحجر كسوةً لجدار، أو إطارًا لنافذة، أو لمسةً تزيّن واجهة. وكنت أبحث عن شيء مختلف: حجرٍ لا يغطّي شيئًا ولا يزيّن شيئًا، بل يقف في الفراغ كتلةً لها ثقلها وظلّها.",
-        "من هنا جاء القرار: أن يكون المقعد نفسه كتلةً حجرية واحدة. الحجر هنا لا يكسو شيئًا آخر؛ هو الشيء نفسه.",
+        "في أغلب ما نبنيه يأتي الحجر في النهاية: نبني أولًا، ثم نكسو بالحجر. في هذا المجلس أردت أن أبدأ منه. فبدل أن أبني مقعدًا وأغطّيه بالحجر، اخترت أن يكون المقعد نفسه كتلةً حجرية واحدة.",
     ],
 
     "mono_h2": "الكتلة الواحدة",
-    "mono_triad": [("حجرٌ واحد", "One Block"),
-                   ("كتلةٌ واحدة", "One Mass"),
-                   ("قطعةٌ واحدة", "One Piece")],
     "mono_p2": [
-        "كل عنصر جلوس رئيسي في هذا المجلس كتلة حجرية واحدة كاملة. لم أجمع قطعًا لأصنع منها مقعدًا؛ تعاملت مع كل كتلة بمنطق النحت: أُزيل ما يزيد، وأُبقي ما يكفي للجلوس.",
-        "لم أرد أن يبدو الحجر وكأنه بُني ليصير مقعدًا. أردت أن يبدو المقعد وكأنه كان في الحجر منذ البداية.",
-        "ولذلك تركت للسطح خشونته الطبيعية، حتى تبقى الكتلة قريبة من أصلها.",
+        "كل مقعد هنا قطعة واحدة: مكان الجلوس والمسند من الحجر نفسه، دون تجميع. وتركت سطحه خشنًا، لأني أردت أن يبقى الحجر حجرًا حتى وهو مقعد.",
     ],
     "mono_block_alt": "كتلة حجرية واحدة تشكّل مقعدًا ومسندًا، وعليها وسائد قماشية",
-    "mono_block_cap": "المقعد والمسند من الكتلة نفسها.",
 
-    "mono_h3": "الحجر كعمارة",
+    "mono_h3": "الحجر والمجلس",
     "mono_p3": [
-        "الحجر في الأردن ليس مادّة بناء فحسب؛ إنه جزء من ذاكرة المكان. نشأتُ في مدينةٍ تُعرف بلون حجرها، بيوتها وأدراجها وأسوارها من المادّة نفسها التي تخرج من أرضها.",
-        "ولأنه مألوف إلى هذا الحد، قلّما نلتفت إليه. أردت أن أقدّمه في مقدّمة المشهد: المادّة التي نعرفها جميعًا، في هيئةٍ غير التي اعتدناها.",
-        "لا أحاول هنا أن أقلّد الماضي. لا أقواس ولا زخارف؛ فقط الحجر نفسه، بلغة اليوم.",
+        "الحجر والمجلس كلاهما مألوف في بيوتنا في الأردن: الأول نبني به، والثاني نجتمع فيه. ما فعلته هنا أنني جمعتهما في شيء واحد. بقي المجلس كما نعرفه، مقاعد متقابلة حول طاولة للضيافة والحديث، لكنه هذه المرة من الحجر وفي الهواء الطلق.",
     ],
+    "mono_sky_alt": "المجلس تحت سماء غائمة واسعة، والتلال تمتدّ خلف الجدار الحجري",
 
-    "mono_h4": "مجلس أردني بلغة معاصرة",
+    "mono_h4": "التكوين",
     "mono_p4": [
-        "المجلس عندنا ليس مجموعة مقاعد. هو المكان الذي يُستقبل فيه الضيف، ويدور فيه الحديث، ويجتمع حوله الناس. قيمته في من يجلسون فيه قبل أن تكون في ما يجلسون عليه.",
-        "حافظت على هذا المعنى وغيّرت لغته. الجلوس متقابل حول مركزٍ واحد كما في كل مجلس، لكنّ المقاعد كتلٌ حجرية أقرب إلى المنحوتات، والأرض حصى، والسقف سماء مفتوحة.",
-        "هكذا يلتقي في مساحة واحدة المجلس الأردني، والحجر الأردني، والنحت، وتنسيق المواقع المعاصر، وحاولت ألّا يطغى أحدها على الآخر.",
+        "التكوين بسيط: مقاعد تتحلّق حول طاولة حجرية مستديرة، وخلفها جدار يحمل الحطب. وحولها حصى أحمر ونبات، يتركان للحجر أن يكون أوضح ما في المشهد.",
     ],
-
-    "mono_h5": "التكوين",
-    "mono_p5": [
-        "يقوم التكوين على عناصر قليلة: كتل للجلوس، وطاولة في الوسط، وجدار يحدّ المشهد، ونبات يليّن حوافّه. والباقي فراغ.",
-    ],
-    # key: (label, caption, alt)
+    # key: (label, alt)
     "mono_plates": {
         "mono-above": ("المشهد من الأعلى",
-                       "كتل الجلوس تتحلّق حول طاولة الوسط، والجدار يغلق المشهد من جهة واحدة.",
                        "المجلس من الأعلى: كتل حجرية للجلوس حول طاولة مستديرة فوق أرضية من الحصى الأحمر"),
-        "mono-seat": ("الكتلة والنبات",
-                      "لون النبات أمام لون الحجر.",
-                      "كتلة حجرية للجلوس بجوار شجيرة مزهرة"),
-        "mono-wall": ("الجدار",
-                      "فتحتان في الحجر، دائرة ومستطيل، تحملان الحطب.",
-                      "جدار حجري فيه فتحة دائرية وأخرى مستطيلة مملوءتان بالحطب"),
-        "mono-table": ("طاولة الوسط",
-                       "كتلة مستديرة منخفضة، هي مركز المجلس.",
-                       "طاولة حجرية مستديرة منخفضة في وسط المجلس"),
-        "mono-sofa": ("الحجر والقماش",
-                      "الوسائد تستقرّ على الحجر ولا تخفيه.",
-                      "وسائد قماشية فاتحة فوق مقعد حجري طويل"),
-        "mono-sky": ("الفراغ المحيط",
-                     "المجلس مفتوح على التلال والسماء.",
-                     "المجلس تحت سماء غائمة واسعة، والتلال تمتدّ خلف الجدار الحجري"),
+        "mono-seat": ("الكتلة والنبات", "كتلة حجرية للجلوس بجوار شجيرة مزهرة"),
+        "mono-wall": ("الجدار", "جدار حجري فيه فتحة دائرية وأخرى مستطيلة مملوءتان بالحطب"),
+        "mono-table": ("طاولة الوسط", "طاولة حجرية مستديرة منخفضة في وسط المجلس"),
     },
 
-    "mono_h6": "بيانات المشروع",
+    "mono_h5": "بيانات المشروع",
     "mono_info": [
-        ("اسم المشروع", "مجلس الكتلة الواحدة"),
-        ("الاسم الإنجليزي", '<span lang="en" dir="ltr">The Monolith Majlis</span>'),
         ("الموقع", "عمّان، الأردن"),
         ("تاريخ الإنجاز", "سبتمبر 2026"),
         ("المجال", '<span lang="en" dir="ltr">Landscape / Outdoor Architecture / Stone</span>'),
-        ("الفكرة", "مجلس خارجي قائم على كتل حجرية منفردة، تعمل عناصرَ جلوسٍ وكتلًا معمارية في آنٍ واحد."),
+        ("الفكرة", "مجلس خارجي من كتل حجرية منفردة، كل كتلة فيه مقعد."),
         ("التصميم والتنفيذ", "ماجد ناموس"),
     ],
 
-    "mono_h7": "لماذا الكتلة الواحدة؟",
-    "mono_p7": [
-        "كنت أبحث عن شيء لا يُصنع بتركيب قطعةٍ فوق قطعة. ما يُركَّب يسهل أن يُعاد ويُكرَّر؛ أمّا الكتلة فلكل واحدةٍ منها شكلها ووزنها وملمسها.",
-        "أردت للمكان ثقلًا حقيقيًا. لذلك صار الحجر هو المقعد والجدار والكتلة والتكوين في الوقت نفسه.",
-        "لم يكن أمامي نموذج قريب أقيس عليه، فكان في المشروع قدرٌ من التجربة. وهذا ما شدّني إليه.",
-    ],
-
-    "mono_end": ["لم أضع الحجر في المكان.", "تركته يصنع المكان."],
+    "mono_end": ["لا شيء هنا أكثر من حجرٍ وجلسة.", "وهذا ما أردته."],
     "mono_sign_latin": "Majed Namous",
     "mono_link_works": "بقية الأعمال",
     "mono_link_contact": "تواصل معي",
@@ -389,9 +353,12 @@ EN = {
     "lang": "en", "dir": "ltr", "other": "ar", "other_label": "AR", "self_label": "EN",
     
     
-    "nav": [("#top", "Home"), ("#works", "Works"), ("#about", "About"),
-            ("#athar", "Athar"), ("aqsa.html", "Al-Aqsa Car"),
+    "nav": [("#top", "Home"),
+            ("#works", "Works", [("monolith.html", "The Monolith Majlis"),
+                                 ("aqsa.html", "The Al-Aqsa Car")]),
+            ("#about", "About"), ("#athar", "Athar"),
             ("contact.html", "Contact")],
+    "nav_sub_label": "Selected projects",
     "skip": "Skip to content",
     "menu_open": "Open menu",
     "home_href": "index.html", "contact_href": "contact.html",
@@ -517,91 +484,53 @@ EN = {
     # --- The Monolith Majlis (en/monolith.html) ---
     "mono_page_title": "The Monolith Majlis - Majed Namous",
     "mono_desc": "The Monolith Majlis: an outdoor majlis in Amman that I designed and built from single blocks of stone, where every seat is one block.",
-    "mono_eyebrow": "Project",
+    "mono_place": "Amman, Jordan",
+    "mono_date": "September 2026",
     "mono_title": "The Monolith Majlis",
     "mono_title_alt": "مجلس الكتلة الواحدة",
     "mono_title_alt_lang": "ar",
     "mono_hero_alt": "An outdoor majlis of large stone blocks gathered around a round stone table, with a stone wall behind it holding firewood in a circular opening",
-    "mono_hero_facts": [("Location", "Amman, Jordan"),
-                        ("Completed", "September 2026"),
-                        ("Field", "Landscape / Architecture / Stone")],
-    "mono_open": "When the block itself is the seat, sitting becomes a direct encounter with stone.",
+    "mono_open": "An outdoor majlis in natural stone, with a single block for every seat.",
 
     "mono_h1": "The idea",
     "mono_p1": [
-        "It began with a simple question: how can stone be present in a place with its full weight, and not only its face?",
-        "We are used to seeing stone as cladding on a wall, a frame around a window, a finish on a facade. I was looking for something different: stone that covers nothing and decorates nothing, that stands in the open as a mass with its own weight and shadow.",
-        "From there came the decision that the seat itself would be a single block of stone. Here the stone is not laid over something else. It is the thing itself.",
+        "In most of what we build, stone comes last: we build first, then clad in stone. In this majlis I wanted to start from it. Instead of building a seat and covering it with stone, I chose to make the seat itself a single block of stone.",
     ],
 
     "mono_h2": "The single block",
-    "mono_triad": [("One block", ""), ("One mass", ""), ("One piece", "")],
     "mono_p2": [
-        "Every main seat in this majlis is one complete block of stone. I did not assemble pieces to make a seat. I worked each block the way one carves: take away what is too much, keep what is enough to sit on.",
-        "I did not want the stone to look as if it had been built into a seat. I wanted the seat to look as if it had been in the stone from the beginning.",
-        "So I left the surface its natural roughness, to keep each block close to where it came from.",
+        "Every seat here is one piece: the seat and its back are the same stone, with nothing assembled. I left its surface rough, because I wanted the stone to remain stone even as a seat.",
     ],
     "mono_block_alt": "A single block of stone forming a seat and its back, with fabric cushions on it",
-    "mono_block_cap": "Seat and back, from the same block.",
 
-    "mono_h3": "Stone as architecture",
+    "mono_h3": "Stone and the majlis",
     "mono_p3": [
-        "In Jordan, stone is more than a building material; it is part of the memory of the place. I grew up in a city known by the colour of its stone, its houses, stairways and walls made of the same material that comes out of its ground.",
-        "Because it is so familiar, we rarely look at it. I wanted to put it at the front of the scene: the material we all know, in a form other than the usual one.",
-        "I am not trying to imitate the past here. No arches, no ornament; only the stone, in the language of today.",
+        "Stone and the majlis are both familiar in our homes in Jordan: we build with one and gather in the other. What I did here was bring them together into one thing. The majlis stays as we know it, seats facing each other around a table for hospitality and conversation, only this time in stone and in the open air.",
     ],
+    "mono_sky_alt": "The majlis under a wide overcast sky, hills stretching beyond the stone wall",
 
-    "mono_h4": "A Jordanian majlis, in a contemporary language",
+    "mono_h4": "Composition",
     "mono_p4": [
-        "A majlis, for us, is not a set of seats. It is where a guest is received, where conversation goes round, where people gather. Its worth lies in who sits there before it lies in what they sit on.",
-        "I kept that meaning and changed its language. The seating still faces inward around one centre, as in any majlis, but the seats are stone blocks closer to sculpture, the floor is gravel, and the ceiling is open sky.",
-        "So four things meet in one space: the Jordanian majlis, Jordanian stone, sculpture and contemporary landscape, and I tried to keep any one of them from overriding the others.",
-    ],
-
-    "mono_h5": "Composition",
-    "mono_p5": [
-        "The composition rests on very few elements: blocks to sit on, a table at the centre, a wall that closes the scene, and planting that softens its edges. The rest is space.",
+        "The composition is simple: seats gathered around a round stone table, with a wall behind them that holds the firewood. Around them, red gravel and planting leave the stone as the clearest thing in the scene.",
     ],
     "mono_plates": {
         "mono-above": ("From above",
-                       "The seating blocks gather around the central table; the wall closes the scene on one side.",
                        "The majlis from above: stone seating blocks around a round table on red gravel"),
-        "mono-seat": ("Block and planting",
-                      "The colour of the planting against the colour of the stone.",
-                      "A stone seating block beside a flowering shrub"),
-        "mono-wall": ("The wall",
-                      "Two openings in the stone, a circle and a rectangle, holding firewood.",
-                      "A stone wall with a circular and a rectangular opening, both filled with firewood"),
-        "mono-table": ("The central table",
-                       "A low round block, the centre of the majlis.",
-                       "A low round stone table at the centre of the majlis"),
-        "mono-sofa": ("Stone and fabric",
-                      "The cushions rest on the stone without hiding it.",
-                      "Light fabric cushions on a long stone seat"),
-        "mono-sky": ("The space around",
-                     "The majlis is open to the hills and the sky.",
-                     "The majlis under a wide overcast sky, hills stretching beyond the stone wall"),
+        "mono-seat": ("Block and planting", "A stone seating block beside a flowering shrub"),
+        "mono-wall": ("The wall", "A stone wall with a circular and a rectangular opening, both filled with firewood"),
+        "mono-table": ("The central table", "A low round stone table at the centre of the majlis"),
     },
 
-    "mono_h6": "Project information",
+    "mono_h5": "Project information",
     "mono_info": [
-        ("Project", "The Monolith Majlis"),
-        ("Arabic name", '<span lang="ar" dir="rtl">مجلس الكتلة الواحدة</span>'),
         ("Location", "Amman, Jordan"),
         ("Completed", "September 2026"),
         ("Field", "Landscape / Outdoor Architecture / Stone"),
-        ("Concept", "An outdoor majlis built on single blocks of stone that work as seating and as architectural masses at once."),
+        ("Concept", "An outdoor majlis of single stone blocks, each block a seat."),
         ("Design and execution", "Majed Namous"),
     ],
 
-    "mono_h7": "Why a single block?",
-    "mono_p7": [
-        "I was looking for something that cannot be made by setting one piece on top of another. What is assembled is easy to repeat. A block is different: each one has its own shape, weight and texture.",
-        "I wanted the place to have real weight. So the stone became the seat, the wall, the mass and the composition at once.",
-        "I had no close precedent to measure against, so the project carried a degree of experiment. That is what drew me to it.",
-    ],
-
-    "mono_end": ["I did not place the stone in the space.", "I let it make the space."],
+    "mono_end": ["Nothing here is more than stone and a place to sit.", "That is what I wanted."],
     "mono_sign_latin": "Majed Namous",
     "mono_link_works": "Other works",
     "mono_link_contact": "Get in touch",
@@ -685,6 +614,10 @@ COTTAGES_MARK = svg("almajed-cottages.svg", optional=True)
 ARROW = ('<svg class="arrow" viewBox="0 0 12 12" fill="none" aria-hidden="true" '
          'focusable="false"><path d="M2.5 9.5 9.5 2.5M4 2.5h5.5V8" '
          'stroke="currentColor" stroke-width="1.1" stroke-linecap="square"/></svg>')
+
+
+CARET = ('<svg viewBox="0 0 10 10" fill="none" aria-hidden="true" focusable="false">'
+         '<path d="M2 3.6 5 6.6 8 3.6" stroke="currentColor" stroke-width="1.1"/></svg>')
 
 
 def picture(base, alt, widths, sizes, loading="lazy", fetchpriority=None,
@@ -782,15 +715,38 @@ def head(t, *, page, title, desc, canonical, theme="", css=None,
 
 
 def navbar(t, page, alt_href):
+    def cur(href):
+        return ' aria-current="page"' if href == page + ".html" else ""
+
     def links(cls):
+        """cls is "nav__link" for the bar and "" for the mobile menu."""
         out = []
-        for href, label in t["nav"]:
+        for item in t["nav"]:
+            href, label = item[0], item[1]
+            kids = item[2] if len(item) > 2 else []
             h = href
             if page != "home" and href.startswith("#"):
                 h = t["home_href"] + href
-            current = ' aria-current="page"' if href == page + ".html" else ""
-            out.append('<li><a class="%s" href="%s"%s>%s</a></li>'
-                       % (cls, h, current, label))
+            if not kids:
+                out.append('<li><a class="%s" href="%s"%s>%s</a></li>'
+                           % (cls, h, cur(href), label))
+                continue
+            sub = "".join('<li><a href="%s"%s>%s</a></li>' % (k, cur(k), kl)
+                          for k, kl in kids)
+            if cls:
+                active = " is-current" if any(cur(k) for k, _ in kids) else ""
+                out.append(
+                    '<li class="nav__item--sub" data-sub>'
+                    '<a class="{cls}{active}" href="{h}">{label}</a>'
+                    '<button class="nav__caret" type="button" data-sub-toggle '
+                    'aria-expanded="false" aria-controls="nav-sub" aria-label="{sl}">'
+                    '{caret}</button>'
+                    '<ul class="nav__sub" id="nav-sub">{sub}</ul></li>'.format(
+                        cls=cls, active=active, h=h, label=label,
+                        sl=t["nav_sub_label"], caret=CARET, sub=sub))
+            else:
+                out.append('<li><a href="%s">%s</a>'
+                           '<ul class="nav__menu-sub">%s</ul></li>' % (h, label, sub))
         return "\n        ".join(out)
 
     lang_block = ('<div class="lang">'
@@ -831,10 +787,14 @@ def navbar(t, page, alt_href):
 
 
 def footer(t):
+    flat = []
+    for item in t["nav"][1:]:
+        flat.append((item[0], item[1]))
+        flat.extend(item[2] if len(item) > 2 else [])
     nav_items = "\n          ".join(
         '<li><a href="%s">%s</a></li>' % (
             (t["home_href"] + h) if h.startswith("#") else h, label)
-        for h, label in t["nav"][1:])
+        for h, label in flat)
     return """<footer class="footer">
   <div class="wrap">
     <div class="footer__top">
@@ -1344,11 +1304,12 @@ def monolith(t, alt_href):
     """The Monolith Majlis — a project page with its own art
     direction. Same navbar and footer as every other page; the cream
     ground and the editorial grid come from assets/css/monolith.css,
-    which only this page loads."""
+    which only this page loads. Deliberately short: five brief
+    chapters and a closing line."""
 
-    def prose(key, cls=""):
-        return ('<div class="prose mono-prose %s reveal" data-delay="1">%s</div>'
-                % (cls, "".join("<p>%s</p>" % x for x in t[key])))
+    def prose(key):
+        return ('<div class="prose mono-prose reveal" data-delay="1">%s</div>'
+                % "".join("<p>%s</p>" % x for x in t[key]))
 
     def chapter_head(n, key):
         return ('<header class="mono-ch__head reveal">'
@@ -1356,20 +1317,26 @@ def monolith(t, alt_href):
                 '<h2 class="mono-ch__title" id="m%d">%s</h2>'
                 '</header>' % (n, n, t[key]))
 
-    def plate(base, sizes, cls="", delay=None):
-        label, cap, alt = t["mono_plates"][base]
+    def figure(base, alt, sizes, cls=""):
+        return ('<figure class="mono-plate mono-plate--{k} {cls} img-reveal">'
+                '<div class="mono-plate__frame">{pic}</div></figure>').format(
+                    k=base.replace("mono-", ""), cls=cls,
+                    pic=mono_pic(base, alt, sizes))
+
+    def plate(base, sizes, delay=None):
+        label, alt = t["mono_plates"][base]
         d = ' data-delay="%d"' % delay if delay else ""
-        return ('<figure class="mono-plate mono-plate--{k} {cls} img-reveal"{d}>'
+        return ('<figure class="mono-plate mono-plate--{k} img-reveal"{d}>'
                 '<div class="mono-plate__frame">{pic}</div>'
-                '<figcaption class="mono-plate__cap">'
-                '<span class="mono-plate__label">{label}</span>'
-                '<span class="mono-plate__text">{cap}</span>'
-                '</figcaption></figure>').format(
-                    k=base.replace("mono-", ""), cls=cls, d=d,
-                    pic=mono_pic(base, alt, sizes), label=label, cap=cap)
+                '<figcaption class="mono-plate__cap">{label}</figcaption>'
+                '</figure>').format(
+                    k=base.replace("mono-", ""), d=d,
+                    pic=mono_pic(base, alt, sizes), label=label)
 
     hw, hh = MONO_IMG["mono-hero"][1:]
     mw, mh = MONO_IMG["mono-hero-m"][1:]
+    hero_srcset = ", ".join("%s/mono-hero-%d.webp %dw" % (A, n, n)
+                            for n in MONO_IMG["mono-hero"][0])
     hero_pic = (
         '<picture>'
         '<source media="(max-width: 699px)" type="image/webp" '
@@ -1379,8 +1346,7 @@ def monolith(t, alt_href):
         'loading="eager" decoding="async" fetchpriority="high">'
         '</picture>').format(
             a=A, mw=mw, mh=mh, hw=hw, hh=hh, alt=t["mono_hero_alt"],
-            srcset=", ".join("%s/mono-hero-%d.webp %dw" % (A, n, n)
-                             for n in MONO_IMG["mono-hero"][0]))
+            srcset=hero_srcset)
 
     latin_alt = t["mono_title_alt_lang"] == "en"
     title_alt = ('<p class="mono-hero__alt {cls} reveal" data-delay="1" lang="{l}" dir="{d}">{x}</p>'
@@ -1388,22 +1354,12 @@ def monolith(t, alt_href):
                          l=t["mono_title_alt_lang"],
                          d=("ltr" if latin_alt else "rtl"), x=t["mono_title_alt"]))
 
-    hero_facts = "".join(
-        '<div class="mono-facts__item"><dt>%s</dt><dd>%s</dd></div>' % kv
-        for kv in t["mono_hero_facts"])
-
-    triad = "".join(
-        '<li class="mono-triad__item"><span class="mono-triad__main">%s</span>%s</li>'
-        % (main, ('<span class="mono-latin" lang="en" dir="ltr">%s</span>' % sub)
-           if sub else "")
-        for main, sub in t["mono_triad"])
-
     info = "".join(
         '<div class="mono-info__row"><dt>%s</dt><dd>%s</dd></div>' % kv
         for kv in t["mono_info"])
 
     THIRD = "(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"
-    HALFISH = "(min-width: 1320px) 520px, (min-width: 880px) 40vw, 92vw"
+    INSET = "(min-width: 900px) 400px, 78vw"
 
     body = """
 <main id="main" class="mono">
@@ -1411,10 +1367,9 @@ def monolith(t, alt_href):
   <section class="mono-hero" id="top" aria-labelledby="mono-title">
     <figure class="mono-hero__media">{hero_pic}</figure>
     <div class="wrap mono-hero__head">
-      <p class="mono-hero__eyebrow reveal"><span>{eyebrow}</span><span dir="ltr">2026</span></p>
+      <p class="mono-hero__eyebrow reveal"><span>{place}</span><span>{date}</span></p>
       <h1 class="mono-hero__title reveal" id="mono-title">{title}</h1>
       {title_alt}
-      <dl class="mono-facts reveal" data-delay="2">{hero_facts}</dl>
     </div>
   </section>
 
@@ -1431,61 +1386,37 @@ def monolith(t, alt_href):
     </div>
   </section>
 
-  <section class="mono-ch mono-ch--key" aria-labelledby="m2">
+  <section class="mono-ch" aria-labelledby="m2">
     <div class="wrap mono-ch__grid">
       {head2}
-      <div class="mono-ch__body">
-        <ul class="mono-triad reveal">{triad}</ul>
-      </div>
-    </div>
-    <div class="wrap mono-split">
-      <figure class="mono-plate mono-plate--block img-reveal">
-        <div class="mono-plate__frame">{block}</div>
-        <figcaption class="mono-plate__cap"><span class="mono-plate__text">{block_cap}</span></figcaption>
-      </figure>
-      {p2}
+      <div class="mono-ch__body">{p2}{block}</div>
     </div>
   </section>
 
   <section class="mono-ch" aria-labelledby="m3">
     <div class="wrap mono-ch__grid">
       {head3}
-      <div class="mono-ch__body">{p3}</div>
+      <div class="mono-ch__body">{p3}{sky}</div>
     </div>
   </section>
 
-  <section class="mono-ch" aria-labelledby="m4">
+  <section class="mono-ch mono-ch--plates" aria-labelledby="m4">
     <div class="wrap mono-ch__grid">
       {head4}
       <div class="mono-ch__body">{p4}</div>
     </div>
-  </section>
-
-  <section class="mono-ch mono-ch--plates" aria-labelledby="m5">
-    <div class="wrap mono-ch__grid">
-      {head5}
-      <div class="mono-ch__body">{p5}</div>
-    </div>
     <div class="wrap">
       {above}
       <div class="mono-trio">{seat}{wall}{table}</div>
-      <div class="mono-duo">{sky}{sofa}</div>
     </div>
   </section>
 
-  <section class="mono-ch" aria-labelledby="m6">
+  <section class="mono-ch" aria-labelledby="m5">
     <div class="wrap mono-ch__grid">
-      {head6}
+      {head5}
       <div class="mono-ch__body">
         <dl class="mono-info reveal" data-delay="1">{info}</dl>
       </div>
-    </div>
-  </section>
-
-  <section class="mono-ch mono-ch--voice" aria-labelledby="m7">
-    <div class="wrap mono-ch__grid">
-      {head7}
-      <div class="mono-ch__body">{p7}</div>
     </div>
   </section>
 
@@ -1494,7 +1425,7 @@ def monolith(t, alt_href):
       <p class="mono-end__line reveal"><span>{end_a}</span> <span>{end_b}</span></p>
       <div class="mono-sign reveal" data-delay="1">
         <span class="mono-sign__mark">{logo}</span>
-        {sign}
+        <p class="mono-sign__alt mono-latin" lang="en" dir="ltr">{sign}</p>
       </div>
       <p class="mono-end__links reveal" data-delay="2">
         <a class="link" href="{works_href}"><span>{link_works}</span>{arrow}</a>
@@ -1505,29 +1436,23 @@ def monolith(t, alt_href):
 
 </main>
 """.format(
-        hero_pic=hero_pic, eyebrow=t["mono_eyebrow"], title=t["mono_title"],
-        title_alt=title_alt, hero_facts=hero_facts, open=t["mono_open"],
+        hero_pic=hero_pic, place=t["mono_place"], date=t["mono_date"],
+        title=t["mono_title"], title_alt=title_alt, open=t["mono_open"],
         head1=chapter_head(1, "mono_h1"), p1=prose("mono_p1"),
-        head2=chapter_head(2, "mono_h2"), triad=triad,
-        block=mono_pic("mono-block", t["mono_block_alt"], HALFISH),
-        block_cap=t["mono_block_cap"], p2=prose("mono_p2"),
+        head2=chapter_head(2, "mono_h2"), p2=prose("mono_p2"),
+        block=figure("mono-block", t["mono_block_alt"], INSET, "mono-ch__fig"),
         head3=chapter_head(3, "mono_h3"), p3=prose("mono_p3"),
+        sky=figure("mono-sky", t["mono_sky_alt"], INSET, "mono-ch__fig mono-ch__fig--end"),
         head4=chapter_head(4, "mono_h4"), p4=prose("mono_p4"),
-        head5=chapter_head(5, "mono_h5"), p5=prose("mono_p5"),
         above=plate("mono-above", "(min-width: 1320px) 1240px, 92vw"),
         seat=plate("mono-seat", THIRD),
         wall=plate("mono-wall", THIRD, delay=1),
         table=plate("mono-table", THIRD, delay=2),
-        sky=plate("mono-sky", HALFISH),
-        sofa=plate("mono-sofa", "(min-width: 1320px) 640px, (min-width: 880px) 50vw, 92vw", delay=1),
-        head6=chapter_head(6, "mono_h6"), info=info,
-        head7=chapter_head(7, "mono_h7"), p7=prose("mono_p7", "mono-prose--voice"),
+        head5=chapter_head(5, "mono_h5"), info=info,
         end_a=t["mono_end"][0], end_b=t["mono_end"][1],
         # the mark already spells the Arabic name, so the signature adds
         # only the Latin one beneath it, never the same name twice
-        logo=LOGO,
-        sign='<p class="mono-sign__alt mono-latin" lang="en" dir="ltr">%s</p>'
-             % t["mono_sign_latin"],
+        logo=LOGO, sign=t["mono_sign_latin"],
         works_href=t["home_href"] + "#works", contact_href=t["contact_href"],
         link_works=t["mono_link_works"], link_contact=t["mono_link_contact"],
         arrow=ARROW,
@@ -1538,15 +1463,12 @@ def monolith(t, alt_href):
         'href="{a}/mono-hero-m-{mw}.webp" media="(max-width: 699px)" fetchpriority="high">'
         '\n  <link rel="preload" as="image" type="image/webp" '
         'imagesrcset="{srcset}" imagesizes="100vw" media="(min-width: 700px)" '
-        'fetchpriority="high">').format(
-            a=A, mw=mw,
-            srcset=", ".join("%s/mono-hero-%d.webp %dw" % (A, n, n)
-                             for n in MONO_IMG["mono-hero"][0]))
+        'fetchpriority="high">').format(a=A, mw=mw, srcset=hero_srcset)
 
     return head(t, page="monolith", title=t["mono_page_title"], desc=t["mono_desc"],
                 canonical=BASE_URL + "/" + ("monolith.html" if t["lang"] == "ar"
                                             else "en/monolith.html"),
-                theme="theme-cream", css="monolith.css", theme_color="#f0ede6",
+                theme="theme-cream", css="monolith.css", theme_color="#f9f4ea",
                 og_image="mono-hero-1472.jpg", preload=preload,
                 preload_display=False) \
         + navbar(t, "monolith", alt_href) + body + footer(t)
