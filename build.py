@@ -270,35 +270,35 @@ AR = {
     # First person, short, no superlatives. No figures, stone types,
     # areas or costs: only what was actually provided about the project.
     "mono_page_title": "مجلس الكتلة الواحدة - ماجد ناموس",
-    "mono_desc": "مجلس الكتلة الواحدة: مجلس خارجي في عمّان صمّمته ونفّذته من كتل حجرية منفردة، حيث كل مقعد كتلة واحدة.",
+    "mono_desc": "مجلس الكتلة الواحدة: مجلس خارجي في عمّان صمّمته ونفّذته من كتل حجرية منفردة، يقوم كل مقعد رئيسي فيه على كتلة واحدة.",
     "mono_place": "عمّان، الأردن",
     "mono_date": "سبتمبر 2026",
     "mono_title": "مجلس الكتلة الواحدة",
     "mono_title_alt": "The Monolith Majlis",
     "mono_title_alt_lang": "en",
     "mono_hero_alt": "مجلس خارجي من كتل حجرية كبيرة تتحلّق حول طاولة حجرية مستديرة، وخلفه جدار حجري بفتحة دائرية مملوءة بالحطب",
-    "mono_open": "مجلس خارجي من الحجر الطبيعي، لكل مقعد فيه كتلة واحدة.",
+    "mono_open": "مجلس خارجي يتشكّل من كتل حجرية منفردة؛ الحجر فيه هو الجلسة نفسها، لا غلافٌ لها.",
 
     "mono_h1": "الفكرة",
     "mono_p1": [
-        "في أغلب ما نبنيه يأتي الحجر في النهاية: نبني أولًا، ثم نكسو بالحجر. في هذا المجلس أردت أن أبدأ منه. فبدل أن أبني مقعدًا وأغطّيه بالحجر، اخترت أن يكون المقعد نفسه كتلةً حجرية واحدة.",
+        "في هذا المشروع بدأ التصميم من الحجر نفسه. لم أتعامل معه ككسوة تُضاف إلى المقعد، بل ككتلةٍ هي التي تصنع المقعد وتمنحه حضوره. ومن هنا جاء مفهوم المشروع كله: لكل مقعد رئيسي كتلة حجرية واحدة.",
     ],
 
     "mono_h2": "الكتلة الواحدة",
     "mono_p2": [
-        "كل مقعد هنا قطعة واحدة: مكان الجلوس والمسند من الحجر نفسه، دون تجميع. وتركت سطحه خشنًا، لأني أردت أن يبقى الحجر حجرًا حتى وهو مقعد.",
+        "كل مقعد هنا قائم على كتلة حجرية واحدة، تحضر في المكان عنصرًا معماريًا قبل أن تكون قطعة أثاث. وتركت سطحها خشنًا، لأني أردت أن يبقى الحجر حجرًا حتى وهو مقعد.",
     ],
-    "mono_block_alt": "كتلة حجرية واحدة تشكّل مقعدًا ومسندًا، وعليها وسائد قماشية",
+    "mono_block_alt": "مقعد حجري قائم على كتلة واحدة، وعليه وسائد قماشية",
 
     "mono_h3": "الحجر والمجلس",
     "mono_p3": [
-        "الحجر والمجلس كلاهما مألوف في بيوتنا في الأردن: الأول نبني به، والثاني نجتمع فيه. ما فعلته هنا أنني جمعتهما في شيء واحد. بقي المجلس كما نعرفه، مقاعد متقابلة حول طاولة للضيافة والحديث، لكنه هذه المرة من الحجر وفي الهواء الطلق.",
+        "الحجر والمجلس كلاهما مألوف في بيوتنا في الأردن: الأول نبني به، والثاني نجتمع فيه. ما فعلته هنا أنني جمعتهما في تكوين واحد. بقي المجلس كما نعرفه، مقاعد متقابلة حول طاولة للضيافة والحديث، لكنه هذه المرة يأتي من الحجر، ويعيش في الهواء الطلق.",
     ],
     "mono_sky_alt": "المجلس تحت سماء غائمة واسعة، والتلال تمتدّ خلف الجدار الحجري",
 
     "mono_h4": "التكوين",
     "mono_p4": [
-        "التكوين بسيط: مقاعد تتحلّق حول طاولة حجرية مستديرة، وخلفها جدار يحمل الحطب. وحولها حصى أحمر ونبات، يتركان للحجر أن يكون أوضح ما في المشهد.",
+        "التكوين بسيط: مقاعد تتحلّق حول طاولة حجرية مستديرة، وخلفها جدار يحتضن الحطب. حولها حصى أحمر ونباتات، فيما يبقى الحجر هو العنصر الأكثر حضورًا في المشهد.",
     ],
     # key: (label, alt)
     "mono_plates": {
@@ -314,7 +314,7 @@ AR = {
         ("الموقع", "عمّان، الأردن"),
         ("تاريخ الإنجاز", "سبتمبر 2026"),
         ("المجال", '<span lang="en" dir="ltr">Landscape / Outdoor Architecture / Stone</span>'),
-        ("الفكرة", "مجلس خارجي من كتل حجرية منفردة، كل كتلة فيه مقعد."),
+        ("الفكرة", "مجلس خارجي من كتل حجرية منفردة، يقوم كل مقعد رئيسي فيه على كتلة واحدة."),
         ("التصميم والتنفيذ", "ماجد ناموس"),
     ],
 
@@ -483,35 +483,35 @@ EN = {
 
     # --- The Monolith Majlis (en/monolith.html) ---
     "mono_page_title": "The Monolith Majlis - Majed Namous",
-    "mono_desc": "The Monolith Majlis: an outdoor majlis in Amman that I designed and built from single blocks of stone, where every seat is one block.",
+    "mono_desc": "The Monolith Majlis: an outdoor majlis in Amman that I designed and built from single blocks of stone, where every main seat rests on one block.",
     "mono_place": "Amman, Jordan",
     "mono_date": "September 2026",
     "mono_title": "The Monolith Majlis",
     "mono_title_alt": "مجلس الكتلة الواحدة",
     "mono_title_alt_lang": "ar",
     "mono_hero_alt": "An outdoor majlis of large stone blocks gathered around a round stone table, with a stone wall behind it holding firewood in a circular opening",
-    "mono_open": "An outdoor majlis in natural stone, with a single block for every seat.",
+    "mono_open": "An outdoor majlis formed from single blocks of stone, where the stone is the seating itself, not a covering for it.",
 
     "mono_h1": "The idea",
     "mono_p1": [
-        "In most of what we build, stone comes last: we build first, then clad in stone. In this majlis I wanted to start from it. Instead of building a seat and covering it with stone, I chose to make the seat itself a single block of stone.",
+        "In this project the design began with the stone itself. I did not treat it as a finish added to the seat, but as the mass that makes the seat and gives it its presence. The whole concept follows from that: one block of stone for every main seat.",
     ],
 
     "mono_h2": "The single block",
     "mono_p2": [
-        "Every seat here is one piece: the seat and its back are the same stone, with nothing assembled. I left its surface rough, because I wanted the stone to remain stone even as a seat.",
+        "Every seat here rests on a single block of stone, present in the space as an architectural element before it is a piece of furniture. I left its surface rough, because I wanted the stone to remain stone even as a seat.",
     ],
-    "mono_block_alt": "A single block of stone forming a seat and its back, with fabric cushions on it",
+    "mono_block_alt": "A stone seat resting on a single block, with fabric cushions on it",
 
     "mono_h3": "Stone and the majlis",
     "mono_p3": [
-        "Stone and the majlis are both familiar in our homes in Jordan: we build with one and gather in the other. What I did here was bring them together into one thing. The majlis stays as we know it, seats facing each other around a table for hospitality and conversation, only this time in stone and in the open air.",
+        "Stone and the majlis are both familiar in our homes in Jordan: we build with one and gather in the other. What I did here was bring them together in one composition. The majlis stays as we know it, seats facing each other around a table for hospitality and conversation, but this time it comes from stone and lives in the open air.",
     ],
     "mono_sky_alt": "The majlis under a wide overcast sky, hills stretching beyond the stone wall",
 
     "mono_h4": "Composition",
     "mono_p4": [
-        "The composition is simple: seats gathered around a round stone table, with a wall behind them that holds the firewood. Around them, red gravel and planting leave the stone as the clearest thing in the scene.",
+        "The composition is simple: seats gathered around a round stone table, with a wall behind them that holds the firewood. Around them are red gravel and planting, while the stone remains the strongest presence in the scene.",
     ],
     "mono_plates": {
         "mono-above": ("From above",
@@ -526,7 +526,7 @@ EN = {
         ("Location", "Amman, Jordan"),
         ("Completed", "September 2026"),
         ("Field", "Landscape / Outdoor Architecture / Stone"),
-        ("Concept", "An outdoor majlis of single stone blocks, each block a seat."),
+        ("Concept", "An outdoor majlis of single stone blocks, with every main seat resting on one block."),
         ("Design and execution", "Majed Namous"),
     ],
 
