@@ -96,7 +96,7 @@ AQSA_IMG = {
     "aqsa-people-b": ([482], 482, 271),
 }
 
-# The Monolith Majlis project page. Same naming rule as above:
+# The Stone Block Majlis project page. Same naming rule as above:
 # <img>-<w>.webp for every w listed, plus <img>-<w0>.jpg for the first.
 # The widths are the real pixel widths of the crops — never upscaled.
 MONO_IMG = {
@@ -131,7 +131,7 @@ AR = {
     # An entry may carry a third element: the project pages listed
     # under it (a quiet sub-menu on desktop, nested rows on mobile).
     "nav": [("#top", "الرئيسية"),
-            ("#works", "الأعمال", [("monolith.html", "مجلس الكتلة الواحدة"),
+            ("#works", "الأعمال", [("monolith.html", "مجلس الكتل الحجرية"),
                                    ("aqsa.html", "سيارة الأقصى")]),
             ("#about", "عن ماجد"), ("#athar", "أثر"),
             ("contact.html", "تواصل")],
@@ -266,18 +266,18 @@ AR = {
     "aqsa_prev": "الصورة السابقة",
     "aqsa_next": "الصورة التالية",
 
-    # --- The Monolith Majlis (monolith.html) ---
+    # --- The Stone Block Majlis (monolith.html) ---
     # First person, short, no superlatives. No figures, stone types,
     # areas or costs: only what was actually provided about the project.
-    "mono_page_title": "مجلس الكتلة الواحدة - ماجد ناموس",
-    "mono_desc": "مجلس الكتلة الواحدة: مجلس خارجي في عمّان صمّمته ونفّذته من كتل حجرية منفردة، يقوم كل مقعد رئيسي فيه على كتلة واحدة.",
+    "mono_page_title": "مجلس الكتل الحجرية - ماجد ناموس",
+    "mono_desc": "مجلس الكتل الحجرية: مجلس خارجي في عمّان صمّمته ونفّذته من كتل حجرية منفردة، يقوم كل مقعد رئيسي فيه على كتلة واحدة.",
     "mono_place": "عمّان، الأردن",
     "mono_date": "سبتمبر 2026",
-    "mono_title": "مجلس الكتلة الواحدة",
-    "mono_title_alt": "The Monolith Majlis",
+    "mono_title": "مجلس الكتل الحجرية",
+    "mono_title_alt": "The Stone Block Majlis",
     "mono_title_alt_lang": "en",
     "mono_hero_alt": "مجلس خارجي من كتل حجرية كبيرة تتحلّق حول طاولة حجرية مستديرة، وخلفه جدار حجري بفتحة دائرية مملوءة بالحطب",
-    "mono_open": "مجلس خارجي يتشكّل من كتل حجرية منفردة؛ الحجر فيه هو الجلسة نفسها، لا غلافٌ لها.",
+    "mono_open": "مجلس خارجي صُمّمت مقاعده من كتل حجرية منفردة، ليكون الحجر جزءًا من تكوين الجلسة نفسها.",
 
     "mono_h1": "الفكرة",
     "mono_p1": [
@@ -354,7 +354,7 @@ EN = {
     
     
     "nav": [("#top", "Home"),
-            ("#works", "Works", [("monolith.html", "The Monolith Majlis"),
+            ("#works", "Works", [("monolith.html", "The Stone Block Majlis"),
                                  ("aqsa.html", "The Al-Aqsa Car")]),
             ("#about", "About"), ("#athar", "Athar"),
             ("contact.html", "Contact")],
@@ -481,16 +481,16 @@ EN = {
     "aqsa_prev": "Previous image",
     "aqsa_next": "Next image",
 
-    # --- The Monolith Majlis (en/monolith.html) ---
-    "mono_page_title": "The Monolith Majlis - Majed Namous",
-    "mono_desc": "The Monolith Majlis: an outdoor majlis in Amman that I designed and built from single blocks of stone, where every main seat rests on one block.",
+    # --- The Stone Block Majlis (en/monolith.html) ---
+    "mono_page_title": "The Stone Block Majlis - Majed Namous",
+    "mono_desc": "The Stone Block Majlis: an outdoor majlis in Amman that I designed and built from single blocks of stone, where every main seat rests on one block.",
     "mono_place": "Amman, Jordan",
     "mono_date": "September 2026",
-    "mono_title": "The Monolith Majlis",
-    "mono_title_alt": "مجلس الكتلة الواحدة",
+    "mono_title": "The Stone Block Majlis",
+    "mono_title_alt": "مجلس الكتل الحجرية",
     "mono_title_alt_lang": "ar",
     "mono_hero_alt": "An outdoor majlis of large stone blocks gathered around a round stone table, with a stone wall behind it holding firewood in a circular opening",
-    "mono_open": "An outdoor majlis formed from single blocks of stone, where the stone is the seating itself, not a covering for it.",
+    "mono_open": "An outdoor majlis whose seats are designed from single blocks of stone, so that the stone is part of the seating itself.",
 
     "mono_h1": "The idea",
     "mono_p1": [
@@ -1301,7 +1301,7 @@ def mono_pic(base, alt, sizes, eager=False):
 
 
 def monolith(t, alt_href):
-    """The Monolith Majlis — a project page with its own art
+    """The Stone Block Majlis — a project page with its own art
     direction. Same navbar and footer as every other page; the cream
     ground and the editorial grid come from assets/css/monolith.css,
     which only this page loads. Deliberately short: five brief
