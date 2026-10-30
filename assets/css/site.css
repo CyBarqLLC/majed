@@ -710,15 +710,44 @@ html[lang="ar"] .hero .lead { max-width: 42ch; line-height: 1.85; }
   .mosaic:hover .tile:not(:hover) .tile__frame img { filter: grayscale(0.4); opacity: 0.86; }
 }
 
-/* mosaic rhythm — sizes and small offsets */
-.tile:nth-child(1) { --r: -1.6; --k: 1.1; }
-.tile:nth-child(2) { --r: 1.2; --k: 0.8; }
-.tile:nth-child(3) { --r: -0.8; --k: 1.3; }
-.tile:nth-child(4) { --r: 1.8; --k: 0.9; }
-.tile:nth-child(5) { --r: -1.2; --k: 1.2; }
-.tile:nth-child(6) { --r: 0.9; --k: 0.7; }
-.tile:nth-child(7) { --r: -1.9; --k: 1; }
-.tile:nth-child(8) { --r: 1.4; --k: 1.15; }
+/* mosaic rhythm — sizes and small offsets, repeating every 8 tiles */
+.tile:nth-child(8n + 1) { --r: -1.6; --k: 1.1; }
+.tile:nth-child(8n + 2) { --r: 1.2; --k: 0.8; }
+.tile:nth-child(8n + 3) { --r: -0.8; --k: 1.3; }
+.tile:nth-child(8n + 4) { --r: 1.8; --k: 0.9; }
+.tile:nth-child(8n + 5) { --r: -1.2; --k: 1.2; }
+.tile:nth-child(8n + 6) { --r: 0.9; --k: 0.7; }
+.tile:nth-child(8n + 7) { --r: -1.9; --k: 1; }
+.tile:nth-child(8n + 8) { --r: 1.4; --k: 1.15; }
+
+/* the latest work, opening the section: a wide view and the maker in
+   the place. Mobile: stacked, the portrait stepped to the far side. */
+.works__lead {
+  display: grid;
+  gap: clamp(2rem, 7vw, 3rem);
+  margin-bottom: clamp(3.5rem, 10vw, 7rem);
+}
+.lead-shot { margin: 0; }
+.lead-shot__frame { display: block; overflow: hidden; background: var(--placeholder); }
+.lead-shot__frame picture { display: block; width: 100%; height: 100%; }
+.lead-shot__frame img { width: 100%; height: 100%; object-fit: cover; }
+.lead-shot--wide .lead-shot__frame { aspect-ratio: 16 / 9; }
+.lead-shot--tall { width: 64%; max-width: 320px; justify-self: end; }
+.lead-shot--tall .lead-shot__frame { aspect-ratio: 4 / 5; }
+.lead-shot--tall .lead-shot__frame img { object-position: 40% center; }
+@media (min-width: 880px) {
+  .works__lead {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 2.4vw, 2.5rem);
+    align-items: end;
+  }
+  .lead-shot--wide { grid-column: 1 / span 8; }
+  .lead-shot--tall { grid-column: 10 / span 3; width: 100%; max-width: none; justify-self: stretch; }
+}
+@media (hover: hover) and (min-width: 1000px) {
+  .lead-shot__frame img { transition: transform 1.2s var(--ease); }
+  .lead-shot:hover .lead-shot__frame img { transform: scale(1.02); }
+}
 
 @media (max-width: 719.98px) {
   .tile:nth-child(4n + 2) { margin-top: 1.6rem; }

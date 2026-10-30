@@ -294,10 +294,85 @@ html[lang="en"] .mono-plate__cap {
   .mono-plate--table { grid-column: 10 / span 3; width: 100%; margin-top: clamp(3.5rem, 9vw, 8rem); }
 }
 
+/* wide views: the majlis in the courtyard (ch. 3), from the front (ch. 4) */
+.mono-plate--court .mono-plate__frame,
+.mono-plate--front .mono-plate__frame { aspect-ratio: 16 / 9; }
+.mono-plate--court { margin-top: clamp(3rem, 9vw, 5.5rem); }
+.mono-plate--front { margin-top: clamp(3.5rem, 10vw, 7rem); }
+
+/* two details closing the plates — same stepping as the trio */
+.mono-duo {
+  display: grid;
+  gap: clamp(2.25rem, 8vw, 3.25rem);
+  margin-top: clamp(2.5rem, 8vw, 4.5rem);
+}
+.mono-plate--wood { width: 64%; max-width: 380px; }
+.mono-plate--wood .mono-plate__frame { aspect-ratio: 4 / 5; }
+.mono-plate--arch { width: 86%; max-width: 640px; justify-self: end; }
+.mono-plate--arch .mono-plate__frame { aspect-ratio: 4 / 3; }
+@media (min-width: 820px) {
+  .mono-duo {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 2.4vw, 2.5rem);
+    align-items: start;
+  }
+  .mono-plate--wood { grid-column: 2 / span 4; width: 100%; max-width: none; }
+  .mono-plate--arch { grid-column: 7 / span 6; width: 100%; max-width: none; justify-self: stretch; margin-top: clamp(4rem, 10vw, 9rem); }
+}
+
 @media (hover: hover) and (min-width: 1000px) {
   .mono-plate__frame img { transition: transform 1.2s var(--ease); }
   .mono-plate:hover .mono-plate__frame img { transform: scale(1.02); }
 }
+
+/* ---------- 5b. The film ----------
+   A hairline, a short head, then the frame at full measure. The player
+   itself (poster, play mark, controls on demand) is the site's own
+   .film__* system from site.css; only the shape changes here. */
+
+.mono-film { padding-bottom: var(--mono-gap); }
+.mono-film .wrap { border-top: 1px solid var(--line-soft); padding-top: clamp(2.5rem, 6vw, 4rem); }
+
+.mono-film__head {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: clamp(1.75rem, 5vw, 2.75rem);
+}
+.mono-film__meta {
+  font-size: var(--step--2);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: var(--stone);
+  line-height: 1.5;
+}
+html[lang="en"] .mono-film__meta { text-transform: uppercase; }
+.mono-film__note {
+  font-size: var(--step-0);
+  line-height: 1.7;
+  max-width: 44ch;
+  color: var(--ink-45);
+}
+html[lang="ar"] .mono-film__note { line-height: 1.9; }
+
+@media (min-width: 900px) {
+  .mono-film__head {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: clamp(1.5rem, 2.4vw, 2.5rem);
+    align-items: end;
+  }
+  .mono-film__meta { grid-column: 1 / span 4; grid-row: 1; }
+  .mono-film__head .mono-ch__title { grid-column: 1 / span 4; grid-row: 2; }
+  .mono-film__note { grid-column: 7 / span 6; grid-row: 2; }
+}
+
+.film__stage.mono-film__stage {
+  max-width: none;
+  aspect-ratio: 16 / 9;
+  background: var(--placeholder);
+}
+.mono-film__stage .film__video { background: #0c0c0c; }
+.mono-film__stage .film__play { background: rgba(12, 12, 12, 0.18); }
+.mono-film__stage .film__play-mark { width: clamp(56px, 9vw, 76px); }
 
 /* ---------- 6. Project information ---------- */
 

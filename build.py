@@ -77,6 +77,61 @@ WORKS = [
     {"img": "work-2024", "year": "2024",
      "alt_ar": "صالة بيضاء بسقف جمالوني ونافذة عالية تطلّ على السهل",
      "alt_en": "White living space under a gable, its tall window opening onto the plain"},
+    # 2026 — the house with the arcades and the stone block majlis, Amman
+    {"img": "work-2026-a", "year": "2026",
+     "alt_ar": "فناء البيت عند الغروب، ومقاعد الكتل الحجرية في المقدّمة",
+     "alt_en": "The courtyard at sunset, the stone block seats in the foreground"},
+    {"img": "work-2026-b", "year": "2026",
+     "alt_ar": "مجلس داخلي بثلاثة عقود يكسوها السجاد، وسقف من الخشب والقصب",
+     "alt_en": "An interior majlis with three carpeted arches under a timber and reed ceiling"},
+    {"img": "work-2026-c", "year": "2026",
+     "alt_ar": "المجلس الداخلي بفوانيسه النحاسية وعقوده المكسوّة بالسجاد",
+     "alt_en": "The interior majlis with its brass lanterns and carpeted arches"},
+    {"img": "work-2026-d", "year": "2026",
+     "alt_ar": "محاريب للرفوف بإضاءة دافئة ليلًا، وإلى جانبها درابزين حديدي",
+     "alt_en": "Arched shelf niches in warm light at night, beside an iron railing"},
+    {"img": "work-2026-e", "year": "2026",
+     "alt_ar": "رواق معقود تضيئه الفوانيس ليلًا، وفي آخره مرآة بإطار خشبي",
+     "alt_en": "An arched gallery lit by lanterns at night, a timber-framed mirror at its end"},
+    {"img": "work-2026-f", "year": "2026",
+     "alt_ar": "شجرة زيتون أمام الدرج الخارجي، وحولها الجهنمية",
+     "alt_en": "An olive tree before the outdoor stair, bougainvillea around it"},
+    {"img": "work-2026-g", "year": "2026",
+     "alt_ar": "عقد أبيض يُرى من بين أغصان الزيتون، وفي داخله رواق بالفوانيس",
+     "alt_en": "A white arch seen through olive branches, a lantern-lit gallery inside"},
+    {"img": "work-2026-h", "year": "2026",
+     "alt_ar": "مظلّة خشبية فوق عقد المدخل، وفانوس حديدي على الجدار",
+     "alt_en": "A timber canopy above the entrance arch, an iron lantern on the wall"},
+    {"img": "work-2026-i", "year": "2026",
+     "alt_ar": "رواق بسقف من الجسور الخشبية والقصب، تتقابل فيه العقود والمرآة",
+     "alt_en": "A gallery under timber beams and reed, arches facing a mirror"},
+    {"img": "work-2026-j", "year": "2026",
+     "alt_ar": "واجهة معقودة بالفوانيس، وفوقها مظلّة خشبية ونباتات متسلّقة",
+     "alt_en": "An arcaded front with lanterns, a timber awning and climbing plants"},
+    {"img": "work-2026-k", "year": "2026",
+     "alt_ar": "عريشة خشبية مسقوفة بالقصب فوق طاولة طويلة، وخلفها ثلاثة محاريب",
+     "alt_en": "A reed-roofed timber pergola over a long table, three niches behind it"},
+    {"img": "work-2026-l", "year": "2026",
+     "alt_ar": "مغسلة على رفّ خشبي تحت مرآة معقودة، بإضاءة دافئة",
+     "alt_en": "A basin on a timber shelf beneath an arched mirror, in warm light"},
+]
+
+# The latest work, opening the works section: a wide view and the
+# maker in the place. (base, widths, w, h)
+LEAD_IMG = {
+    "home-facade": ([1600, 1200, 800], 1600, 900),
+    "home-majed":  ([864, 600], 864, 1080),
+}
+
+# The hero horizon: two rows of 12 squares (<img>-400.webp), old and
+# new work interleaved. hero-2026-* exist only as 400px squares.
+HERO_ROWS = [
+    ["work-2016", "hero-2026-d", "work-2007", "work-2026-b", "work-2018",
+     "hero-2026-a", "work-2013", "work-2026-f", "work-2023", "work-2026-j",
+     "work-2015", "work-2026-k"],
+    ["work-2026-g", "work-2012", "hero-2026-b", "work-2017", "work-2026-d",
+     "work-2018-b", "hero-2026-c", "work-2020", "work-2026-e", "work-2024",
+     "work-2026-i", "work-2023-b"],
 ]
 
 # Al-Aqsa car story images. Basenames live in assets/img as
@@ -108,6 +163,10 @@ MONO_IMG = {
     "mono-wall":   ([510], 510, 382),
     "mono-table":  ([450], 450, 300),
     "mono-sky":    ([720], 720, 1080),
+    "mono-court":  ([1600, 1200, 800], 1600, 900),
+    "mono-front":  ([1600, 1200, 800], 1600, 900),
+    "mono-wood":   ([864, 600], 864, 1080),
+    "mono-arch":   ([1200, 800], 1200, 900),
 }
 
 # ============================================================
@@ -147,6 +206,9 @@ AR = {
 
     "works_title": "الأعمال",
     "works_meta": "<span dir=\"ltr\">2007 - 2018</span>",
+    "lead_facade_alt": "واجهة البيت البيضاء بعقودها الثلاثة ومظلّاتها الخشبية، وأمامها فناء من الرخام",
+    "lead_majed_alt": "ماجد ناموس جالسًا إلى الطاولة تحت العريشة، وخلفه المحاريب المضاءة",
+    "lead_majed_cap": "في المكان",
 
     "about_meta": "عن ماجد",
     "about_body": [
@@ -295,6 +357,8 @@ AR = {
         "الحجر والمجلس كلاهما مألوف في بيوتنا في الأردن: الأول نبني به، والثاني نجتمع فيه. ما فعلته هنا أنني جمعتهما في تكوين واحد. بقي المجلس كما نعرفه، مقاعد متقابلة حول طاولة للضيافة والحديث، لكنه هذه المرة يأتي من الحجر، ويعيش في الهواء الطلق.",
     ],
     "mono_sky_alt": "المجلس تحت سماء غائمة واسعة، والتلال تمتدّ خلف الجدار الحجري",
+    "mono_court": ("المجلس في الفناء",
+                   "المجلس في فناء البيت عند الغروب، والكتل الحجرية في المقدّمة"),
 
     "mono_h4": "التكوين",
     "mono_p4": [
@@ -307,7 +371,17 @@ AR = {
         "mono-seat": ("الكتلة والنبات", "كتلة حجرية للجلوس بجوار شجيرة مزهرة"),
         "mono-wall": ("الجدار", "جدار حجري فيه فتحة دائرية وأخرى مستطيلة مملوءتان بالحطب"),
         "mono-table": ("طاولة الوسط", "طاولة حجرية مستديرة منخفضة في وسط المجلس"),
+        "mono-front": ("المجلس كاملًا",
+                       "المجلس من الأمام: مقعدان من الكتل الحجرية حول الطاولة، والجدار بفتحته الدائرية بينهما والتلال خلفه"),
+        "mono-wood": ("الحطب", "فتحة مستطيلة في الجدار الحجري مملوءة بقطع الحطب"),
+        "mono-arch": ("الحجر والزهر", "الجدار الحجري خلف شجيرة جهنمية مزهرة"),
     },
+
+    "mono_film_meta": "فيلم قصير - <span dir=\"ltr\">1:30</span>",
+    "mono_film_title": "الجلسة الحجرية",
+    "mono_film_note": "جولة قصيرة في المجلس، أحكي فيها عن فكرته، وعن الحجر حين صار جلسة.",
+    "mono_film_play": "شاهد الفيلم",
+    "mono_film_alt": "فيلم قصير: ماجد ناموس يتحدّث عن مجلس الكتل الحجرية",
 
     "mono_h5": "بيانات المشروع",
     "mono_info": [
@@ -369,6 +443,9 @@ EN = {
     "hero_cue": "Works below",
 
     "works_title": "Works",
+    "lead_facade_alt": "The white front of the house, its three arches and timber canopies, a marble court before it",
+    "lead_majed_alt": "Majed Namous seated at the table under the pergola, the lit niches behind him",
+    "lead_majed_cap": "In the place",
 
     "about_meta": "About",
     "about_body": [
@@ -508,6 +585,8 @@ EN = {
         "Stone and the majlis are both familiar in our homes in Jordan: we build with one and gather in the other. What I did here was bring them together in one composition. The majlis stays as we know it, seats facing each other around a table for hospitality and conversation, but this time it comes from stone and lives in the open air.",
     ],
     "mono_sky_alt": "The majlis under a wide overcast sky, hills stretching beyond the stone wall",
+    "mono_court": ("The majlis in the courtyard",
+                   "The majlis in the courtyard of the house at sunset, the stone blocks in the foreground"),
 
     "mono_h4": "Composition",
     "mono_p4": [
@@ -519,7 +598,17 @@ EN = {
         "mono-seat": ("Block and planting", "A stone seating block beside a flowering shrub"),
         "mono-wall": ("The wall", "A stone wall with a circular and a rectangular opening, both filled with firewood"),
         "mono-table": ("The central table", "A low round stone table at the centre of the majlis"),
+        "mono-front": ("The whole majlis",
+                       "The majlis from the front: two stone block seats around the table, the wall with its round opening between them, hills beyond"),
+        "mono-wood": ("Firewood", "A rectangular opening in the stone wall, stacked with firewood"),
+        "mono-arch": ("Stone and bloom", "The stone wall behind a flowering bougainvillea"),
     },
+
+    "mono_film_meta": "Short film - 1:30",
+    "mono_film_title": "The Stone Seating",
+    "mono_film_note": "A short walk through the majlis, in which I talk about its idea, and about the stone once it became a place to sit.",
+    "mono_film_play": "Watch the film",
+    "mono_film_alt": "Short film: Majed Namous talks about the Stone Block Majlis",
 
     "mono_h5": "Project information",
     "mono_info": [
@@ -634,6 +723,11 @@ def picture(base, alt, widths, sizes, loading="lazy", fetchpriority=None,
             '<img src="{a}/{base}-{big}.jpg" alt="{alt}" {attrs}>'
             '</picture>').format(srcset=srcset, sizes=sizes, a=A, base=base,
                                  big=big, alt=alt, attrs=attrs)
+
+
+def lead_pic(base, alt, sizes):
+    widths, w, h = LEAD_IMG[base]
+    return picture(base, alt, widths, sizes, w=w, h=h)
 
 
 def words(text):
@@ -846,14 +940,12 @@ def hero_field():
     LTR flow in CSS so RTL cannot reverse the loop.
     """
     rows = []
-    n = len(WORKS)
-    for i in range(2):
-        items = [WORKS[(i * 4 + j) % n] for j in range(n)]
+    for i, items in enumerate(HERO_ROWS):
         one = "".join(
             '<span class="hero__tile"><img src="{a}/{img}-400.webp" alt="" '
             'loading="eager" decoding="async" width="400" height="400"></span>'.format(
-                a=A, img=w["img"])
-            for w in items)
+                a=A, img=img)
+            for img in items)
         rows.append('<div class="hero__row hero__row--{c}">{s}{s}{s}{s}{s}{s}</div>'.format(
             c="ab"[i], s=one))
     return '<div class="hero__field" aria-hidden="true">%s</div>' % "".join(rows)
@@ -917,6 +1009,16 @@ def home(t, alt_href):
     <div class="wrap">
       <div class="section-head reveal">
         <h2 class="section-title" id="works-title">{works_title}</h2>
+      </div>
+      <div class="works__lead">
+        <figure class="lead-shot lead-shot--wide img-reveal">
+          <span class="lead-shot__frame">{lead_facade}</span>
+          <figcaption class="tile__year">2026</figcaption>
+        </figure>
+        <figure class="lead-shot lead-shot--tall img-reveal" data-delay="1">
+          <span class="lead-shot__frame">{lead_majed}</span>
+          <figcaption class="tile__year">{lead_majed_cap}</figcaption>
+        </figure>
       </div>
       <div class="mosaic" data-mosaic>
         {tiles}
@@ -1019,6 +1121,11 @@ def home(t, alt_href):
         portrait=picture("majed-portrait", t["about_portrait_alt"], [900, 600],
                          "(min-width: 880px) 40vw, 86vw"),
         works_title=t["works_title"],
+        lead_facade=lead_pic("home-facade", t["lead_facade_alt"],
+                             "(min-width: 1320px) 820px, (min-width: 880px) 62vw, 92vw"),
+        lead_majed=lead_pic("home-majed", t["lead_majed_alt"],
+                            "(min-width: 1320px) 300px, (min-width: 880px) 23vw, 70vw"),
+        lead_majed_cap=t["lead_majed_cap"],
         tiles="\n        ".join(tiles),
         athar_mark=ATHAR_MARK, athar_logo_alt=t["athar_logo_alt"],
         athar_title=t["athar_title"],
@@ -1358,6 +1465,14 @@ def monolith(t, alt_href):
         '<div class="mono-info__row"><dt>%s</dt><dd>%s</dd></div>' % kv
         for kv in t["mono_info"])
 
+    court_label, court_alt = t["mono_court"]
+    court = ('<figure class="mono-plate mono-plate--court img-reveal">'
+             '<div class="mono-plate__frame">{pic}</div>'
+             '<figcaption class="mono-plate__cap">{label}</figcaption>'
+             '</figure>').format(
+                 pic=mono_pic("mono-court", court_alt, "(min-width: 1320px) 1240px, 92vw"),
+                 label=court_label)
+
     THIRD = "(min-width: 1320px) 400px, (min-width: 820px) 30vw, 78vw"
     INSET = "(min-width: 900px) 400px, 78vw"
 
@@ -1398,6 +1513,7 @@ def monolith(t, alt_href):
       {head3}
       <div class="mono-ch__body">{p3}{sky}</div>
     </div>
+    <div class="wrap">{court}</div>
   </section>
 
   <section class="mono-ch mono-ch--plates" aria-labelledby="m4">
@@ -1408,6 +1524,29 @@ def monolith(t, alt_href):
     <div class="wrap">
       {above}
       <div class="mono-trio">{seat}{wall}{table}</div>
+      {front}
+      <div class="mono-duo">{wood}{arch}</div>
+    </div>
+  </section>
+
+  <section class="mono-film" aria-labelledby="mono-film-title">
+    <div class="wrap">
+      <header class="mono-film__head reveal">
+        <p class="mono-film__meta">{film_meta}</p>
+        <h2 class="mono-ch__title" id="mono-film-title">{film_title}</h2>
+        <p class="mono-film__note">{film_note}</p>
+      </header>
+      <div class="mono-film__stage film__stage reveal" data-film>
+        <video class="film__video" data-film-video
+               poster="{film_poster}" preload="none" playsinline controls
+               width="1280" height="720" aria-label="{film_alt}">
+          <source src="{film_src}" type="video/mp4">
+        </video>
+        <button class="film__play" type="button" data-film-play>
+          <span class="film__play-mark" aria-hidden="true">{play_icon}</span>
+          <span class="film__play-label">{film_play}</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -1448,6 +1587,15 @@ def monolith(t, alt_href):
         seat=plate("mono-seat", THIRD),
         wall=plate("mono-wall", THIRD, delay=1),
         table=plate("mono-table", THIRD, delay=2),
+        court=court,
+        front=plate("mono-front", "(min-width: 1320px) 1240px, 92vw"),
+        wood=plate("mono-wood", "(min-width: 820px) 30vw, 72vw"),
+        arch=plate("mono-arch", "(min-width: 820px) 46vw, 86vw", delay=1),
+        film_meta=t["mono_film_meta"], film_title=t["mono_film_title"],
+        film_note=t["mono_film_note"], film_play=t["mono_film_play"],
+        film_alt=t["mono_film_alt"], play_icon=PLAY_ICON,
+        film_poster="%s/mono-film-1280.jpg" % A,
+        film_src="%s/video/mono-film.mp4" % ASSETS,
         head5=chapter_head(5, "mono_h5"), info=info,
         end_a=t["mono_end"][0], end_b=t["mono_end"][1],
         # the mark already spells the Arabic name, so the signature adds

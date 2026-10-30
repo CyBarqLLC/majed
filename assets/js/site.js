@@ -340,10 +340,8 @@
      Never autoplays. `controls` sits in the markup so the element still
      works with JS off; with JS on it is taken away until the visitor
      presses play, and the poster carries the frame until then. -------- */
-  (function film() {
-    var stage = document.querySelector("[data-film]");
-    if (!stage) return;
-
+  /* one or more players per page (Athar on home, the majlis film) */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-film]"), function (stage) {
     var video = stage.querySelector("[data-film-video]");
     var play = stage.querySelector("[data-film-play]");
     if (!video || !play) return;
@@ -366,7 +364,7 @@
     });
 
     video.addEventListener("play", started);
-  })();
+  });
 
 
   requestAnimationFrame(frame);
