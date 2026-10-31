@@ -366,6 +366,26 @@
     video.addEventListener("play", started);
   });
 
+  /* ---------- the Instagram reel ----------
+     A still in the site's frame; Instagram's player (and everything it
+     loads) arrives only when the visitor presses play. Without JS the
+     link beside it still opens the reel. ---------------------------- */
+  Array.prototype.forEach.call(document.querySelectorAll("[data-reel]"), function (stage) {
+    var btn = stage.querySelector("[data-reel-play]");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      var f = document.createElement("iframe");
+      f.src = stage.getAttribute("data-reel-src");
+      f.title = stage.getAttribute("data-reel-title") || "";
+      f.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; clipboard-write");
+      f.setAttribute("allowfullscreen", "");
+      f.setAttribute("scrolling", "no");
+      stage.classList.add("is-playing");
+      btn.remove();
+      stage.appendChild(f);
+    });
+  });
+
 
   requestAnimationFrame(frame);
 })();

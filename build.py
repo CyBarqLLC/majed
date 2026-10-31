@@ -155,19 +155,47 @@ AQSA_IMG = {
 # <img>-<w>.webp for every w listed, plus <img>-<w0>.jpg for the first.
 # The widths are the real pixel widths of the crops — never upscaled.
 MONO_IMG = {
-    "mono-hero":   ([1472, 1100, 800], 1472, 828),
-    "mono-hero-m": ([753], 753, 941),
-    "mono-above":  ([1280, 800], 1280, 720),
-    "mono-block":  ([500], 500, 625),
-    "mono-seat":   ([420], 420, 420),
-    "mono-wall":   ([510], 510, 382),
-    "mono-table":  ([450], 450, 300),
-    "mono-sky":    ([720], 720, 1080),
+    # all from the 2026 shoot; block, sky, above and table are stills
+    # from the film, cropped above its subtitles
+    "mono-hero":   ([1600, 1100, 800], 1600, 900),
+    "mono-hero-m": ([864], 864, 1080),
+    "mono-above":  ([1600, 1200, 800], 1600, 900),
+    "mono-block":  ([720, 500], 720, 900),
+    "mono-seat":   ([800, 500], 800, 800),
+    "mono-wall":   ([1200, 800], 1200, 900),
+    "mono-table":  ([1200, 800], 1200, 800),
+    "mono-sky":    ([600], 600, 900),
     "mono-court":  ([1600, 1200, 800], 1600, 900),
     "mono-front":  ([1600, 1200, 800], 1600, 900),
-    "mono-wood":   ([864, 600], 864, 1080),
-    "mono-arch":   ([1200, 800], 1200, 900),
 }
+
+# The Emirati House (emirati.html). Same naming rule as above.
+HOUSE_IMG = {
+    "house-hero":       ([1600, 1100, 800], 1600, 900),
+    "house-hero-m":     ([864], 864, 1080),
+    "house-night":      ([1600, 1200, 800], 1600, 900),
+    "house-arcade":     ([864, 600], 864, 1080),
+    "house-canopy":     ([1200, 800], 1200, 900),
+    "house-olive-arch": ([864, 600], 864, 1080),
+    "house-gallery":    ([864, 600], 864, 1080),
+    "house-corridor":   ([864, 600], 864, 1080),
+    "house-door":       ([1200, 800], 1200, 900),
+    "house-majlis":     ([1600, 1200, 800], 1600, 900),
+    "house-majlis-b":   ([1200, 800], 1200, 900),
+    "house-niches":     ([864, 600], 864, 1080),
+    "house-olive":      ([1600, 1200, 800], 1600, 900),
+    "house-above":      ([1200, 800], 1200, 900),
+    "house-pergola":    ([1200, 800], 1200, 900),
+    "house-basin":      ([864, 600], 864, 1080),
+    "house-majed":      ([864, 600], 864, 1080),
+    "house-reel":       ([864, 600], 864, 1080),
+    "house-side":       ([1600, 1200, 800], 1600, 900),
+    "house-entrance":   ([1200, 800], 1200, 900),
+    "house-basin-arch": ([864, 600], 864, 1080),
+    "house-carpet":     ([864, 600], 864, 1080),
+    "house-kitchen":    ([864, 600], 864, 1080),
+}
+HOUSE_REEL = "https://www.instagram.com/reel/DerwBd5ItFg/"
 
 # ============================================================
 # 2. CONTENT — Arabic / English
@@ -190,7 +218,8 @@ AR = {
     # An entry may carry a third element: the project pages listed
     # under it (a quiet sub-menu on desktop, nested rows on mobile).
     "nav": [("#top", "الرئيسية"),
-            ("#works", "الأعمال", [("monolith.html", "مجلس الكتل الحجرية"),
+            ("#works", "الأعمال", [("emirati.html", "البيت الإماراتي"),
+                                   ("monolith.html", "مجلس الكتل الحجرية"),
                                    ("aqsa.html", "سيارة الأقصى")]),
             ("#about", "عن ماجد"), ("#athar", "أثر"),
             ("contact.html", "تواصل")],
@@ -241,7 +270,7 @@ AR = {
     "cottages_meta": "شارع الأردن - تأسست <span dir=\"ltr\">2023</span>",
     "cottages_title": "أكواخ الماجد",
     "cottages_body": [
-        "في عام 2023، أنشأتُ أكواخ الماجد في شارع الأردن بمدينة عمّان، وتولّيت تصميمها وتنفيذها بنفسي، من الفكرة الأولى وحتى تفاصيلها الأخيرة.",
+        "في عام 2023، أنشأتُ أكواخ الماجد في شارع الأردن بمدينة عمّان، وتولّيت تصميمها وتنفيذها، من الفكرة الأولى وحتى تفاصيلها الأخيرة.",
         "كان اهتمامي أن تكون المساحات مدروسة وقريبة من الإنسان؛ تمنح من يدخلها شعورًا بالألفة والراحة، بعيدًا عن الطابع المعتاد لأماكن الإقامة المؤقتة. أردتُ لكل كوخ أن يحمل إحساس البيت وخصوصيته، وأن تكون العمارة فيه جزءًا هادئًا من التجربة، لا مجرد إطارٍ لها.",
     ],
     "cottages_logo_alt": "شعار أكواخ الماجد",
@@ -338,7 +367,7 @@ AR = {
     "mono_title": "مجلس الكتل الحجرية",
     "mono_title_alt": "The Stone Block Majlis",
     "mono_title_alt_lang": "en",
-    "mono_hero_alt": "مجلس خارجي من كتل حجرية كبيرة تتحلّق حول طاولة حجرية مستديرة، وخلفه جدار حجري بفتحة دائرية مملوءة بالحطب",
+    "mono_hero_alt": "مجلس خارجي من كتل حجرية حول طاولة حجرية مستديرة، وخلفه جدار بفتحة دائرية وأخرى للحطب، والتلال في الأفق",
     "mono_open": "مجلس خارجي صُمّمت مقاعده من كتل حجرية منفردة، ليكون الحجر جزءًا من تكوين الجلسة نفسها.",
 
     "mono_h1": "الفكرة",
@@ -356,7 +385,7 @@ AR = {
     "mono_p3": [
         "الحجر والمجلس كلاهما مألوف في بيوتنا في الأردن: الأول نبني به، والثاني نجتمع فيه. ما فعلته هنا أنني جمعتهما في تكوين واحد. بقي المجلس كما نعرفه، مقاعد متقابلة حول طاولة للضيافة والحديث، لكنه هذه المرة يأتي من الحجر، ويعيش في الهواء الطلق.",
     ],
-    "mono_sky_alt": "المجلس تحت سماء غائمة واسعة، والتلال تمتدّ خلف الجدار الحجري",
+    "mono_sky_alt": "الجدار الحجري بفتحته الدائرية عند الغروب، وإلى جانبها الحطب",
     "mono_court": ("المجلس في الفناء",
                    "المجلس في فناء البيت عند الغروب، والكتل الحجرية في المقدّمة"),
 
@@ -367,21 +396,17 @@ AR = {
     # key: (label, alt)
     "mono_plates": {
         "mono-above": ("المشهد من الأعلى",
-                       "المجلس من الأعلى: كتل حجرية للجلوس حول طاولة مستديرة فوق أرضية من الحصى الأحمر"),
-        "mono-seat": ("الكتلة والنبات", "كتلة حجرية للجلوس بجوار شجيرة مزهرة"),
-        "mono-wall": ("الجدار", "جدار حجري فيه فتحة دائرية وأخرى مستطيلة مملوءتان بالحطب"),
-        "mono-table": ("طاولة الوسط", "طاولة حجرية مستديرة منخفضة في وسط المجلس"),
-        "mono-front": ("المجلس كاملًا",
-                       "المجلس من الأمام: مقعدان من الكتل الحجرية حول الطاولة، والجدار بفتحته الدائرية بينهما والتلال خلفه"),
-        "mono-wood": ("الحطب", "فتحة مستطيلة في الجدار الحجري مملوءة بقطع الحطب"),
-        "mono-arch": ("الحجر والزهر", "الجدار الحجري خلف شجيرة جهنمية مزهرة"),
+                       "المجلس من الأعلى عند الغروب، والحديقة من حوله"),
+        "mono-seat": ("الكتلة والنبات", "كتل حجرية للجلوس خلف شجيرة جهنمية مزهرة، والجدار من ورائها"),
+        "mono-wall": ("الحجر والحطب", "تفصيل من الجدار: حجر خشن السطح، وفتحة مستطيلة مملوءة بالحطب"),
+        "mono-table": ("طاولة الوسط", "الطاولة الحجرية المستديرة في وسط المجلس"),
+        "mono-front": ("في الليل", "المجلس ليلًا: النار في الفتحة الدائرية، وعلى الطاولة دلّة القهوة"),
     },
 
-    "mono_film_meta": "فيلم قصير - <span dir=\"ltr\">1:30</span>",
     "mono_film_title": "الجلسة الحجرية",
     "mono_film_note": "جولة قصيرة في المجلس، أحكي فيها عن فكرته، وعن الحجر حين صار جلسة.",
     "mono_film_play": "شاهد الفيلم",
-    "mono_film_alt": "فيلم قصير: ماجد ناموس يتحدّث عن مجلس الكتل الحجرية",
+    "mono_film_alt": "ماجد ناموس يتحدّث عن مجلس الكتل الحجرية",
 
     "mono_h5": "بيانات المشروع",
     "mono_info": [
@@ -390,12 +415,74 @@ AR = {
         ("المجال", '<span lang="en" dir="ltr">Landscape / Outdoor Architecture / Stone</span>'),
         ("الفكرة", "مجلس خارجي من كتل حجرية منفردة، يقوم كل مقعد رئيسي فيه على كتلة واحدة."),
         ("التصميم والتنفيذ", "ماجد ناموس"),
+        ("المشروع", '<a class="link" href="emirati.html"><span>البيت الإماراتي</span></a>'),
     ],
+    "mono_link_house": "البيت الإماراتي",
 
     "mono_end": ["لا شيء هنا أكثر من حجرٍ وجلسة.", "وهذا ما أردته."],
     "mono_sign_latin": "Majed Namous",
     "mono_link_works": "بقية الأعمال",
     "mono_link_contact": "تواصل معي",
+
+
+    # --- The Emirati House (emirati.html) --- first person, very short
+    "house_page_title": "البيت الإماراتي - ماجد ناموس",
+    "house_desc": "البيت الإماراتي: أول بيت إماراتي في الأردن.",
+    "house_place": "عمّان، الأردن",
+    "house_date": "<span dir=\"ltr\">2026</span>",
+    "house_title": "البيت الإماراتي",
+    "house_title_alt": "The Emirati House",
+    "house_hero_alt": "واجهة البيت البيضاء بعقودها الثلاثة ومظلّاتها الخشبية، وأمامها فناء من الرخام",
+    "house_open": "أول بيت إماراتي في الأردن. عقود بيضاء، وأروقة، ومجالس، وفناء حول شجرة زيتون.",
+    "house_ch": [
+        ("الواجهة", "واجهة بيضاء بثلاثة عقود ومظلّات من الخشب."),
+        ("العقود والأروقة", "عقود في الأبواب والممرّات والمحاريب."),
+        ("الداخل", "في المضافة جلسات على امتداد الجدران، وسجاد إيراني في أعماق مقوّسة، وسقف من الخشب والقصب."),
+        ("الفناء", "فناء حول شجرة زيتون، وعريشة للجلسات."),
+    ],
+    # key: (label, alt)
+    "house_plates": {
+        "house-night": ("في المساء", "البيت ليلًا بعقوده المضاءة، وأمامه سيارة كلاسيكية على أرضية الرخام"),
+        "house-arcade": ("الرواق", "رواق من العقود البيضاء تضيئه الفوانيس، وأمامه شجرة زيتون"),
+        "house-canopy": ("المظلّة", "مظلّة خشبية فوق عقد المدخل، وفانوس حديدي على الجدار"),
+        "house-olive-arch": ("من بين الزيتون", "عقد أبيض يُرى من بين أغصان الزيتون، وفي داخله رواق بالفوانيس"),
+        "house-gallery": ("السقف", "رواق بسقف من الجسور الخشبية والقصب، تتقابل فيه العقود والمرآة"),
+        "house-corridor": ("الممرّ", "ممرّ معقود تضيئه الفوانيس ليلًا، وفي آخره مرآة بإطار خشبي"),
+        "house-door": ("الباب", "باب معقود بستارة بيضاء، وعلى جانبيه فوانيس مضاءة ليلًا"),
+        "house-majlis": ("المضافة", "المضافة: جلسات على امتداد الجدار، وسجاد إيراني في ثلاثة أعماق مقوّسة، وسقف من الخشب والقصب"),
+        "house-majlis-b": ("الفوانيس", "المضافة بفوانيسها النحاسية وجلساتها البيضاء ووسائدها الحمراء"),
+        "house-side": ("الواجهة الجانبية", "واجهة البيت الجانبية بعقودها ومظلّاتها الخشبية، وأمامها شجرة زيتون في حوض دائري"),
+        "house-entrance": ("المدخل ليلًا", "عقدا المدخل مضاءان ليلًا، والفوانيس على الجدار"),
+        "house-basin-arch": ("تحت الدرج", "مغسلة داخل عقد تحت الدرج، يضيئها فانوس معلّق"),
+        "house-carpet": ("السجاد الإيراني", "سجادة إيرانية في عمق مقوّس داخل جدار المضافة"),
+        "house-kitchen": ("بين الزيتون", "المطبخ الخارجي والعريشة من بين أشجار الزيتون"),
+        "house-niches": ("المحاريب", "محاريب للرفوف بإضاءة دافئة ليلًا، وإلى جانبها درابزين حديدي"),
+        "house-olive": ("الزيتونة", "شجرة زيتون أمام الدرج الخارجي، وحولها الجهنمية"),
+        "house-above": ("من الأعلى", "الفناء من الأعلى: شجرة الزيتون في حوضها، والعريشة والدرج"),
+        "house-pergola": ("العريشة", "عريشة خشبية مسقوفة بالقصب فوق طاولة طويلة، وخلفها ثلاثة محاريب"),
+        "house-basin": ("المغسلة", "مغسلة على رفّ خشبي تحت مرآة معقودة، بإضاءة دافئة"),
+    },
+    "house_reel_title": "جولة في البيت",
+    "house_reel_note": "من داخل البيت وفنائه.",
+    "house_reel_play": "شاهد المقطع",
+    "house_reel_open": "فتح المقطع على إنستغرام",
+    "house_reel_alt": "البيت الإماراتي ليلًا، غلاف المقطع",
+    "house_reel_frame": "مقطع البيت الإماراتي على إنستغرام",
+    "house_majlis_title": "مجلس الكتل الحجرية",
+    "house_majlis_line": "جزء من البيت: مجلس خارجي من كتل حجرية.",
+    "house_majlis_alt": "مجلس الكتل الحجرية في البيت الإماراتي: مقاعد من كتل حجرية حول طاولة مستديرة، وخلفها جدار بفتحة دائرية",
+    "house_h_info": "بيانات المشروع",
+    "house_info": [
+        ("الموقع", "عمّان، الأردن"),
+        ("السنة", "<span dir=\"ltr\">2026</span>"),
+        ("الطابع", "عمارة إماراتية"),
+        ("التصميم والتنفيذ", "ماجد ناموس"),
+    ],
+    "house_majed_alt": "ماجد ناموس جالسًا إلى الطاولة تحت العريشة، وخلفه المحاريب المضاءة",
+    "house_majed_cap": "في المكان",
+    "house_link_majlis": "مجلس الكتل الحجرية",
+    "house_link_works": "بقية الأعمال",
+    "house_link_contact": "تواصل معي",
 
     "contact_title": "تواصل",
     "contact_lead": "أسعد بتواصلكم حول المشاريع المعمارية، أو فرص التعاون في الإعلام الوقفي ومشاريع مؤسسة أثر.",
@@ -428,7 +515,8 @@ EN = {
     
     
     "nav": [("#top", "Home"),
-            ("#works", "Works", [("monolith.html", "The Stone Block Majlis"),
+            ("#works", "Works", [("emirati.html", "The Emirati House"),
+                                 ("monolith.html", "The Stone Block Majlis"),
                                  ("aqsa.html", "The Al-Aqsa Car")]),
             ("#about", "About"), ("#athar", "Athar"),
             ("contact.html", "Contact")],
@@ -476,7 +564,7 @@ EN = {
 
     "cottages_title": "Al Majed Cottages",
     "cottages_body": [
-        "In 2023 I built Al Majed Cottages on Jordan Street in Amman, designing them and carrying out the work myself, from the first idea through to the last detail.",
+        "In 2023 I built Al Majed Cottages on Jordan Street in Amman, designing them and overseeing the work, from the first idea through to the last detail.",
         "What mattered to me was that the spaces be considered and close to the person in them - that anyone who walks in feels a familiarity and an ease far from the usual character of short-stay places. I wanted each cottage to carry the feeling and the privacy of a home, and the architecture to be a quiet part of the experience rather than merely a frame around it.",
     ],
     "cottages_logo_alt": "Al Majed Cottages logo",
@@ -566,7 +654,7 @@ EN = {
     "mono_title": "The Stone Block Majlis",
     "mono_title_alt": "مجلس الكتل الحجرية",
     "mono_title_alt_lang": "ar",
-    "mono_hero_alt": "An outdoor majlis of large stone blocks gathered around a round stone table, with a stone wall behind it holding firewood in a circular opening",
+    "mono_hero_alt": "An outdoor majlis of stone blocks around a round stone table, a wall behind it with a round opening and a niche of firewood, hills on the horizon",
     "mono_open": "An outdoor majlis whose seats are designed from single blocks of stone, so that the stone is part of the seating itself.",
 
     "mono_h1": "The idea",
@@ -584,7 +672,7 @@ EN = {
     "mono_p3": [
         "Stone and the majlis are both familiar in our homes in Jordan: we build with one and gather in the other. What I did here was bring them together in one composition. The majlis stays as we know it, seats facing each other around a table for hospitality and conversation, but this time it comes from stone and lives in the open air.",
     ],
-    "mono_sky_alt": "The majlis under a wide overcast sky, hills stretching beyond the stone wall",
+    "mono_sky_alt": "The stone wall and its round opening at dusk, firewood beside it",
     "mono_court": ("The majlis in the courtyard",
                    "The majlis in the courtyard of the house at sunset, the stone blocks in the foreground"),
 
@@ -594,21 +682,17 @@ EN = {
     ],
     "mono_plates": {
         "mono-above": ("From above",
-                       "The majlis from above: stone seating blocks around a round table on red gravel"),
-        "mono-seat": ("Block and planting", "A stone seating block beside a flowering shrub"),
-        "mono-wall": ("The wall", "A stone wall with a circular and a rectangular opening, both filled with firewood"),
-        "mono-table": ("The central table", "A low round stone table at the centre of the majlis"),
-        "mono-front": ("The whole majlis",
-                       "The majlis from the front: two stone block seats around the table, the wall with its round opening between them, hills beyond"),
-        "mono-wood": ("Firewood", "A rectangular opening in the stone wall, stacked with firewood"),
-        "mono-arch": ("Stone and bloom", "The stone wall behind a flowering bougainvillea"),
+                       "The majlis from above at dusk, the garden around it"),
+        "mono-seat": ("Block and planting", "Stone seating blocks behind a flowering bougainvillea, the wall beyond"),
+        "mono-wall": ("Stone and firewood", "A detail of the wall: rough-faced stone and a rectangular niche of firewood"),
+        "mono-table": ("The central table", "The round stone table at the centre of the majlis"),
+        "mono-front": ("At night", "The majlis at night: fire in the round opening, a coffee pot on the table"),
     },
 
-    "mono_film_meta": "Short film - 1:30",
     "mono_film_title": "The Stone Seating",
     "mono_film_note": "A short walk through the majlis, in which I talk about its idea, and about the stone once it became a place to sit.",
     "mono_film_play": "Watch the film",
-    "mono_film_alt": "Short film: Majed Namous talks about the Stone Block Majlis",
+    "mono_film_alt": "Majed Namous talks about the Stone Block Majlis",
 
     "mono_h5": "Project information",
     "mono_info": [
@@ -617,12 +701,73 @@ EN = {
         ("Field", "Landscape / Outdoor Architecture / Stone"),
         ("Concept", "An outdoor majlis of single stone blocks, with every main seat resting on one block."),
         ("Design and execution", "Majed Namous"),
+        ("Project", '<a class="link" href="emirati.html"><span>The Emirati House</span></a>'),
     ],
+    "mono_link_house": "The Emirati House",
 
     "mono_end": ["Nothing here is more than stone and a place to sit.", "That is what I wanted."],
     "mono_sign_latin": "Majed Namous",
     "mono_link_works": "Other works",
     "mono_link_contact": "Get in touch",
+
+
+    # --- The Emirati House (en/emirati.html) ---
+    "house_page_title": "The Emirati House - Majed Namous",
+    "house_desc": "The Emirati House: the first Emirati house in Jordan.",
+    "house_place": "Amman, Jordan",
+    "house_date": "2026",
+    "house_title": "The Emirati House",
+    "house_title_alt": "البيت الإماراتي",
+    "house_hero_alt": "The white front of the house, its three arches and timber canopies, a marble court before it",
+    "house_open": "The first Emirati house in Jordan. White arches, galleries, majlis rooms, and a courtyard around an olive tree.",
+    "house_ch": [
+        ("The front", "A white front of three arches and timber canopies."),
+        ("Arches and galleries", "Arches in the doors, the passages and the niches."),
+        ("Inside", "In the guest room: seating along the walls, Iranian carpets set into arched recesses, and a ceiling of timber and reed."),
+        ("The courtyard", "A courtyard around an olive tree, and a pergola for gathering."),
+    ],
+    "house_plates": {
+        "house-night": ("Evening", "The house at night, its arches lit, a classic car on the marble court"),
+        "house-arcade": ("The arcade", "An arcade of white arches lit by lanterns, an olive tree before it"),
+        "house-canopy": ("The canopy", "A timber canopy above the entrance arch, an iron lantern on the wall"),
+        "house-olive-arch": ("Through the olive", "A white arch seen through olive branches, a lantern-lit gallery inside"),
+        "house-gallery": ("The ceiling", "A gallery under timber beams and reed, arches facing a mirror"),
+        "house-corridor": ("The passage", "An arched passage lit by lanterns at night, a timber-framed mirror at its end"),
+        "house-door": ("The door", "An arched door with a white curtain, lanterns lit on either side at night"),
+        "house-majlis": ("The guest room", "The guest room: seating along the wall, Iranian carpets in three arched recesses, a ceiling of timber and reed"),
+        "house-majlis-b": ("The lanterns", "The guest room with its brass lanterns, white seating and red cushions"),
+        "house-side": ("The side front", "The side of the house, its arches and timber canopies, an olive tree in a round bed before it"),
+        "house-entrance": ("The entrance at night", "The two entrance arches lit at night, lanterns on the wall"),
+        "house-basin-arch": ("Under the stair", "A basin set in an arch beneath the stair, lit by a hanging lantern"),
+        "house-carpet": ("Iranian carpet", "An Iranian carpet set into an arched recess in the guest room wall"),
+        "house-kitchen": ("Through the olives", "The outdoor kitchen and pergola seen through the olive trees"),
+        "house-niches": ("The niches", "Arched shelf niches in warm light at night, beside an iron railing"),
+        "house-olive": ("The olive tree", "An olive tree before the outdoor stair, bougainvillea around it"),
+        "house-above": ("From above", "The courtyard from above: the olive tree in its bed, the pergola and the stair"),
+        "house-pergola": ("The pergola", "A reed-roofed timber pergola over a long table, three niches behind it"),
+        "house-basin": ("The basin", "A basin on a timber shelf beneath an arched mirror, in warm light"),
+    },
+    "house_reel_title": "Around the house",
+    "house_reel_note": "From inside the house and its courtyard.",
+    "house_reel_play": "Watch the reel",
+    "house_reel_open": "Open the reel on Instagram",
+    "house_reel_alt": "The Emirati House at night, the reel cover",
+    "house_reel_frame": "The Emirati House reel on Instagram",
+    "house_majlis_title": "The Stone Block Majlis",
+    "house_majlis_line": "Part of the house: an outdoor majlis of stone blocks.",
+    "house_majlis_alt": "The Stone Block Majlis at the Emirati House: seats of stone blocks around a round table, a wall with a round opening behind",
+    "house_h_info": "Project information",
+    "house_info": [
+        ("Location", "Amman, Jordan"),
+        ("Year", "2026"),
+        ("Character", "Emirati architecture"),
+        ("Design and execution", "Majed Namous"),
+    ],
+    "house_majed_alt": "Majed Namous seated at the table under the pergola, the lit niches behind him",
+    "house_majed_cap": "In the place",
+    "house_link_majlis": "The Stone Block Majlis",
+    "house_link_works": "Other works",
+    "house_link_contact": "Get in touch",
 
     "contact_title": "Let\'s talk",
     "contact_lead": "I would be glad to hear from you about architectural projects, or about working together on waqf media and the work of Athar Foundation.",
@@ -745,6 +890,7 @@ PATHS = {
     "contact": ("contact.html", "en/contact.html"),
     "aqsa": ("aqsa.html", "en/aqsa.html"),
     "monolith": ("monolith.html", "en/monolith.html"),
+    "emirati": ("emirati.html", "en/emirati.html"),
 }
 
 
@@ -1011,10 +1157,10 @@ def home(t, alt_href):
         <h2 class="section-title" id="works-title">{works_title}</h2>
       </div>
       <div class="works__lead">
-        <figure class="lead-shot lead-shot--wide img-reveal">
+        <a class="lead-shot lead-shot--wide img-reveal" href="emirati.html">
           <span class="lead-shot__frame">{lead_facade}</span>
-          <figcaption class="tile__year">2026</figcaption>
-        </figure>
+          <span class="lead-shot__cap"><span class="lead-shot__title">{lead_title}</span><span class="tile__year" dir="ltr">2026</span>{arrow}</span>
+        </a>
         <figure class="lead-shot lead-shot--tall img-reveal" data-delay="1">
           <span class="lead-shot__frame">{lead_majed}</span>
           <figcaption class="tile__year">{lead_majed_cap}</figcaption>
@@ -1125,7 +1271,7 @@ def home(t, alt_href):
                              "(min-width: 1320px) 820px, (min-width: 880px) 62vw, 92vw"),
         lead_majed=lead_pic("home-majed", t["lead_majed_alt"],
                             "(min-width: 1320px) 300px, (min-width: 880px) 23vw, 70vw"),
-        lead_majed_cap=t["lead_majed_cap"],
+        lead_majed_cap=t["lead_majed_cap"], lead_title=t["house_title"],
         tiles="\n        ".join(tiles),
         athar_mark=ATHAR_MARK, athar_logo_alt=t["athar_logo_alt"],
         athar_title=t["athar_title"],
@@ -1525,14 +1671,12 @@ def monolith(t, alt_href):
       {above}
       <div class="mono-trio">{seat}{wall}{table}</div>
       {front}
-      <div class="mono-duo">{wood}{arch}</div>
     </div>
   </section>
 
   <section class="mono-film" aria-labelledby="mono-film-title">
     <div class="wrap">
       <header class="mono-film__head reveal">
-        <p class="mono-film__meta">{film_meta}</p>
         <h2 class="mono-ch__title" id="mono-film-title">{film_title}</h2>
         <p class="mono-film__note">{film_note}</p>
       </header>
@@ -1567,6 +1711,7 @@ def monolith(t, alt_href):
         <p class="mono-sign__alt mono-latin" lang="en" dir="ltr">{sign}</p>
       </div>
       <p class="mono-end__links reveal" data-delay="2">
+        <a class="link" href="emirati.html"><span>{link_house}</span>{arrow}</a>
         <a class="link" href="{works_href}"><span>{link_works}</span>{arrow}</a>
         <a class="link" href="{contact_href}"><span>{link_contact}</span>{arrow}</a>
       </p>
@@ -1575,6 +1720,7 @@ def monolith(t, alt_href):
 
 </main>
 """.format(
+        link_house=t["mono_link_house"],
         hero_pic=hero_pic, place=t["mono_place"], date=t["mono_date"],
         title=t["mono_title"], title_alt=title_alt, open=t["mono_open"],
         head1=chapter_head(1, "mono_h1"), p1=prose("mono_p1"),
@@ -1589,9 +1735,7 @@ def monolith(t, alt_href):
         table=plate("mono-table", THIRD, delay=2),
         court=court,
         front=plate("mono-front", "(min-width: 1320px) 1240px, 92vw"),
-        wood=plate("mono-wood", "(min-width: 820px) 30vw, 72vw"),
-        arch=plate("mono-arch", "(min-width: 820px) 46vw, 86vw", delay=1),
-        film_meta=t["mono_film_meta"], film_title=t["mono_film_title"],
+        film_title=t["mono_film_title"],
         film_note=t["mono_film_note"], film_play=t["mono_film_play"],
         film_alt=t["mono_film_alt"], play_icon=PLAY_ICON,
         film_poster="%s/mono-film-1280.jpg" % A,
@@ -1617,9 +1761,230 @@ def monolith(t, alt_href):
                 canonical=BASE_URL + "/" + ("monolith.html" if t["lang"] == "ar"
                                             else "en/monolith.html"),
                 theme="theme-cream", css="monolith.css", theme_color="#f9f4ea",
-                og_image="mono-hero-1472.jpg", preload=preload,
+                og_image="mono-hero-1600.jpg", preload=preload,
                 preload_display=False) \
         + navbar(t, "monolith", alt_href) + body + footer(t)
+
+
+def emirati(t, alt_href):
+    """The Emirati House — a project page in the same family as the
+    Stone Block Majlis (it reuses monolith.css), but on the site's own
+    grey ground. Very little text: one line per chapter, photographs
+    carry the rest. The Instagram reel stays a still until it is asked
+    for, so Instagram's frame and script never load on their own."""
+
+    def hpic(base, alt, sizes, eager=False):
+        widths, w, h = HOUSE_IMG[base]
+        return picture(base, alt, widths, sizes,
+                       loading=("eager" if eager else "lazy"), w=w, h=h)
+
+    def ratio(base):
+        _, w, h = HOUSE_IMG[base]
+        return {16 / 9: "r169", 4 / 3: "r43", 4 / 5: "r45"}.get(
+            min((16 / 9, 4 / 3, 4 / 5), key=lambda r: abs(r - w / h)))
+
+    WIDE = "(min-width: 1320px) 1240px, 92vw"
+    HALF = "(min-width: 820px) 54vw, 86vw"
+    NARROW = "(min-width: 820px) 30vw, 64vw"
+
+    def plate(base, sizes, delay=None, wide=False):
+        label, alt = t["house_plates"][base]
+        r = ratio(base)
+        d = ' data-delay="%d"' % delay if delay else ""
+        cls = "house-wide" if wide else ("is-tall" if r == "r45" else "")
+        return ('<figure class="mono-plate house-plate {cls} img-reveal"{d}>'
+                '<div class="mono-plate__frame {r}">{pic}</div>'
+                '<figcaption class="mono-plate__cap">{label}</figcaption>'
+                '</figure>').format(cls=cls, d=d, r=r,
+                                    pic=hpic(base, alt, sizes), label=label)
+
+    def chapter(n, plates):
+        title, line = t["house_ch"][n - 1]
+        return """
+  <section class="mono-ch mono-ch--plates" aria-labelledby="h{n}">
+    <div class="wrap mono-ch__grid">
+      <header class="mono-ch__head reveal">
+        <p class="mono-num" dir="ltr">{nn:02d}</p>
+        <h2 class="mono-ch__title" id="h{n}">{title}</h2>
+      </header>
+      <div class="mono-ch__body">
+        <div class="prose mono-prose reveal" data-delay="1"><p>{line}</p></div>
+      </div>
+    </div>
+    <div class="wrap">{plates}</div>
+  </section>
+""".format(n=n, nn=n, title=title, line=line, plates=plates)
+
+    def row(kind, *items):
+        return '<div class="house-row house-row--%s">%s</div>' % (kind, "".join(items))
+
+    hw, hh = HOUSE_IMG["house-hero"][1:]
+    mw, mh = HOUSE_IMG["house-hero-m"][1:]
+    hero_srcset = ", ".join("%s/house-hero-%d.webp %dw" % (A, n, n)
+                            for n in HOUSE_IMG["house-hero"][0])
+    hero_pic = (
+        '<picture>'
+        '<source media="(max-width: 699px)" type="image/webp" '
+        'srcset="{a}/house-hero-m-{mw}.webp" width="{mw}" height="{mh}">'
+        '<source type="image/webp" sizes="100vw" srcset="{srcset}">'
+        '<img src="{a}/house-hero-{hw}.jpg" alt="{alt}" width="{hw}" height="{hh}" '
+        'loading="eager" decoding="async" fetchpriority="high">'
+        '</picture>').format(a=A, mw=mw, mh=mh, hw=hw, hh=hh,
+                             alt=t["house_hero_alt"], srcset=hero_srcset)
+
+    latin_alt = t["lang"] == "ar"
+    title_alt = ('<p class="mono-hero__alt {cls} reveal" data-delay="1" lang="{l}" dir="{d}">{x}</p>'
+                 .format(cls=("mono-latin" if latin_alt else ""),
+                         l=("en" if latin_alt else "ar"),
+                         d=("ltr" if latin_alt else "rtl"), x=t["house_title_alt"]))
+
+    info = "".join('<div class="mono-info__row"><dt>%s</dt><dd>%s</dd></div>' % kv
+                   for kv in t["house_info"])
+
+    chapters = "".join([
+        chapter(1, plate("house-side", WIDE, wide=True)
+                + row("pair-r", plate("house-arcade", NARROW),
+                      plate("house-canopy", HALF, delay=1))),
+        chapter(2, row("trio", plate("house-olive-arch", NARROW),
+                       plate("house-gallery", NARROW, delay=1),
+                       plate("house-corridor", NARROW, delay=2))
+                + row("pair", plate("house-entrance", HALF),
+                      plate("house-basin-arch", NARROW, delay=1))),
+        chapter(3, plate("house-majlis", WIDE, wide=True)
+                + row("pair", plate("house-majlis-b", HALF),
+                      plate("house-carpet", NARROW, delay=1))),
+        chapter(4, plate("house-olive", WIDE, wide=True)
+                + row("trio", plate("house-above", NARROW),
+                      plate("house-kitchen", NARROW, delay=1),
+                      plate("house-pergola", NARROW, delay=2))
+                + row("pair-r", plate("house-niches", NARROW),
+                      plate("house-night", HALF, delay=1))),
+    ])
+
+    mw0, mh0 = MONO_IMG["mono-hero"][1:]
+    majlis_link = """
+  <section class="mono-ch mono-ch--plates" aria-labelledby="h5">
+    <div class="wrap mono-ch__grid">
+      <header class="mono-ch__head reveal">
+        <p class="mono-num" dir="ltr">05</p>
+        <h2 class="mono-ch__title" id="h5">{title}</h2>
+      </header>
+      <div class="mono-ch__body">
+        <div class="prose mono-prose reveal" data-delay="1"><p>{line}</p></div>
+      </div>
+    </div>
+    <div class="wrap">
+      <a class="mono-plate house-wide house-link img-reveal" href="monolith.html">
+        <span class="mono-plate__frame r169">{pic}</span>
+        <span class="mono-plate__cap house-link__cap"><span>{title}</span>{arrow}</span>
+      </a>
+    </div>
+  </section>
+""".format(title=t["house_majlis_title"], line=t["house_majlis_line"], arrow=ARROW,
+           pic=picture("mono-hero", t["house_majlis_alt"], MONO_IMG["mono-hero"][0],
+                       WIDE, w=mw0, h=mh0))
+
+    body = """
+<main id="main" class="mono house">
+
+  <section class="mono-hero" id="top" aria-labelledby="house-title">
+    <figure class="mono-hero__media">{hero_pic}</figure>
+    <div class="wrap mono-hero__head">
+      <p class="mono-hero__eyebrow reveal"><span>{place}</span><span>{date}</span></p>
+      <h1 class="mono-hero__title reveal" id="house-title">{title}</h1>
+      {title_alt}
+    </div>
+  </section>
+
+  <section class="mono-open">
+    <div class="wrap">
+      <p class="mono-statement reveal">{open}</p>
+    </div>
+  </section>
+{chapters}{majlis_link}
+  <section class="mono-film house-reel" aria-labelledby="house-reel-title">
+    <div class="wrap house-reel__grid">
+      <div class="house-reel__stage reveal" data-reel data-reel-src="{reel_embed}"
+           data-reel-title="{reel_frame}">
+        <button class="house-reel__cover" type="button" data-reel-play>
+          {reel_pic}
+          <span class="film__play-mark" aria-hidden="true">{play_icon}</span>
+          <span class="film__play-label">{reel_play}</span>
+        </button>
+      </div>
+      <header class="house-reel__body reveal" data-delay="1">
+        <h2 class="mono-ch__title" id="house-reel-title">{reel_title}</h2>
+        <p class="mono-film__note">{reel_note}</p>
+        <p class="house-reel__open">
+          <a class="link" href="{reel_url}" target="_blank" rel="noopener"><span>{reel_open}</span>{arrow}</a>
+        </p>
+      </header>
+    </div>
+  </section>
+
+  <section class="mono-ch" aria-labelledby="h6">
+    <div class="wrap mono-ch__grid">
+      <header class="mono-ch__head reveal">
+        <p class="mono-num" dir="ltr">06</p>
+        <h2 class="mono-ch__title" id="h6">{h_info}</h2>
+      </header>
+      <div class="mono-ch__body">
+        <dl class="mono-info reveal" data-delay="1">{info}</dl>
+        <figure class="mono-plate house-majed mono-ch__fig mono-ch__fig--end img-reveal">
+          <div class="mono-plate__frame r45">{majed}</div>
+          <figcaption class="mono-plate__cap">{majed_cap}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="mono-end">
+    <div class="wrap">
+      <div class="mono-sign reveal">
+        <span class="mono-sign__mark">{logo}</span>
+        <p class="mono-sign__alt mono-latin" lang="en" dir="ltr">Majed Namous</p>
+      </div>
+      <p class="mono-end__links reveal" data-delay="1">
+        <a class="link" href="monolith.html"><span>{link_majlis}</span>{arrow}</a>
+        <a class="link" href="{works_href}"><span>{link_works}</span>{arrow}</a>
+        <a class="link" href="{contact_href}"><span>{link_contact}</span>{arrow}</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+""".format(
+        hero_pic=hero_pic, place=t["house_place"], date=t["house_date"],
+        title=t["house_title"], title_alt=title_alt, open=t["house_open"],
+        chapters=chapters, majlis_link=majlis_link,
+        reel_embed=HOUSE_REEL + "embed/", reel_url=HOUSE_REEL,
+        reel_frame=t["house_reel_frame"],
+        reel_pic=hpic("house-reel", t["house_reel_alt"], "(min-width: 820px) 400px, 78vw"),
+        play_icon=PLAY_ICON, reel_play=t["house_reel_play"],
+        reel_title=t["house_reel_title"], reel_note=t["house_reel_note"],
+        reel_open=t["house_reel_open"],
+        h_info=t["house_h_info"], info=info,
+        majed=hpic("house-majed", t["house_majed_alt"], "(min-width: 900px) 400px, 78vw"),
+        majed_cap=t["house_majed_cap"],
+        logo=LOGO, link_majlis=t["house_link_majlis"],
+        works_href=t["home_href"] + "#works", contact_href=t["contact_href"],
+        link_works=t["house_link_works"], link_contact=t["house_link_contact"],
+        arrow=ARROW,
+    )
+
+    preload = (
+        '\n  <link rel="preload" as="image" type="image/webp" '
+        'href="{a}/house-hero-m-{mw}.webp" media="(max-width: 699px)" fetchpriority="high">'
+        '\n  <link rel="preload" as="image" type="image/webp" '
+        'imagesrcset="{srcset}" imagesizes="100vw" media="(min-width: 700px)" '
+        'fetchpriority="high">').format(a=A, mw=mw, srcset=hero_srcset)
+
+    return head(t, page="emirati", title=t["house_page_title"], desc=t["house_desc"],
+                canonical=BASE_URL + "/" + ("emirati.html" if t["lang"] == "ar"
+                                            else "en/emirati.html"),
+                theme="theme-house", css="monolith.css",
+                og_image="house-hero-1600.jpg", preload=preload) \
+        + navbar(t, "emirati", alt_href) + body + footer(t)
 
 
 SHOT_ZOOM = ""
@@ -1643,6 +2008,7 @@ if __name__ == "__main__":
     write("index.html", home(AR, "en/index.html"))
     write("aqsa.html", aqsa(AR, "en/aqsa.html"))
     write("monolith.html", monolith(AR, "en/monolith.html"))
+    write("emirati.html", emirati(AR, "en/emirati.html"))
     write("contact.html", contact(AR, "en/contact.html"))
 
     ROOTREL, ASSETS = "../", "../assets"
@@ -1650,13 +2016,14 @@ if __name__ == "__main__":
     write("en/index.html", home(EN, "../index.html"))
     write("en/aqsa.html", aqsa(EN, "../aqsa.html"))
     write("en/monolith.html", monolith(EN, "../monolith.html"))
+    write("en/emirati.html", emirati(EN, "../emirati.html"))
     write("en/contact.html", contact(EN, "../contact.html"))
 
     write("robots.txt", "User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n" % BASE_URL)
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for u in ["", "aqsa.html", "monolith.html", "contact.html",
-              "en/", "en/aqsa.html", "en/monolith.html", "en/contact.html"]:
+    for u in ["", "emirati.html", "aqsa.html", "monolith.html", "contact.html",
+              "en/", "en/emirati.html", "en/aqsa.html", "en/monolith.html", "en/contact.html"]:
         sm.append("  <url><loc>%s/%s</loc></url>" % (BASE_URL, u))
     sm.append("</urlset>\n")
     write("sitemap.xml", "\n".join(sm))
